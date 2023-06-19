@@ -1,0 +1,16 @@
+charset,UTF-8
+
+name,@funkylittlemothman
+type,ghost
+
+shiori,yaya.dll
+
+craftman,Venelona & Zichqec
+craftmanurl,https://github.com/Zichqec/funkylittlemothman
+
+sakura.name,
+kero.name,Screenshare
+
+icon,icon.ico
+
+sstp.allowunspecifiedsend,0
