@@ -1,0 +1,124 @@
+OnMinuteChange
+{
+	CheckModeTimes
+}
+
+CheckModeTimes
+{
+	if GETSECCOUNT >= MoodModeTime
+	{
+		SetMoodModeTime
+	}
+	if GETSECCOUNT >= ProjectModeTime
+	{
+		SetProjectModeTime
+	}
+	if GETSECCOUNT >= WorkModeTime
+	{
+		SetWorkModeTime
+	}
+}
+
+SetMoodModeTime
+{
+	CurrentMood = ANY("Short","Long","Random")
+	MoodModeTime = GETSECCOUNT + ((RAND(300) + 60 + 1) * 60) //1-6 hours
+}
+
+SetProjectModeTime
+{
+	_newproject = ""
+	_rand = RAND(100) + 1
+	
+	if _rand <= 25; _newproject = OtherProjects
+	elseif _rand <= 75; _newproject = GhostProjects
+	else; _newproject = "Idle"
+	
+	CurrentProject = _newproject
+	
+	SetWorkModeTime
+	if CurrentMood == "Short"; ProjectModeTime = (RAND(15) + 5 + 1) * 60 //5-20 minutes
+	elseif CurrentMood == "Long"; ProjectModeTime = (RAND(240) + 60 + 1) * 60 //1-5 hours
+	else; ProjectModeTime = (RAND(295) + 5 + 1) * 60 //5 minutes - 5 hours
+	
+	ProjectModeTime += GETSECCOUNT
+}
+
+SetWorkModeTime
+{
+	_available = IARRAY
+	
+	if !(CurrentProject == "Idle" || CurrentProject == "Jam Ghost"); _available ,= "Drawing"
+	if !(CurrentProject == "Idle" || CurrentProject == "Object Ghost"); _available ,= "Writing"
+	if !(CurrentProject == "Idle"); _available ,= "Programming"
+	
+	if ARRAYSIZE(_available) == 0; CurrentWork == "Idle"
+	else; CurrentWork = ANY(_available)
+	
+	
+	if CurrentMood == "Short"; WorkModeTime = (RAND(7) + 3 + 1) * 60 //3-10 minutes
+	elseif CurrentMood == "Long"
+	{
+		if RAND(2); WorkModeTime = (RAND(150) + 30 + 1) * 60 //30 minutes - 3 hours
+		else; WorkModeTime = 999999 //Lot of time - makes him do a single task the whole work session. super focused and all that
+	}
+	else; WorkModeTime = (RAND(177) + 3 + 1) * 60 //3 minutes - 3 hours
+	
+	WorkModeTime += GETSECCOUNT
+}
+
+GhostProjects
+{
+	"OC Ghost"
+	"Fandom Ghost"
+	"Jam Ghost"
+	
+	//Unreleased
+	"Big Fandom Ghost"
+	"Mini Fandom Ghost"
+	"Obscure Ghost"
+	"Object Ghost"
+}
+
+OtherProjects : array
+{
+	"Balloon"
+}
+
+
+
+/*
+
+I really would like for him to sometimes spend a long time on a task, but other times alternate tasks quickly. Is this better to do totally random? I feel like no...
+
+Needs to pick between project type
+And then between specific project for ghosts
+Maybe it's all just one big list though? hm... do i want it weighted.
+weighted is probably better for future expansion
+
+Ghost work is also divided into drawing, coding, and writing... These are probably modifiers and not whole pools. in fact this could be a modifier that applies to any task
+
+Maybe I should have it so that he picks between ghosts and other tasks, and if he picks ghosts then he picks one of them at random, and if he picks other tasks he picks one of those at random? that feels like the weighting i want
+
+
+↓ these don't have dialogue associated with them, probably? they may but it'll be additional dialogue, not separate pools
+
+Need to also pick how long it'll be until he switches projects
+Need to pick if he's in a switch-quickly mood or a switch once in a while mood? Or maybe a totally random option also
+
+
+
+
+TASK PICKING CAN BE **RANDOM**, i don't need to seed this or anything. i only need to make it use EPOCH to determine when he switches modes
+
+Maybe when he mode switches, he also has a chance of switching work type and not project
+
+Yeah there we go
+
+Project
+Work type
+Mood
+
+
+
+*/

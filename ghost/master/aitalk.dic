@@ -13,5 +13,86 @@ OnAiTalk
 
 RandomTalk : nonoverlap_pool
 {
-	"dialogue"
+	//debug
+	"Current project: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent work: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent mood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)"
+	
+	//—————————————————————————————— Specific projects ——————————————————————————————
+	if CurrentProject == "OC Ghost"
+	{
+		
+	}
+	
+	if CurrentProject == "Fandom Ghost"
+	{
+		
+	}
+	
+	if CurrentProject == "Jam Ghost"
+	{
+		
+	}
+	
+	if CurrentProject == "Big Fandom Ghost"
+	{
+		
+	}
+	
+	if CurrentProject == "Mini Fandom Ghost"
+	{
+		
+	}
+	
+	if CurrentProject == "Obscure Ghost"
+	{
+		
+	}
+	
+	if CurrentProject == "Object Ghost"
+	{
+		
+	}
+	
+	if CurrentProject == "Balloon"
+	{
+		
+	}
+	
+	if CurrentProject == "Idle"
+	{
+		
+	}
+	
+	
+	//—————————————————————————————— Types of work ——————————————————————————————
+	if CurrentWork == "Drawing"
+	{
+		
+	}
+	
+	if CurrentWork == "Writing"
+	{
+		
+	}
+	
+	if CurrentWork == "Programming"
+	{
+		
+	}
+	
+	
+	//—————————————————————————————— Mood comments ——————————————————————————————
+	if CurrentMood == "Short"
+	{
+		
+	}
+	
+	if CurrentMood == "Long"
+	{
+		
+	}
+	
+	if CurrentMood == "Random"
+	{
+		
+	}
 }

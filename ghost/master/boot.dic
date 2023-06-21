@@ -1,7 +1,10 @@
 OnFirstBoot
 {
-	//If you add variables, make sure to initialize them here!
-	//Note - I haven't added anything about username or pronouns here because it's all handled by the SSP prefs
+	ProjectModeTime = 0
+	WorkModeTime = 0
+	MoodModeTime = 0
+	CheckModeTimes
+	
 	stroke = 0
 	LastTalk = ""
 	
@@ -10,17 +13,12 @@ OnFirstBoot
 
 OnInitialize
 {
-	//If you want some variables to reset on boot, put them here. This event will happen even if you add other events like OnGhostChanged
-	//OnInitialize is a NOTIFY event! That means it cannot return scripts. This event is only meant for things like variable changes. See this page on Ukadoc for more info: https://ukagakadreamteam.github.io/ukadoc/manual/spec_shiori3.html
-	
-	//If you add new variables in updates, I recommend initializing them like so:
-	//if !ISVAR("NewVariable"); NewVariable = 0
-	//This means that it will only set the new variable if the user doesn't already have it, so that their variables don't get overwritten
 	
 	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
 	{
 		LastTalk = ""
 	}
+	CheckModeTimes
 }
 
 OnBoot
