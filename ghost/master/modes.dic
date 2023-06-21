@@ -52,7 +52,7 @@ SetWorkModeTime
 	if !(CurrentProject == "Idle" || CurrentProject == "Object Ghost"); _available ,= "Writing"
 	if !(CurrentProject == "Idle"); _available ,= "Programming"
 	
-	if ARRAYSIZE(_available) == 0; CurrentWork == "Idle"
+	if ARRAYSIZE(_available) == 0; CurrentWork = "Idle"
 	else; CurrentWork = ANY(_available)
 	
 	
