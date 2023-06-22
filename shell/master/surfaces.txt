@@ -72,7 +72,7 @@ element0,overlay,surface1001.png,0,0
 2interval,never
 2pattern0,1004,16,overlay,0,0
 //2pattern1,1003,20,overlay,0,0
-3pattern1,1002,20,overlay,0,0
+2pattern1,1002,20,overlay,0,0
 2pattern2,1004,19,overlay,0,0
 2pattern3,1002,16,overlay,0,0
 2pattern4,-1,16,replace,0,0
@@ -100,7 +100,7 @@ element0,overlay,surface1001.png,0,0
 
 surface10
 {
-element1,overlay,surface10.png,0,0
+element0,overlay,surface10.png,0,0
 
 //mouse go weee
 animation0.interval,never
