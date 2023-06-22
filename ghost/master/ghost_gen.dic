@@ -1,0 +1,52 @@
+//Just the beginnings of this, I feel like it could be a lot more varied but I don't have the brainpower atm
+
+GhostIdeaGenerator : nonoverlap
+{
+	"%(Capitalize(an(thing))) that %(feature), but %(modifier)."
+	"%(Capitalize(an(thing)) that %(feature)."
+}
+
+thing{OnGhostGen.Thing}
+feature{"\![embed,OnGhostGen.Feature]"}
+modifier{"\![embed,OnGhostGen.Modifier]"}
+
+OnGhostGen.Thing : nonoverlap
+{
+	"kazoo"
+	"egg"
+	"cockroach"
+	"bug"
+	"wizard"
+	"bottle"
+	"shoe"
+	"ostritch"
+	"skeleton"
+	"tree"
+	"leaf"
+	"octopus"
+	"mermaid"
+	"basket"
+}
+
+OnGhostGen.Feature : nonoverlap
+{
+	"transforms into various other creatures"
+	"moves around the screen"
+	"tells the user a long and winding tale"
+	"is always angry at the user"
+	"has nothing but fakeout functions"
+	"just says random stuff"
+	"lets the user collect various items"
+	"interacts with other ghosts"
+}
+
+OnGhostGen.Modifier : nonoverlap
+{
+	"with horror elements"
+	"you have to unlock it first"
+	"only when clicked"
+	"gets tired if it's open for too long"
+	"it's actually all a front"
+	"in a really unexpected way"
+	"it does literally nothing else"
+}

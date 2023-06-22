@@ -14,7 +14,7 @@ OnAiTalk
 RandomTalk : nonoverlap_pool
 {
 	//debug
-	"Current project: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent work: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent mood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)"
+	"\1\s[11]\0\s[1]\_qCurrent project: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent work: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent mood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)"
 	
 	//—————————————————————————————— Specific projects ——————————————————————————————
 	if CurrentProject == "OC Ghost"

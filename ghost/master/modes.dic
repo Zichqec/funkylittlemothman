@@ -19,10 +19,17 @@ CheckModeTimes
 	}
 }
 
+Debug.ResetAllModes
+{
+	SetMoodModeTime
+	SetProjectModeTime
+	//Work mode will be set as a part of the project
+}
+
 SetMoodModeTime
 {
 	CurrentMood = ANY("Short","Long","Random")
-	MoodModeTime = GETSECCOUNT + ((RAND(300) + 60 + 1) * 60) //1-6 hours
+	MoodModeTime = GETSECCOUNT + ((RAND(90) + 30 + 1) * 60) //30 minutes - 2 hours
 }
 
 SetProjectModeTime
@@ -38,8 +45,8 @@ SetProjectModeTime
 	
 	SetWorkModeTime
 	if CurrentMood == "Short"; ProjectModeTime = (RAND(15) + 5 + 1) * 60 //5-20 minutes
-	elseif CurrentMood == "Long"; ProjectModeTime = (RAND(240) + 60 + 1) * 60 //1-5 hours
-	else; ProjectModeTime = (RAND(295) + 5 + 1) * 60 //5 minutes - 5 hours
+	elseif CurrentMood == "Long"; ProjectModeTime = (RAND(15) + 45 + 1) * 60 //45 minutes - 1 hour
+	else; ProjectModeTime = (RAND(55) + 5 + 1) * 60 //5 minutes - 1 hour
 	
 	ProjectModeTime += GETSECCOUNT
 }
@@ -49,20 +56,20 @@ SetWorkModeTime
 	_available = IARRAY
 	
 	if !(CurrentProject == "Idle" || CurrentProject == "Jam Ghost"); _available ,= "Drawing"
-	if !(CurrentProject == "Idle" || CurrentProject == "Object Ghost"); _available ,= "Writing"
+	if !(CurrentProject == "Idle" || CurrentProject == "Object Ghost" || CurrentProject == "Balloon"); _available ,= "Writing" //BUG for some reason he keeps picking writing even though he's making a balloon...
 	if !(CurrentProject == "Idle"); _available ,= "Programming"
 	
 	if ARRAYSIZE(_available) == 0; CurrentWork = "Idle"
 	else; CurrentWork = ANY(_available)
 	
 	
-	if CurrentMood == "Short"; WorkModeTime = (RAND(7) + 3 + 1) * 60 //3-10 minutes
+	if CurrentMood == "Short"; WorkModeTime = (RAND(8) + 2+ 1) * 60 //2-10 minutes
 	elseif CurrentMood == "Long"
 	{
-		if RAND(2); WorkModeTime = (RAND(150) + 30 + 1) * 60 //30 minutes - 3 hours
-		else; WorkModeTime = 999999 //Lot of time - makes him do a single task the whole work session. super focused and all that
+		if RAND(2); WorkModeTime = (RAND(90) + 30 + 1) * 60 //30 minutes - 1 hour
+		else; WorkModeTime = 999 //Lot of time - makes him do a single task the whole work session. super focused and all that
 	}
-	else; WorkModeTime = (RAND(177) + 3 + 1) * 60 //3 minutes - 3 hours
+	else; WorkModeTime = (RAND(57) + 3 + 1) * 60 //3 minutes - 1 hour
 	
 	WorkModeTime += GETSECCOUNT
 }
