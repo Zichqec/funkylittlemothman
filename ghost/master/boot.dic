@@ -31,7 +31,7 @@ OnBoot
 	--
 	if _today == _user_birthday
 	{
-		"\0\s[0]It is %(username)'s birthday today.\w8 Happy birthday, %(username).\w8 Developer,\w4 you can add an interesting message here.\w8 It can be as long as you like.\w8 Or, you can remove it entirely."
+		"\0\s[1]> Birthdays are one day\w8\w5\n\n[half]> Ghosts are forever\w8\w5\n\n[half]> but yes happy birthday\w8\w5\n\n[half]> Ghost time?"
 	}
 	elseif _today == "1/1" //You can add whatever cool dates you want with more elseifs here
 	{
@@ -39,15 +39,18 @@ OnBoot
 	}
 	else //Normal boot
 	{
-		"\0\s[0]Hello %(username).\w8 Good to see you."
-		"\0\s[0]Hello.\w8 Ready to make something cool?"
+		"\0\s[1]> OKAY break is over\w8\w5\n\n[half]> Let's work on some ghosts"
+		"\0\s[1]> Just woke up\w8\w5\n\n[half]> Don't question my sleep schedule\w8\w5\n\n[half]> Time to code"
+		"\0\s[1]> Heyo\w8\w5\n\n[half]> You're up?\w8\w5\n\n[half]> I'm up\w8\w5\n\n[half]> For some ghost work"
+		"\0\s[1]> Gaming break is over\w8\w5\n\n[half]> Time to work on some ghosts while my energy is restoring"
+		"\0\s[1]> Finally home!!!\w8\w5\n\n[half]> Full of ideas!!!\w8\w5\n\n[half]> work time work time"
 	}
 }
 
 OnClose
 {
-	"\0\s[0]Farewell."
-	"\0\s[0]Goodbye."
+	"\0\s[1]> You're done? \w8\w5\n\n[half]> I'll work some more and then call it a day\w8\w5\n\n[half]> Cyaaa"
+	"\0\s[1]> Tireeeed\w8\w5\n\n[half]> Gonna pick this up later\w8\w5\n\n[half]> Catch you later"
 	--
 	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
 }
