@@ -129,6 +129,10 @@ element0,overlay,surface1010.png,0,0
 4interval,never
 4pattern0,1011,40,replace,0,0
 4pattern1,1012,50,replace,0,0
+
+//smile
+5interval,never
+5pattern0,1008,0,overlay,0,0
 }
 
 //Drawing 1
