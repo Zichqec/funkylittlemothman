@@ -1,0 +1,4 @@
+charset,UTF-8
+type,balloon
+name,Moth Chat
+directory,moth_chat_vz

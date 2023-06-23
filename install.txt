@@ -3,3 +3,5 @@ type,ghost
 
 name,@funkylittlemothman
 directory,funkylittlemothman
+
+balloon.directory,moth_chat_vz

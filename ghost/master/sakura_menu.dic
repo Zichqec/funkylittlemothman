@@ -6,10 +6,14 @@ SakuraMenuGreetings : nonoverlap
 //Because there is an all modifier here, you don't need to write -- between menu options
 OnSakuraMenu : all
 {
-	"\0\s[1]\b2\![set,autoscroll,disable]"
-	if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings //The check here is so they won't comment if you click the back button. Remove if you prefer
+	"\0"
+	"\![set,autoscroll,disable]"
+	if !DefaultBalloon; "\b[2]"
+	else; "\b[6]"
 	
-	"\n\n\_q"
+	//if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings + "\n\n" //The check here is so they won't comment if you click the back button. Remove if you prefer
+	
+	"\_q"
 	
 	"\![*]\q[Observe,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[See chat log,OnLastTalk]"
@@ -17,9 +21,11 @@ OnSakuraMenu : all
 	"\![*]\q[Talk,OnTalkMenu]\n"
 	"\![*]\q[Encourage,OnEncourageMenu]\n\n"
 	
-	"\![*]\q[Change talk rate,OnTalkRateMenu]\n\n"
+	"\![*]\q[Preferences,OnSettings]\n\n"
 	
-	"\![*]\q[Nevermind,blank]"	
+	"\![*]\q[Nevermind,blank]"
+	
+	if SHIORI3FW.DebugMode; "\n\nProject: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nWork: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nMood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)\nSurface: %(SurfaceModeTime - GETSECCOUNT)"
 }
 
 OnLastTalk
@@ -29,7 +35,11 @@ OnLastTalk
 
 OnTalkMenu : all
 {
-	"\0\s[1]\b2\![set,autoscroll,disable]\_q"
+	"\C\![lock,balloonrepaint]\c\0\s[1]\_q"
+	"\![set,autoscroll,disable]"
+	
+	if !DefaultBalloon; "\b[2]"
+	else; "\b[6]"
 	
 	"Talk about...\n\n"
 	
@@ -39,6 +49,7 @@ OnTalkMenu : all
 	"\![*]\q[Ghost tips,OnTalk.GhostTips]\n"
 	"\n"
 	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
+	"\![unlock,balloonrepaint]"
 	
 }
 
@@ -49,7 +60,12 @@ OnTalk.Ghosts
 
 OnTalk.HisGhosts : all
 {
-	"\0\s[1]\b2\![set,autoscroll,disable]\_q"
+	"\C\![lock,balloonrepaint]\c\0\s[1]\_q"
+	"\![set,autoscroll,disable]"
+	
+	if !DefaultBalloon; "\b[2]"
+	else; "\b[6]"
+	
 	"Which ghost?"
 	"\![*]\q[OC ghost,OnTalkGhost.OC]\n"
 	"\![*]\q[Fandom ghost,OnTalkGhost.Fandom]\n"
@@ -61,6 +77,7 @@ OnTalk.HisGhosts : all
 	"\![*]\q[Object ghost,OnTalkGhost.Object]\n"
 	"\n"
 	"\![*]\q[Back,OnTalkMenu]  \![*]\q[Nevermind,blank]"
+	"\![unlock,balloonrepaint]"
 }
 
 OnTalk.CurrentProject
@@ -76,13 +93,18 @@ OnTalk.GhostTips
 //ALL THE DIALOGUES ASSOCIATED WITH THIS ARE PLACEHOLDER
 OnEncourageMenu : all
 {
-	"\0\s[1]\![set,autoscroll,disable]\_q"
+	"\C\![lock,balloonrepaint]\c\0\_q"
+	"\![set,autoscroll,disable]"
+	
+	if !DefaultBalloon; "\b[0]"
+	else; "\b[1]"
 	
 	"\![*]\q[Get back to work,OnEncourageWork]\n"
 	"\![*]\q[Take a break,OnEncourageBreak]\n"
 	"\![*]\q[Stay hydrated,OnEncourageWater]\n"
 	"\n"
 	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
+	"\![unlock,balloonrepaint]"
 }
 
 OnEncourageWork
@@ -137,6 +159,144 @@ OnEncourageWater
 	}
 }
 
+OnSettings : all
+{
+	if !ISVAR("SpecialFont"); SpecialFont = ("",DefaultFontSize)
+	"\C\![lock,balloonrepaint]\c\0\_q"
+	"\![set,autoscroll,disable]"
+	"\![close,inputbox,OnNewNickname]\![close,inputbox,OnFontSizeSlider]"
+	"\f[align,center]%(emdash) Chat Preferences %(emdash)\n\n\f[align,left]"
+	
+	if !DefaultBalloon; "\b[2]"
+	else; "\b[6]"
+	
+	"Username: \![*]\_a[OnChangeUsername]%(origname)\_a\n"
+	"Nickname: \![*]\_a[OnChangeNickname]%(username)\_a"
+	if nickname != ""; " \__q[OnResetNickname](reset)\__q"
+	"\n\n"
+	
+	_font = "Default"
+	if SpecialFont[0] != ""; _font = SpecialFont[0]
+	"Font: \![*]\_a[OnChangeFont]%(_font)\_a (\_a[OnFontSizeSlider]%(SpecialFont[1])\_a) \f[height,default]\q[▲,OnFontSize,up] \q[▼,OnFontSize,down]\f[height,%(SpecialFont[1])]"
+	
+	if SpecialFont[0] != "" || SpecialFont[1] != DefaultFontSize; " \__q[OnResetFont](reset)\__q"
+	"\n\n"
+	
+	"\![*]\q[Change message frequency,OnTalkRateMenu]\n\n"
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
+	
+	"\![unlock,balloonrepaint]"
+}
+
+OnChangeUsername : all
+{
+	"\C\![lock,balloonrepaint]\c\0\_q"
+	"\![set,autoscroll,disable]"
+	if !DefaultBalloon; "\b[2]"
+	else; "\b[6]"
+	
+	"\![open,configurationdialog,setup]"
+	"\f[italic,1](Username can be changed in the ""User Information"" section at the bottom of the SSP preferences.)\n\n"
+	"(After setting your name, close the SSP preferences window and then click below to return to Mothy's preferences.)\f[italic,default]\n\n"
+	"\![*]\q[Back to preferences,OnSettings]  \![*]\q[Nevermind,blank]"
+	"\![unlock,balloonrepaint]"
+}
+
+OnChangeNickname : all
+{
+	"\0\s[1]"
+	"\![open,inputbox,OnNewNickname,-1]"
+	
+	"\_q> what should I call you?"
+	
+	"\n\n\![*]\q[Back,OnSettings]  \![*]\q[Nevermind,OnCancelInput]"
+}
+
+OnNewNickname : all
+{
+	nickname = reference0
+	"\_q> k, %(nickname) it is.\_q\w8\w5\n\n:> cool.<:\w8\w5"
+	
+	"\n\n\_q\![*]\q[Back,OnSettings]  \![*]\q[Done,blank]"
+	"\_w[%((RAND(3) + 1) * 1000)]%(OnSurfaceRestore)"
+}
+
+OnCancelInput
+{
+	"\![close,inputbox,OnNewNickname]\![close,inputbox,OnFontSizeSlider]%(OnSurfaceRestore)"
+}
+
+OnResetNickname
+{
+	nickname = ""
+	OnSettings
+}
+
+OnNotifyFontInfo
+{
+	FontList = reference
+}
+
+OnChangeFont : all
+{
+	"\C\![lock,balloonrepaint]\c\0\_q"
+	"\![set,autoscroll,disable]"
+	if !DefaultBalloon; "\b[2]"
+	else; "\b[6]"
+	
+	"\f[align,center]%(emdash) Font Selection %(emdash)\n\f[align,left]"
+	"\n\![*]\__q[OnNewFont,]Reset to default\__q  \![*]\q[Back,OnSettings]  \![*]\q[Nevermind,blank]\n\n"
+	
+	foreach FontList; _font
+	{
+		"\![*]\f[name,""%(_font)""]\__q[OnNewFont,""%(_font)""]%(_font)\__q\n"
+	}
+	if SpecialFont[0] != ""; "\f[name,%(SpecialFont[0])]"
+	else; "\f[name,default]"
+	"\n\_q\![*]\q[Back,OnSettings]  \![*]\q[Nevermind,blank]\![unlock,balloonrepaint]"
+}
+
+OnNewFont
+{
+	SpecialFont[0] = reference0
+	OnSettings
+}
+
+OnFontSize
+{
+	if reference0 == "up"
+	{
+		SpecialFont[1]++
+	}
+	else //down
+	{
+		SpecialFont[1]--
+	}
+	if SpecialFont[1] <= 1; SpecialFont[1] = 1
+	OnSettings
+}
+
+OnFontSizeSlider : all
+{
+	"\0\_q"
+	"\![open,sliderinput,OnFontSizeSlider,-1,14,1,100]"
+	
+	if !DefaultBalloon; "\b[2]"
+	else; "\b[6]"
+	
+	if reference0 != ""; SpecialFont[1] = TOINT(reference0)
+	
+	"Current font size: %(SpecialFont[1])"
+	
+	"\n\n\![*]\q[Back,OnSettings]  \![*]\q[Nevermind,OnCancelInput]"
+}
+
+OnResetFont
+{
+	SpecialFont = ("",DefaultFontSize)
+	OnSettings
+}
+
 OnTalkRateMenu : all
 {	
 	//This is just setting up a label, you may need to add to it or tweak it if you change what rates are available
@@ -147,8 +307,12 @@ OnTalkRateMenu : all
 	elseif aitalkinterval == 300; _talkrate = "5 minutes"
 	elseif aitalkinterval == 600; _talkrate = "10 minutes"
 	
-	"\0\s[0]\b2\![set,autoscroll,disable]\_q"
-	"Current interval: %(_talkrate)\n\n"
+	"\C\![lock,balloonrepaint]\c\0\s[0]\_q"
+	
+	if !DefaultBalloon; "\![set,autoscroll,disable]\b[2]"
+	else; "\b[6]"
+	
+	"Current frequency: %(_talkrate)\n\n"
 	
 	"\![*]\q[Off,OnTalkRateChange,0]\n"
 	"\![*]\q[30 seconds,OnTalkRateChange,30]\n"
@@ -157,7 +321,8 @@ OnTalkRateMenu : all
 	"\![*]\q[5 minutes,OnTalkRateChange,300]\n"
 	"\![*]\q[10 minutes,OnTalkRateChange,600]\n"
 	"\n"
-	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
+	"\![*]\q[Back,OnSettings]  \![*]\q[Nevermind,blank]"
+	"\![unlock,balloonrepaint]"
 }
 
 OnTalkRateChange

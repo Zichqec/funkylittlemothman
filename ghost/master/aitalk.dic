@@ -12,111 +12,108 @@ OnAiTalk
 }
 
 RandomTalk : nonoverlap_pool
-{
-	//debug
-	"\1\s[11]\0\s[1]\_qCurrent project: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent work: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nCurrent mood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)"
-	
+{	
 	//—————————————————————————————— Specific projects ——————————————————————————————
 	if CurrentProject == "OC Ghost" //first ghost
 	{
-		"\0\s[2]*It looks like he's working on one of his ghosts.\e"
+		"\0\s[1][[is working on one of his ghosts]]\s[2]\e"
 		
-		"\0\s[1]> I totally forgot I wanted to work on more chains\w8\w5\n\n[half]> and I also forgot\w8\w5\n\n[half]> what I wanted them to be about lol\e"
+		"\0\s[1]:> I totally forgot I wanted to work on more chains<: :> and I also forgot<: :> what I wanted them to be about lol<:\e"
 		
-		"\0\s[1]> why\w8\w5\n\n[half]> why emails don't work\w8\w5\n\n[half]> they worked before\w8\w5\n\n[half]> what did i break\w8\w5\n\n[half]> darnit\e"
+		"\0\s[1]:> why<: :> why emails don't work<: :> they worked before<: :> what did i break<: :> darnit<:\e"
 		
-		"\0\s[1]> Do you think i should update balloon on this?\w8\w5\n\n[half]> idk\e"
+		"\0\s[1]:> Do you think i should update balloon on this?<: :> idk<:\e"
 		
-		"\0\s[1]> Surfaces\w8\w5\n\n[half]> I'm so tired of surfaces\w8\w5\n\n[half]> Why did I set them up this way\e"
+		"\0\s[1]:> Surfaces<: :> I'm so tired of surfaces<: :> Why did I set them up this way<:\e"
 		
-		"\0\s[1]> I really should've removed this function\w8\w5\n\n[half]> but now we're sticking with it\w8\w5\n\n[half]> which means\w8\w5\n\n[half]> I gotta fix it now lol\e"
+		"\0\s[1]:> I really should've removed this function<: :> but now we're sticking with it<: :> which means<: :> I gotta fix it now lol<:\e"
 		
-		"\0\s[1]> Chesster please\w8\w5\n\n[half]> Chesster\w8\w5\n\n[half]> he doesn't listen to me can you believe it\e"
+		"\0\s[1]:> Chesster please<: :> Chesster<: :> he doesn't listen to me can you believe it<:\e"
 		
-		"\0\s[1]> Piece of advice\w8\w5\n\n[half]> use new deifinition\w8\w5\n\n[half]> will save you a loooooooooooooooooooooot of trouble\e"
+		"\0\s[1]:> Piece of advice<: :> use new deifinition<: :> will save you a loooooooooooooooooooooot of trouble<:\e"
 		
-		"\0\s[1]> do i even bother updating\w8\w5\n\n[half]> whole three new lines\e"
+		"\0\s[1]:> do i even bother updating<: :> whole three new lines<:\e"
 		
-		"\0\s[1]> Oh Chesster\w8\w5\n\n[half]> we're really in it now\e"
+		"\0\s[1]:> Oh Chesster<: :> we're really in it now<:\e"
 	}
 	
 	if CurrentProject == "Fandom Ghost" //big phandom ghost - a fairy
 	{
-		"\0\s[1]> oh god I just got like\w8\w5\n\n[half]> 4 new questions\w8\w5\n\n[half]> no bug reports thankfully\w8\w5\n\n[half]> just. lore\e"
+		"\0\s[1]:> oh god I just got like<: :> 4 new questions<: :> no bug reports thankfully<: :> just. lore<:\e"
 		
-		"\0\s[1]> %(username) can you help me fight my temptation\w8\w5\n\n[half]> of starting on a new shell\w8\w5\n\n[half]> please\e"
+		"\0\s[1]:> %(username) can you help me fight my temptation<: :> of starting on a new shell<: :> please<:\e"
 		
-		"\0\s[1]> Why fairies have such complected designs\w8\w5\n\n[half]> wings alone are a nightmare\w8\w8\w8\w5\n\n[half]> but also wings are pretty idk\e"
+		"\0\s[1]:> Why fairies have such complicated designs<: :> wings alone are a nightmare\w8\w8<: :> but also wings are pretty idk<:\e"
 		
-		"\0\s[1]> Alright\w8\w5\n\n[half]> Time to think like a teenage fairy\e"
+		"\0\s[1]:> Alright<: :> Time to think like a teenage fairy<:\e"
 		
-		"\0\s[1]> stressed stressed STRESSED\w8\w5\n\n[half]> i have SO MANY UPDATES in mind\w8\w5\n\n[half]> what the hell do I start with\e"
+		"\0\s[1]:> stressed stressed STRESSED<: :> i have SO MANY UPDATES in mind<: :> what the hell do I start with<:\e"
 		
-		"\0\s[1]> I'm trying to write\w8\w5\n\n[half]> but it's not really coming to my head rn\w8\w5\n\n[half]> Maybe I should rewatch the show\w8\w5\n\n[half]> or at least episodes with Molnia in them\w8\w5\n\n[half]> will hopefully put me in the mood\e"
+		"\0\s[1]:> I'm trying to write<: :> but it's not really coming to my head rn<: :> Maybe I should rewatch the show<: :> or at least episodes with Molnia in them<: :> will hopefully put me in the mood<:\e"
 		
-		"\0\s[1]> Writing writing\w8\w5\n\n[half]> Need to do more writing\e"
+		"\0\s[1]:> Writing writing<: :> Need to do more writing<:\e"
 		
-		"\0\s[1]> Finished setting up new surfaces!!\w8\w5\n\n[half]> Time to insert them everywhere\w8\w5\n\n[half]> hehehehehehehehehehehe\e"
+		"\0\s[1]:> Finished setting up new surfaces!!<: :> Time to insert them everywhere<: :> hehehehehehehehehehehe<:\e"
 		
-		"\0\s[1]> Crap\w8\w5\n\n[half]> I got another bug report\w8\w5\n\n[half]> Molniaaaa whyyyy\e"
+		"\0\s[1]:> Crap<: :> I got another bug report<: :> Molniaaaa whyyyy<:\e"
 		
-		"\0\s[1]> Ugh I am so slow\w8\w5\n\n[half]> I should change my name to @funkylittlesnail\w8\w5\n\n[half]> this update is taking me eons\w8\w5\n\n[half]> feels bad\e"
+		"\0\s[1]:> Ugh I am so slow<: :> I should change my name to @funkylittlesnail<: :> this update is taking me eons<: :> feels bad<:\e"
 		
-		"\0\s[1]> I need more surfaces\w8\w5\n\n[half]> Need to grab more screenshots\w8\w5\n\n[half]> References\w8\w5\n\n[half]> Or just, like, draw another head tilt\w8\w5\n\n[half]> It counts too\e"
+		"\0\s[1]:> I need more surfaces<: :> Need to grab more screenshots<: :> References<: :> Or just, like, draw another head tilt<: :> It counts too<:\e"
 		
-		"\0\s[1]> End me\w8\w5\n\n[half]> I updated aitalk wrong\e"
+		"\0\s[1]:> End me<: :> I updated aitalk wrong<:\e"
 		
-		"\0\s[1]> I really really really want to add this one headcanone in\w8\w5\n\n[half]> but idk\w8\w5\n\n[half]> half the fandom will flame me\e"
+		"\0\s[1]:> I really really really want to add this one headcanon in<: :> but idk<: :> half the fandom will flame me<:\e"
 		
-		"\0\s[1]> FINALLY\w8\w5\n\n[half]> DONE WITH THIS PART\w8\w5\n\n[half]> JUST\w8\w5\n\n[half]> GOTTA MAKE UPDATE POST\e"
+		"\0\s[1]:> FINALLY<: :> DONE WITH THIS PART<: :> JUST<: :> GOTTA MAKE UPDATE POST<:\e"
 	}
 	
 	if CurrentProject == "Jam Ghost" //object ghost (egg?)
 	{
-		"\0\s[1]> I kinda wish they'll make another ghost jam soon\w8\w5\n\n[half]> This ghost was fun but I think now I can top it no prob\e"
+		"\0\s[1]:> I kinda hope they'll have another ghost jam soon<: :> This ghost was fun but I think now I can top it no prob<:\e"
 		
-		"\0\s[1]> I haven't added much to this one post-jam\w8\w5\n\n[half]> Time to\w8\w5\n\n[half]> Add something\e"
+		"\0\s[1]:> I haven't added much to this one post-jam<: :> Time to<: :> Add something<:\e"
 		
-		"\0\s[1]> Pros of an inanimate object\w8\w5\n\n[half]> No dialogue needed\w8\w5\n\n[half]> Cons are\w8\w5\n\n[half]> What the hell do I write then\e"
+		"\0\s[1]:> Pros of an inanimate object<: :> No dialogue needed<: :> Cons are<: :> What the hell do I write then<:\e"
 		
-		"\0\s[1]> Dress up dress up I should add a dress up\e"
+		"\0\s[1]:> Dress up dress up I should add a dress up<:\e"
 		
-		"\0\s[1]> Testing this is weird\w8\w5\n\n[half]> so much RNG\w8\w5\n\n[half]> I guess I just hope nothing is broken\e"
+		"\0\s[1]:> Testing this is weird<: :> so much RNG<: :> I guess I just hope nothing is broken<:\e"
 		
-		"\0\s[1]> Egg\w8\w5\n\n[half]> how do you improve an egg\w8\w5\n\n[half]> it's already egg-celent\e"
+		"\0\s[1]:> Egg<: :> how do you improve an egg<: :> it's already egg-celent<:\e"
 		
-		"\0\s[1]> I need to write more stuff\w8\w5\n\n[half]> While jam was going I ran out of time\w8\w5\n\n[half]> Now I have all of the time\w8\w5\n\n[half]> But still no writing lol\e"
+		"\0\s[1]:> I need to write more stuff<: :> While jam was going I ran out of time<: :> Now I have all of the time<: :> But still no writing lol<:\e"
 		
-		"\0\s[1]> Why did I code it like this\w8\w5\n\n[half]> because I ran out of time that's why\w8\w5\n\n[half]> But do I\w8\w5\n\n[half]> fix it now?..\e"
+		"\0\s[1]:> Why did I code it like this<: :> because I ran out of time that's why<: :> But do I<: :> fix it now?..<:\e"
 		
-		"\0\s[1]> Do I expend youuuu\w8\w5\n\n[half]> Or are you perfect as you are\w8\w5\n\n[half]> Hmmmmmm\w8\w5\n\n[half]> Decisions, decisions\e"
+		"\0\s[1]:> Do I expand youuuu<: :> Or are you perfect as you are<: :> Hmmmmmm<: :> Decisions, decisions<:\e"
 		
-		"\0\s[1]> Okay okay I finally fixed that typo\w8\w5\n\n[half]> I just hope I didn't put in like five more like I always do\e"
+		"\0\s[1]:> Okay okay I finally fixed that typo<: :> I just hope I didn't put in like five more like I always do<:\e"
 	}
 	
 	if CurrentProject == "Big Fandom Ghost"
 	{
-		"\0\s[1]> Refs refs refs I need more refs\e"
+		"\0\s[1]:> Refs refs refs I need more refs<:\e"
 		
-		"\0\s[1]> I hope this fandom won't eat me alive for my writing choices\e"
+		"\0\s[1]:> I hope this fandom won't eat me alive for my writing choices<:\e"
 		
-		"\0\s[1]> Oh God I just saw such a good fanart\w8\w5\n\n[half]> I am PUMPED to work more now\e"
+		"\0\s[1]:> Oh God I just saw such a good fanart<: :> I am PUMPED to work more now<:\e"
 		
-		"\0\s[1]> I can't decide how much stuff I want to add before releasing this into the world\w8\w5\n\n[half]> Ugh\w8\w5\n\n[half]> It needs to be gooood\w8\w5\n\n[half]> Good enouuuugh\e"
+		"\0\s[1]:> I can't decide how much stuff I want to add before releasing this into the world<: :> Ugh<: :> It needs to be gooood<: :> Good enouuuugh<:\e"
 		
-		"\0\s[1]> Remind me to work on a balloon later\w8\w5\n\n[half]> I got one from balloon town but idk\w8\w5\n\n[half]> Probably should make one myself\e"
+		"\0\s[1]:> Remind me to work on a balloon later<: :> I got one from balloon town but idk<: :> Probably should make one myself<:\e"
 		
-		"\0\s[1]> Do I add a shell\w8\w5\n\n[half]> or do I do it after the release\w8\w5\n\n[half]> It's not a priority\w8\w5\n\n[half]> But I really feel like working on a shell rn...\e"
+		"\0\s[1]:> Do I add a shell<: :> or do I do it after the release<: :> It's not a priority<: :> But I really feel like working on a shell rn...<:\e"
 		
-		"\0\s[1]> Writing this is SO HARD\w8\w5\n\n[half]> Trying to get into charcter\w8\w5\n\n[half]> And do it RIGHT\w8\w5\n\n[half]> AGH\e"
+		"\0\s[1]:> Writing this is SO HARD<: :> Trying to get into charcter<: :> And do it RIGHT<: :> AGH<:\e"
 		
-		"\0\s[1]> I wonder how many people will be interested in like\w8\w5\n\n[half]> The ~Ghost~ as a whole\w8\w5\n\n[half]> It's not my first fandom ghost but\w8\w5\n\n[half]> I hope it will be at least\w8\w5\n\n[half]> Like\w8\w5\n\n[half]> Three\w8\w5\n\n[half]> Three people\e"
+		"\0\s[1]:> I wonder how many people will be interested in like<: :> The ~Ghost~ as a whole<: :> It's not my first fandom ghost but<: :> I hope it will be at least<: :> Like<: :> Three<: :> Three people<:\e"
 		
-		"\0\s[1]> Ugh\w8\w5\n\n[half]> Mind's blanking\w8\w5\n\n[half]> maybe I should check the wiki\e"
+		"\0\s[1]:> Ugh<: :> Mind's blanking<: :> maybe I should check the wiki<:\e"
 		
-		"\0\s[1]> I really want to add this one dialogue line in\w8\w5\n\n[half]> But it will require me to add like\w8\w5\n\n[half]> Three new poses\w8\w5\n\n[half]> JUST for it\w8\w5\n\n[half]> Hm.\w8\w8\w8\w7\n\n[half]> I'll think about it\e"
+		"\0\s[1]:> I really want to add this one dialogue line in<: :> But it will require me to add like<: :> Three new poses<: :> JUST for it<: :> Hm.\w8\w8\w8\w7\n\n[half]:> I'll think about it<:\e"
 		
-		"\0\s[1]> Progress, progress\w8\w5\n\n[half]> Still nowhere near release but. Progress.\e"
+		"\0\s[1]:> Progress, progress<: :> Still nowhere near release but. Progress.<:\e"
 	}
 	
 	if CurrentProject == "Mini Fandom Ghost"
@@ -141,27 +138,27 @@ RandomTalk : nonoverlap_pool
 	
 	if CurrentProject == "Idle"
 	{
-		"\0\s[1]> what do I do now what do I do\e"
+		"\0\s[1]:> what do I do now what do I do<:\e"
 		
-		"\0\s[1]> Decisions, decisions\w8\w5\n\n[half]> do I update an oldie or keep working on a new one\e"
+		"\0\s[1]:> Decisions, decisions<: :> do I update an oldie or keep working on a new one<:\e"
 		
-		"\0\s[1]> Do I feel like drawing\w8\w5\n\n[half]> Or writing\w8\w5\n\n[half]> Or coding\w8\w5\n\n[half]> Or a new anime episode\w8\w5\n\n[half]> Or coding\w8\w5\n\n[half]> Or episode\w8\w5\n\n[half]> Or drawing\w8\w5\n\n[half]> Or episode\e"
+		"\0\s[1]:> Do I feel like drawing<: :> Or writing<: :> Or coding<: :> Or a new anime episode<: :> Or coding<: :> Or episode<: :> Or drawing<: :> Or episode<:\e"
 		
-		"\0\s[1]> I need to work\w8\w5\n\n[half]> Tell me to work\e"
+		"\0\s[1]:> I need to work<: :> Tell me to work<:\e"
 		
-		"\0\s[1]> Are you also working\w8\w5\n\n[half]> Or like me\w8\w5\n\n[half]> Thinking about working instead\e"
+		"\0\s[1]:> Are you also working<: :> Or like me<: :> Thinking about working instead<:\e"
 		
-		"\0\s[1]> Maybe I should finally get to updating ghost wiki page...\e"
+		"\0\s[1]:> Maybe I should finally get to updating ghost wiki page...<:\e"
 		
-		"\0\s[1]> Okay.\w8\w5\n\n[half]> It's ghost time.\w8\w5\n\n[half]> After I decide.\w8\w5\n\n[half]> Which ghost.\e"
+		"\0\s[1]:> Okay.<: :> It's ghost time.<: :> After I decide.<: :> Which ghost.<:\e"
 		
-		"\0\s[1]> ukagaka day ukagaka day\w8\w5\n\n[half]> time to ukagaka all day\e"
+		"\0\s[1]:> ukagaka day ukagaka day<: :> time to ukagaka all day<:\e"
 		
-		"\0\s[1]> Trying to decide what do I work on now\w8\w5\n\n[half]> Maybe I should put my ideas down on a list\w8\w5\n\n[half]> And not forget them\w8\w5\n\n[half]> Like I always do\e"
+		"\0\s[1]:> Trying to decide what do I work on now<: :> Maybe I should put my ideas down on a list<: :> And not forget them<: :> Like I always do<:\e"
 		
-		"\0\s[1]> Oh, SSP\w8\w5\n\n[half]> Don't let me down\e"
+		"\0\s[1]:> Oh, SSP<: :> Don't let me down<:\e"
 		
-		"\0\s[1]> Bless the tutorials\e"
+		"\0\s[1]:> Bless the tutorials<:\e"
 	}
 	
 	
@@ -173,64 +170,64 @@ RandomTalk : nonoverlap_pool
 	
 	if CurrentWork == "Writing"
 	{
-		"\0\s[1]> In a writing mood\w8\w5\n\n[half]> > At last\e"
+		"\0\s[1]:> In a writing mood<: :> At last<:\e"
 		
-		"\0\s[1]> God I had so many writing ideas before sleep\w8\w5\n\n[half]> And now I am blanking\w8\w5\n\n[half]> I knew I should've put them down when I thought of them right away\e"
+		"\0\s[1]:> God I had so many writing ideas before sleep<: :> And now I am blanking<: :> I knew I should've put them down when I thought of them right away<:\e"
 		
-		"\0\s[1]> Grammar\w8\w5\n\n[half]> Not my strong suit\w8\w5\n\n[half]> Maybe I should find a proper beta\w8\w5\n\n[half]> Hmmm...\e"
+		"\0\s[1]:> Grammar<: :> Not my strong suit<: :> Maybe I should find a proper beta<: :> Hmmm...<:\e"
 		
-		"\0\s[1]> %(username) I just wrote\w8\w5\n\n[half]> SO MUCH\w8\w5\n\n[half]> Still not finished but\w8\w5\n\n[half]> SO MUCH\e"
+		"\0\s[1]:> %(username) I just wrote<: :> SO MUCH<: :> Still not finished but<: :> SO MUCH<:\e"
 		
-		"\0\s[1]> Fortmatting this, formatting that\w8\w5\n\n[half]> Maybe there's an easier way to do this\w8\w5\n\n[half]> But I don't know it\w8\w5\n\n[half]> So time to format\e"
+		"\0\s[1]:> Fortmatting this, formatting that<: :> Maybe there's an easier way to do this<: :> But I don't know it<: :> So time to format<:\e"
 		
-		"\0\s[1]> I REMEMBERED WHAT I WANTED TO WRITE\w8\w5\n\n[half]> YES\w8\w5\n\n[half]> FINALLY\w8\w5\n\n[half]> writewritewritewrite\e"
+		"\0\s[1]:> I REMEMBERED WHAT I WANTED TO WRITE<: :> YES<: :> FINALLY<: :> writewritewritewrite<:\e"
 		
-		"\0\s[1]> Ugh I wrote stuff but idk\w8\w5\n\n[half]> how good it is\w8\w5\n\n[half]> the more the merrier and all but I still have my doubts\e"
+		"\0\s[1]:> Ugh I wrote stuff but idk<: :> how good it is<: :> the more the merrier and all but I still have my doubts<:\e"
 		
-		"\0\s[1]> I either write twenty lines a day\w8\w5\n\n[half]> Or one line a week\w8\w5\n\n[half]> Writing, why\e"
+		"\0\s[1]:> I either write twenty lines a day<: :> Or one line a week<: :> Writing, why<:\e"
 		
-		"\0\s[1]> Okay okay I got into the flow of writing this\w8\w5\n\n[half]> Hopefully gonna have some work done now\e"
+		"\0\s[1]:> Okay okay I got into the flow of writing this<: :> Hopefully gonna have some work done now<:\e"
 		
-		"\0\s[1]> Need more idle dialogue\w8\w5\n\n[half]> Always\e"
+		"\0\s[1]:> Need more idle dialogue<: :> Always<:\e"
 	}
 	
 	if CurrentWork == "Programming"
 	{
-		"\0\s[1]> I broke it again\w8\w5\n\n[half]> Tama please help me\e"
+		"\0\s[1]:> I broke it again<: :> Tama please help me<:\e"
 		
-		"\0\s[1]> I need SO MANY variables\w8\w5\n\n[half]> I should start documenting what's what\w8\w5\n\n[half]> Maybe I wouldn't need this many if I was smarter about this\w8\w5\n\n[half]> But it's too late we're rolling\e"
+		"\0\s[1]:> I need SO MANY variables<: :> I should start documenting what's what<: :> Maybe I wouldn't need this many if I was smarter about this<: :> But it's too late we're rolling<:\e"
 		
-		"\0\s[1]> Coding is a beast\w8\w5\n\n[half]> Thankfully Mothman is also a beast\w8\w5\n\n[half]> So we're trying to get along\e"
+		"\0\s[1]:> Coding is a beast<: :> Thankfully Mothman is also a beast<: :> So we're trying to get along<:\e"
 		
-		"\0\s[1]> DONE, DONE\w8\w5\n\n[half]> I never want to see that function again\w8\w5\n\n[half]> If it error's one more time I swear\e"
+		"\0\s[1]:> DONE, DONE<: :> I never want to see that function again<: :> If it error's one more time I swear<:\e"
 		
-		"\0\s[1]> Oh no\w8\w5\n\n[half]> My coding sins are catching up to me\w8\w5\n\n[half]> By which I mean\w8\w5\n\n[half]> I mixed up the variables again\e"
+		"\0\s[1]:> Oh no<: :> My coding sins are catching up to me<: :> By which I mean<: :> I mixed up the variables again<:\e"
 		
-		"\0\s[1]> I dunno if I like coding\w8\w5\n\n[half]> Or hate coding\w8\w5\n\n[half]> It's good when you know what you're doing\w8\w5\n\n[half]> But it's bad when it turns out what you're doing spawns like 20 errors\e"
+		"\0\s[1]:> I dunno if I like coding<: :> Or hate coding<: :> It's good when you know what you're doing<: :> But it's bad when it turns out what you're doing spawns like 20 errors<:\e"
 		
-		"\0\s[1]> I forgot again\w8\w5\n\n[half]> The = and == thing\w8\w5\n\n[half]> Watch out for them\e"
+		"\0\s[1]:> I forgot again<: :> The = and == thing<: :> Watch out for them<:\e"
 		
-		"\0\s[1]> I need to make a proper test variable\w8\w5\n\n[half]> And not\w8\w5\n\n[half]> Whatever I am doing at the moment\e"
+		"\0\s[1]:> I need to make a proper test function<: :> And not<: :> Whatever I am doing at the moment<:\e"
 		
-		"\0\s[1]> Yes!\w8\w5\n\n[half]> It works!\w8\w5\n\n[half]> Code!\w8\w5\n\n[half]> Code works!\e"
+		"\0\s[1]:> Yes!<: :> It works!<: :> Code!<: :> Code works!<:\e"
 		
-		"\0\s[1]> I can code it like a smart person\w8\w5\n\n[half]> Or like a funky little mothman\w8\w5\n\n[half]> The choice is obvious\e"
+		"\0\s[1]:> I can code it like a smart person<: :> Or like a funky little mothman<: :> The choice is obvious<:\e"
 	}
 	
 	
 	//—————————————————————————————— Mood comments ——————————————————————————————
 	if CurrentMood == "Short"
 	{
-		
+		"\0\s[1]:> i'm not focusing very well today lol<: :> maybe I should call it a day<: :> or get a snack<:\e"
 	}
 	
 	if CurrentMood == "Long"
 	{
-		
+		"\0\s[1]:> I've been getting a lot done<: :> Feels good<:\e"
 	}
 	
 	if CurrentMood == "Random"
 	{
-		
+		"\0\s[1]:> Things are going alright<: :> I'm not really in The Zone<: :> but I'm making ok progress<:\e"
 	}
 }

@@ -2,8 +2,8 @@
 
 GhostIdeaGenerator : nonoverlap
 {
-	"%(Capitalize(an(thing))) that %(feature), but %(modifier)."
-	"%(Capitalize(an(thing)) that %(feature)."
+	"%(an(thing)) that %(feature), but %(modifier)."
+	"%(an(thing)) that %(feature)."
 }
 
 thing{OnGhostGen.Thing}

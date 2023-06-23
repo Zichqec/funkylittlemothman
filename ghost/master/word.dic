@@ -24,3 +24,25 @@ Capitalize
 	
 	TOUPPER(_let) + _word
 }
+
+DefaultBalloon
+{
+	SHIORI3FW.BalloonName == "Moth Chat"
+}
+
+emdash
+{
+	if DefaultBalloon && SpecialFont[0] == ""; "—"
+	else
+	{
+		"\f[name,calibri]—"
+		--
+		if SpecialFont[0] != ""; "\f[name,%(SpecialFont[0])]"
+		else; "\f[name,default]"
+	}
+}
+
+DefaultFontSize
+{
+	14
+}
