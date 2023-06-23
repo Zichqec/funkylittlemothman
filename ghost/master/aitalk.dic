@@ -16,6 +16,7 @@ RandomTalk : nonoverlap_pool
 	//—————————————————————————————— Specific projects ——————————————————————————————
 	if CurrentProject == "OC Ghost" //first ghost
 	{
+		//OH YEAH this is narration now, let me know if you want me to switch this to envelopes or something. Atm it's [[ to start and ]] to end, and that'll do all the formatting for you + add his name
 		"\0\s[1][[is working on one of his ghosts]]\s[2]\e"
 		
 		"\0\s[1]:> I totally forgot I wanted to work on more chains<: :> and I also forgot<: :> what I wanted them to be about lol<:\e"

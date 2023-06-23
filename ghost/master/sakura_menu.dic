@@ -307,7 +307,7 @@ OnTalkRateMenu : all
 	elseif aitalkinterval == 300; _talkrate = "5 minutes"
 	elseif aitalkinterval == 600; _talkrate = "10 minutes"
 	
-	"\C\![lock,balloonrepaint]\c\0\s[0]\_q"
+	"\C\![lock,balloonrepaint]\c\0\_q"
 	
 	if !DefaultBalloon; "\![set,autoscroll,disable]\b[2]"
 	else; "\b[6]"
