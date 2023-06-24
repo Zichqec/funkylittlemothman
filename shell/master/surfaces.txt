@@ -651,3 +651,707 @@ animation0.pattern25,replace,1519,2000,0,0
 animation0.pattern26,replace,1520,3485,0,0
 animation0.pattern27,replace,1521,985,0,0
 }
+
+//drawings
+surface17
+{
+element0,overlay,surface1401.png,0,0
+
+//draw 1
+animation0.interval,never
+animation0.pattern0,replace,1401,600,0,0
+animation0.pattern1,replace,1402,635,0,0
+animation0.pattern2,replace,1403,635,0,0
+animation0.pattern3,replace,1404,535,0,0
+animation0.pattern4,replace,1405,735,0,0
+animation0.pattern5,replace,1406,535,0,0
+animation0.pattern6,replace,1407,635,0,0
+animation0.pattern7,replace,1408,635,0,0
+animation0.pattern8,replace,1409,740,0,0
+animation0.pattern9,replace,1410,535,0,0
+animation0.pattern10,replace,1411,635,0,0
+animation0.pattern11,replace,1412,635,0,0
+animation0.pattern12,replace,1413,535,0,0
+animation0.pattern13,replace,1414,735,0,0
+animation0.pattern14,replace,1415,535,0,0
+animation0.pattern15,replace,1416,535,0,0
+animation0.pattern16,replace,1417,660,0,0
+animation0.pattern17,replace,1418,635,0,0
+animation0.pattern18,replace,1419,535,0,0
+animation0.pattern19,replace,1420,535,0,0
+animation0.pattern20,replace,1421,735,0,0
+animation0.pattern21,replace,1422,535,0,0
+animation0.pattern22,replace,1423,735,0,0
+animation0.pattern23,replace,1424,635,0,0
+animation0.pattern24,replace,1425,560,0,0
+animation0.pattern25,replace,1426,535,0,0
+animation0.pattern26,replace,1427,635,0,0
+
+//draw 2
+animation1.interval,never
+animation1.pattern0,replace,1428,640,0,0
+animation1.pattern1,replace,1429,655,0,0
+animation1.pattern2,replace,1430,655,0,0
+animation1.pattern3,replace,1431,555,0,0
+animation1.pattern4,replace,1432,555,0,0
+animation1.pattern5,replace,1433,555,0,0
+animation1.pattern6,replace,1434,655,0,0
+animation1.pattern7,replace,1435,655,0,0
+animation1.pattern8,replace,1436,705,0,0
+animation1.pattern9,replace,1437,655,0,0
+animation1.pattern10,replace,1438,655,0,0
+animation1.pattern11,replace,1439,755,0,0
+animation1.pattern12,replace,1440,855,0,0
+animation1.pattern13,replace,1441,755,0,0
+animation1.pattern14,replace,1442,755,0,0
+animation1.pattern15,replace,1443,755,0,0
+animation1.pattern16,replace,1444,760,0,0
+animation1.pattern17,replace,1445,655,0,0
+animation1.pattern18,replace,1446,755,0,0
+
+//draw 3
+animation2.interval,never
+animation2.pattern0,replace,1447,650,0,0
+animation2.pattern1,replace,1448,655,0,0
+animation2.pattern2,replace,1449,655,0,0
+animation2.pattern3,replace,1450,655,0,0
+animation2.pattern4,replace,1451,755,0,0
+animation2.pattern5,replace,1452,755,0,0
+animation2.pattern6,replace,1453,655,0,0
+animation2.pattern7,replace,1454,655,0,0
+animation2.pattern8,replace,1455,705,0,0
+animation2.pattern9,replace,1456,655,0,0
+
+//draw 4
+animation3.interval,never
+animation3.pattern0,replace,1457,655,0,0
+animation3.pattern1,replace,1458,655,0,0
+animation3.pattern2,replace,1459,755,0,0
+animation3.pattern3,replace,1460,655,0,0
+animation3.pattern4,replace,1461,755,0,0
+animation3.pattern5,replace,1462,755,0,0
+animation3.pattern6,replace,1463,655,0,0
+
+//draw 5
+animation4.interval,never
+animation4.pattern0,replace,1464,750,0,0
+animation4.pattern1,replace,1465,655,0,0
+animation4.pattern2,replace,1466,655,0,0
+animation4.pattern3,replace,1467,755,0,0
+animation4.pattern4,replace,1468,755,0,0
+animation4.pattern5,replace,1469,755,0,0
+animation4.pattern6,replace,1470,755,0,0
+animation4.pattern7,replace,1471,755,0,0
+animation4.pattern8,replace,1472,605,0,0
+
+//draw 6
+animation5.interval,never
+animation5.pattern0,replace,1473,650,0,0
+animation5.pattern1,replace,1474,655,0,0
+animation5.pattern2,replace,1475,655,0,0
+animation5.pattern3,replace,1476,755,0,0
+animation5.pattern4,replace,1477,655,0,0
+animation5.pattern5,replace,1478,655,0,0
+animation5.pattern6,replace,1479,655,0,0
+animation5.pattern7,replace,1480,655,0,0
+animation5.pattern8,replace,1481,705,0,0
+animation5.pattern9,replace,1482,655,0,0
+animation5.pattern10,replace,1483,655,0,0
+animation5.pattern11,replace,1484,655,0,0
+animation5.pattern12,replace,1485,755,0,0
+animation5.pattern13,replace,1486,655,0,0
+animation5.pattern14,replace,1487,755,0,0
+animation5.pattern15,replace,1488,655,0,0
+animation5.pattern16,replace,1489,760,0,0
+animation5.pattern17,replace,1490,755,0,0
+animation5.pattern18,replace,1491,655,0,0
+animation5.pattern19,replace,1492,660,0,0
+animation5.pattern20,replace,1493,755,0,0
+animation5.pattern21,replace,1494,755,0,0
+
+//draw 7
+animation6.interval,never
+animation6.pattern0,replace,1495,650,0,0
+animation6.pattern1,replace,1496,755,0,0
+animation6.pattern2,replace,1497,655,0,0
+animation6.pattern3,replace,1498,655,0,0
+animation6.pattern4,replace,1499,655,0,0
+animation6.pattern5,replace,14100,755,0,0
+animation6.pattern6,replace,14101,655,0,0
+animation6.pattern7,replace,14102,655,0,0
+animation6.pattern8,replace,14103,605,0,0
+animation6.pattern9,replace,14104,655,0,0
+animation6.pattern10,replace,14105,655,0,0
+animation6.pattern11,replace,14106,755,0,0
+animation6.pattern12,replace,14107,655,0,0
+animation6.pattern13,replace,14108,635,0,0
+animation6.pattern14,replace,14109,755,0,0
+animation6.pattern15,replace,14110,755,0,0
+animation6.pattern16,replace,14111,660,0,0
+animation6.pattern17,replace,14112,655,0,0
+animation6.pattern18,replace,14113,755,0,0
+animation6.pattern19,replace,14114,660,0,0
+animation6.pattern20,replace,14115,655,0,0
+animation6.pattern21,replace,14116,555,0,0
+animation6.pattern22,replace,14117,655,0,0
+animation6.pattern23,replace,14118,660,0,0
+animation6.pattern24,replace,14119,755,0,0
+animation6.pattern25,replace,14120,755,0,0
+animation6.pattern26,replace,14121,560,0,0
+animation6.pattern27,replace,14122,655,0,0
+animation6.pattern28,replace,14123,655,0,0
+animation6.pattern29,replace,14124,660,0,0
+animation6.pattern30,replace,14125,655,0,0
+animation6.pattern31,replace,14126,755,0,0
+
+//draw 8
+animation7.interval,never
+animation7.pattern0,replace,14127,750,0,0
+animation7.pattern1,replace,14128,755,0,0
+animation7.pattern2,replace,14129,755,0,0
+animation7.pattern3,replace,14130,755,0,0
+animation7.pattern4,replace,14131,755,0,0
+animation7.pattern5,replace,14132,755,0,0
+animation7.pattern6,replace,14133,755,0,0
+animation7.pattern7,replace,14134,755,0,0
+animation7.pattern8,replace,14135,705,0,0
+animation7.pattern9,replace,14136,755,0,0
+animation7.pattern10,replace,14137,655,0,0
+animation7.pattern11,replace,14138,755,0,0
+animation7.pattern12,replace,14139,655,0,0
+animation7.pattern13,replace,14140,635,0,0
+animation7.pattern14,replace,14141,755,0,0
+animation7.pattern15,replace,14142,755,0,0
+animation7.pattern16,replace,14143,660,0,0
+animation7.pattern17,replace,14144,755,0,0
+animation7.pattern18,replace,14145,755,0,0
+animation7.pattern19,replace,14146,760,0,0
+animation7.pattern20,replace,14147,755,0,0
+animation7.pattern21,replace,14148,755,0,0
+animation7.pattern22,replace,14149,755,0,0
+animation7.pattern23,replace,14150,760,0,0
+animation7.pattern24,replace,14151,755,0,0
+animation7.pattern25,replace,14152,755,0,0
+animation7.pattern26,replace,14153,760,0,0
+animation7.pattern27,replace,14154,655,0,0
+animation7.pattern28,replace,14155,755,0,0
+animation7.pattern29,replace,14156,660,0,0
+animation7.pattern30,replace,14157,755,0,0
+animation7.pattern31,replace,14158,755,0,0
+animation7.pattern32,replace,14159,755,0,0
+
+//draw 9
+animation8.interval,never
+animation8.pattern0,replace,14160,750,0,0
+animation8.pattern1,replace,14161,755,0,0
+animation8.pattern2,replace,14162,755,0,0
+animation8.pattern3,replace,14163,755,0,0
+animation8.pattern4,replace,14164,755,0,0
+animation8.pattern5,replace,14165,755,0,0
+animation8.pattern6,replace,14166,755,0,0
+animation8.pattern7,replace,14167,755,0,0
+animation8.pattern8,replace,14168,705,0,0
+animation8.pattern9,replace,14169,755,0,0
+animation8.pattern10,replace,14170,655,0,0
+animation8.pattern11,replace,14171,755,0,0
+animation8.pattern12,replace,14172,655,0,0
+animation8.pattern13,replace,14173,735,0,0
+animation8.pattern14,replace,14174,755,0,0
+animation8.pattern15,replace,14175,755,0,0
+animation8.pattern16,replace,14176,760,0,0
+animation8.pattern17,replace,14177,755,0,0
+animation8.pattern18,replace,14178,755,0,0
+animation8.pattern19,replace,14179,760,0,0
+animation8.pattern20,replace,14180,755,0,0
+animation8.pattern21,replace,14181,755,0,0
+animation8.pattern22,replace,14182,755,0,0
+animation8.pattern23,replace,14183,760,0,0
+//draw 10
+animation9.interval,never
+animation9.pattern0,replace,14184,750,0,0
+animation9.pattern1,replace,14185,755,0,0
+animation9.pattern2,replace,14186,755,0,0
+animation9.pattern3,replace,14187,755,0,0
+animation9.pattern4,replace,14188,755,0,0
+animation9.pattern5,replace,14189,755,0,0
+animation9.pattern6,replace,14190,755,0,0
+animation9.pattern7,replace,14191,755,0,0
+animation9.pattern8,replace,14192,705,0,0
+animation9.pattern9,replace,14193,755,0,0
+animation9.pattern10,replace,14194,655,0,0
+animation9.pattern11,replace,14195,755,0,0
+animation9.pattern12,replace,14196,655,0,0
+animation9.pattern13,replace,14197,635,0,0
+animation9.pattern14,replace,14198,755,0,0
+animation9.pattern15,replace,14199,755,0,0
+animation9.pattern16,replace,14200,660,0,0
+animation9.pattern17,replace,14201,755,0,0
+animation9.pattern18,replace,14202,755,0,0
+animation9.pattern19,replace,14203,760,0,0
+animation9.pattern20,replace,14204,755,0,0
+animation9.pattern21,replace,14205,755,0,0
+animation9.pattern22,replace,14206,655,0,0
+animation9.pattern23,replace,14207,660,0,0
+animation9.pattern24,replace,14208,660,0,0
+animation9.pattern25,replace,14209,755,0,0
+animation9.pattern26,replace,14210,755,0,0
+animation9.pattern27,replace,14211,760,0,0
+animation9.pattern28,replace,14212,755,0,0
+animation9.pattern29,replace,14213,755,0,0
+animation9.pattern30,replace,14214,755,0,0
+animation9.pattern31,replace,14215,760,0,0
+animation9.pattern32,replace,14216,760,0,0
+animation9.pattern33,replace,14217,755,0,0
+animation9.pattern34,replace,14218,755,0,0
+animation9.pattern35,replace,14219,655,0,0
+animation9.pattern36,replace,14220,660,0,0
+}
+
+//template
+surface18
+{
+element0,overlay,surface1600.png,0,0
+}
+
+//menu balloon
+surface19
+{
+element0,overlay,surface1601.png,0,0
+
+//animation 1
+animation0.interval,never
+animation0.pattern0,overlay,1601,0,0,0
+animation0.pattern1,overlay,1602,355,0,0
+animation0.pattern2,overlay,1603,355,0,0
+animation0.pattern3,overlay,1604,355,0,0
+animation0.pattern4,overlay,1605,355,0,0
+animation0.pattern5,overlay,1606,155,0,0
+animation0.pattern6,overlay,1607,55,0,0
+animation0.pattern7,overlay,1608,55,0,0
+animation0.pattern8,overlay,1609,54,0,0
+animation0.pattern9,overlay,1610,54,0,0
+animation0.pattern10,overlay,1611,54,0,0
+animation0.pattern11,overlay,1612,54,0,0
+animation0.pattern12,overlay,1613,54,0,0
+
+//animation 2
+animation1.interval,never
+animation1.pattern0,overlay,1646,0,0,0
+animation1.pattern1,overlay,1647,355,0,0
+animation1.pattern2,overlay,1648,355,0,0
+
+//animation 3
+animation2.interval,never
+animation2.pattern0,overlay,1649,0,0,0
+animation2.pattern1,overlay,1650,355,0,0
+animation2.pattern2,overlay,1651,355,0,0
+animation2.pattern3,overlay,1652,355,0,0
+animation2.pattern4,overlay,1653,355,0,0
+
+//template
+animation3.interval,never
+animation3.pattern0,overlay,1695,0,0,0
+
+//fandom ghost 1
+animation4.interval,never
+animation4.pattern0,overlay,1692,0,0,0
+
+//fandom ghost 2
+animation5.interval,never
+animation5.pattern0,overlay,1692,0,0,0
+animation5.pattern1,overlay,1675,300,0,0
+animation5.pattern2,overlay,1692,305,0,0
+animation5.pattern3,overlay,1675,305,0,0
+
+//fandom ghost 3
+animation6.interval,never
+animation6.pattern0,overlay,1676,0,0,0
+
+//fandom ghost 4
+animation7.interval,never
+animation7.pattern0,overlay,1677,0,0,0
+
+//OC ghost
+animation8.interval,never
+animation8.pattern0,overlay,1693,0,0,0
+
+//OC ghost 1
+animation9.interval,never
+animation9.pattern0,overlay,1679,0,0,0
+
+//OC ghost 2
+animation10.interval,never
+animation10.pattern0,overlay,1680,0,0,0
+
+//OC ghost 3
+animation11.interval,never
+animation11.pattern0,overlay,1681,0,0,0
+
+//OC ghost 4
+animation12.interval,never
+animation12.pattern0,overlay,1682,0,0,0
+
+//OC ghost 5
+animation13.interval,never
+animation13.pattern0,overlay,1683,0,0,0
+
+//OC ghost 6
+animation14.interval,never
+animation14.pattern0,overlay,1684,0,0,0
+
+//jam ghost
+animation15.interval,never
+animation15.pattern0,overlay,1694,0,0,0
+
+//jam ghost 1
+animation16.interval,never
+animation16.pattern0,overlay,1686,0,0,0
+
+//jam ghost 2
+animation17.interval,never
+animation17.pattern0,overlay,1687,0,0,0
+
+//jam ghost 3
+animation18.interval,never
+animation18.pattern0,overlay,1688,0,0,0
+
+//jam ghost 4
+animation19.interval,never
+animation19.pattern0,overlay,1689,0,0,0
+
+//jam ghost 5
+animation20.interval,never
+animation20.pattern0,overlay,1690,0,0,0
+
+//jam ghost 6
+animation21.interval,never
+animation21.pattern0,overlay,1691,0,0,0
+}
+
+//small balloon
+surface20
+{
+element0,overlay,surface1614.png,0,0
+
+//animation 1
+animation0.interval,never
+animation0.pattern0,overlay,1614,0,0,0
+animation0.pattern1,overlay,1615,305,0,0
+animation0.pattern2,overlay,1616,305,0,0
+animation0.pattern3,overlay,1617,305,0,0
+animation0.pattern4,overlay,1618,305,0,0
+animation0.pattern5,overlay,1619,305,0,0
+animation0.pattern6,overlay,1620,305,0,0
+animation0.pattern7,overlay,1621,305,0,0
+animation0.pattern8,overlay,1622,304,0,0
+animation0.pattern9,overlay,1623,304,0,0
+
+//animation 2
+animation1.interval,never
+animation1.pattern0,overlay,1624,0,0,0
+animation1.pattern1,overlay,1625,305,0,0
+animation1.pattern2,overlay,1626,305,0,0
+animation1.pattern3,overlay,1627,305,0,0
+animation1.pattern4,overlay,1628,305,0,0
+
+//animation 3
+animation2.interval,never
+animation2.pattern0,overlay,1629,0,0,0
+animation2.pattern1,overlay,1630,305,0,0
+animation2.pattern2,overlay,1631,305,0,0
+animation2.pattern3,overlay,1632,305,0,0
+
+//animation 4
+animation3.interval,never
+animation3.pattern0,overlay,1633,0,0,0
+animation3.pattern1,overlay,1634,305,0,0
+animation3.pattern2,overlay,1635,305,0,0
+animation3.pattern3,overlay,1636,305,0,0
+animation3.pattern4,overlay,1637,305,0,0
+animation3.pattern5,overlay,1638,305,0,0
+animation3.pattern6,overlay,1639,305,0,0
+animation3.pattern7,overlay,1640,305,0,0
+animation3.pattern8,overlay,1641,304,0,0
+animation3.pattern9,overlay,1642,304,0,0
+
+//animation 5
+animation4.interval,never
+animation4.pattern0,overlay,1643,0,0,0
+animation4.pattern1,overlay,1644,305,0,0
+animation4.pattern2,overlay,1645,305,0,0
+
+//template
+animation5.interval,never
+animation5.pattern0,overlay,1695,0,0,0
+
+//fandom ghost 1
+animation6.interval,never
+animation6.pattern0,overlay,1692,0,0,0
+
+//fandom ghost 2
+animation7.interval,never
+animation7.pattern0,overlay,1692,0,0,0
+animation7.pattern1,overlay,1675,300,0,0
+animation7.pattern2,overlay,1692,305,0,0
+animation7.pattern3,overlay,1675,305,0,0
+
+//fandom ghost 3
+animation8.interval,never
+animation8.pattern0,overlay,1676,0,0,0
+
+//fandom ghost 4
+animation9.interval,never
+animation9.pattern0,overlay,1677,0,0,0
+
+//OC ghost
+animation10.interval,never
+animation10.pattern0,overlay,1693,0,0,0
+
+//OC ghost 1
+animation11.interval,never
+animation11.pattern0,overlay,1679,0,0,0
+
+//OC ghost 2
+animation12.interval,never
+animation12.pattern0,overlay,1680,0,0,0
+
+//OC ghost 3
+animation13.interval,never
+animation13.pattern0,overlay,1681,0,0,0
+
+//OC ghost 4
+animation14.interval,never
+animation14.pattern0,overlay,1682,0,0,0
+
+//OC ghost 5
+animation15.interval,never
+animation15.pattern0,overlay,1683,0,0,0
+
+//OC ghost 6
+animation16.interval,never
+animation16.pattern0,overlay,1684,0,0,0
+
+//jam ghost
+animation17.interval,never
+animation17.pattern0,overlay,1694,0,0,0
+
+//jam ghost 1
+animation18.interval,never
+animation18.pattern0,overlay,1686,0,0,0
+
+//jam ghost 2
+animation19.interval,never
+animation19.pattern0,overlay,1687,0,0,0
+
+//jam ghost 3
+animation20.interval,never
+animation20.pattern0,overlay,1688,0,0,0
+
+//jam ghost 4
+animation21.interval,never
+animation21.pattern0,overlay,1689,0,0,0
+
+//jam ghost 5
+animation22.interval,never
+animation22.pattern0,overlay,1690,0,0,0
+
+//jam ghost 6
+animation23.interval,never
+animation23.pattern0,overlay,1691,0,0,0
+}
+
+//send commands
+surface21
+{
+element0,overlay,surface10.png,0,0
+
+//animation 1
+animation0.interval,never
+animation0.pattern0,overlay,1654,0,0,0
+animation0.pattern1,overlay,1655,305,0,0
+animation0.pattern2,overlay,1656,305,0,0
+animation0.pattern3,overlay,1657,305,0,0
+animation0.pattern4,overlay,1658,305,0,0
+animation0.pattern5,overlay,1659,305,0,0
+animation0.pattern6,overlay,1660,305,0,0
+
+//animation 2
+animation1.interval,never
+animation0.pattern0,overlay,1654,0,0,0
+animation1.pattern1,overlay,1661,305,0,0
+animation1.pattern2,overlay,1662,305,0,0
+
+//animation 3
+animation2.interval,never
+animation0.pattern0,overlay,1654,0,0,0
+animation2.pattern1,overlay,1663,305,0,0
+animation2.pattern2,overlay,1664,305,0,0
+animation2.pattern3,overlay,1665,305,0,0
+animation2.pattern4,overlay,1666,305,0,0
+animation2.pattern5,overlay,1667,305,0,0
+animation2.pattern6,overlay,1668,305,0,0
+animation2.pattern7,overlay,1669,305,0,0
+animation2.pattern8,overlay,1670,305,0,0
+animation2.pattern9,overlay,1671,305,0,0
+animation2.pattern10,overlay,1672,305,0,0
+animation2.pattern11,overlay,1673,305,0,0
+
+//template
+animation3.interval,never
+animation3.pattern0,overlay,1695,0,0,0
+
+//fandom ghost 1
+animation4.interval,never
+animation4.pattern0,overlay,1692,0,0,0
+
+//fandom ghost 2
+animation5.interval,never
+animation5.pattern0,overlay,1692,0,0,0
+animation5.pattern1,overlay,1675,300,0,0
+animation5.pattern2,overlay,1692,305,0,0
+animation5.pattern3,overlay,1675,305,0,0
+
+//fandom ghost 3
+animation6.interval,never
+animation6.pattern0,overlay,1676,0,0,0
+
+//fandom ghost 4
+animation7.interval,never
+animation7.pattern0,overlay,1677,0,0,0
+
+//OC ghost
+animation8.interval,never
+animation8.pattern0,overlay,1693,0,0,0
+
+//OC ghost 1
+animation9.interval,never
+animation9.pattern0,overlay,1679,0,0,0
+
+//OC ghost 2
+animation10.interval,never
+animation10.pattern0,overlay,1680,0,0,0
+
+//OC ghost 3
+animation11.interval,never
+animation11.pattern0,overlay,1681,0,0,0
+
+//OC ghost 4
+animation12.interval,never
+animation12.pattern0,overlay,1682,0,0,0
+
+//OC ghost 5
+animation13.interval,never
+animation13.pattern0,overlay,1683,0,0,0
+
+//OC ghost 6
+animation14.interval,never
+animation14.pattern0,overlay,1684,0,0,0
+
+//jam ghost
+animation15.interval,never
+animation15.pattern0,overlay,1694,0,0,0
+
+//jam ghost 1
+animation16.interval,never
+animation16.pattern0,overlay,1686,0,0,0
+
+//jam ghost 2
+animation17.interval,never
+animation17.pattern0,overlay,1687,0,0,0
+
+//jam ghost 3
+animation18.interval,never
+animation18.pattern0,overlay,1688,0,0,0
+
+//jam ghost 4
+animation19.interval,never
+animation19.pattern0,overlay,1689,0,0,0
+
+//jam ghost 5
+animation20.interval,never
+animation20.pattern0,overlay,1690,0,0,0
+
+//jam ghost 6
+animation21.interval,never
+animation21.pattern0,overlay,1691,0,0,0
+}
+
+//fandom ghost
+surface22
+{
+element0,overlay,surface1674.png,0,0
+
+//animation 1
+animation0.interval,never
+animation0.pattern0,overlay,1675,300,0,0
+animation0.pattern1,overlay,1674,305,0,0
+animation0.pattern2,overlay,1675,305,0,0
+
+//animation 2
+animation1.interval,never
+animation1.pattern0,overlay,1676,0,0,0
+
+//animation 3
+animation2.interval,never
+animation2.pattern0,overlay,1677,0,0,0
+}
+
+//OC ghost
+surface23
+{
+element0,overlay,surface1678.png,0,0
+
+//animation 1
+animation0.interval,never
+animation0.pattern0,overlay,1679,0,0,0
+
+//animation 2
+animation1.interval,never
+animation1.pattern0,overlay,1680,0,0,0
+
+//animation 3
+animation2.interval,never
+animation2.pattern0,overlay,1681,0,0,0
+
+//animation 4
+animation3.interval,never
+animation3.pattern0,overlay,1682,0,0,0
+
+//animation 5
+animation4.interval,never
+animation4.pattern0,overlay,1683,0,0,0
+
+//animation 6
+animation5.interval,never
+animation5.pattern0,overlay,1684,0,0,0
+}
+
+//jam ghost
+surface24
+{
+element0,overlay,surface1685.png,0,0
+
+//animation 1
+animation0.interval,never
+animation0.pattern0,overlay,1686,0,0,0
+
+//animation 2
+animation1.interval,never
+animation1.pattern0,overlay,1687,0,0,0
+
+//animation 3
+animation2.interval,never
+animation2.pattern0,overlay,1688,0,0,0
+
+//animation 4
+animation3.interval,never
+animation3.pattern0,overlay,1689,0,0,0
+
+//animation 5
+animation4.interval,never
+animation4.pattern0,overlay,1690,0,0,0
+
+//animation 6
+animation5.interval,never
+animation5.pattern0,overlay,1691,0,0,0
+}
