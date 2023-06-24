@@ -155,11 +155,27 @@ RandomTalk : nonoverlap_pool
 	
 	if CurrentProject == "Balloon"
 	{
+		"\0%(typing):> God how do you code a balloon<: :> There should be more tutorial on this\e"
 		
+		"\0%(typing)[[is working on a balloon]]\e"
 	}
 	
 	if CurrentProject == "Idle"
 	{
+		"\0%(typing)[[is thinking about which ghost he needs to work on next]]\e"
+		
+		"\0%(typing)[[is thinking about potential new updates]]\e"
+		
+		"\0%(typing)[[is distracted]]\e"
+		
+		"\0%(typing)[[is thinking funky thoughts]]\e"
+		
+		"\0%(typing)[[is being funky]]\e"
+		
+		"\0%(typing)[[is deciding what to work on next]]\e"
+		
+		"\0%(typing):> I'm gonna work on a balloon<: :> thats a lie no im not<:\e"
+		
 		"\0%(typing):> what do I do now what do I do<:\e"
 		
 		"\0%(typing):> Decisions, decisions<: :> do I update an oldie or keep working on a new one<:\e"
@@ -187,7 +203,25 @@ RandomTalk : nonoverlap_pool
 	//—————————————————————————————— Types of work ——————————————————————————————
 	if CurrentWork == "Drawing"
 	{
+		"\0%(typing)[[is working on a new surface]]\e"
 		
+		"\0%(typing)[[is working on a new shell]]\e"
+		
+		"\0%(typing):> Drawing is not my strong suit<: :> Maybe I should collab with somebody<: :> Idk<:\e"
+		
+		"\0%(typing):> Ey<: :> Do you know any good tutorial for drawing clothing folds<: :> I can't figure this out<:\e"
+		
+		"\0%(typing):> I really need to get to coloring<: :> Oooor<: :> Lining<: :> Or sketching<:\e"
+		
+		"\0%(typing):> I made some doodles on paper today<: :> I should snap a pic<: :> And trace over digitally<: :> Or just draw it again but digitally like this idk<: :> Those were some nice doodles tho<:\e"
+		
+		"\0%(typing)\i[5]:> Just one more surface<: :> Almost there<:\e"
+		
+		"\0%(typing):> I really like different shells<: :> But they take so much wooork<: :> But it's so wooorth iiiiit<:\e"
+		
+		"\0%(typing):> I should finish this<: :> Preferably today<: :> Need more surfaces<:\e"
+		
+		"\0%(typing):> I don't really need this surface<: :> But it will look cool<: :> So who cares<:\e"
 	}
 	
 	if CurrentWork == "Writing"
@@ -233,7 +267,7 @@ RandomTalk : nonoverlap_pool
 		
 		"\0%(typing):> Yes!<: :> It works!<: :> Code!<: :> Code works!<:\e"
 		
-		"\0%(typing):> I can code it like a smart person<: :> Or like a funky little mothman<: :> The choice is obvious<:\e"
+		"\0%(typing):> I can code it like a smart person<: :> Or like a funky little mothman<: \i[5]:> The choice is obvious<:\e"
 	}
 	
 	
@@ -245,11 +279,11 @@ RandomTalk : nonoverlap_pool
 	
 	if CurrentMood == "Long"
 	{
-		"\0%(typing):> I've been getting a lot done<: :> Feels good<:\e"
+		"\0%(typing)\i[5]:> I've been getting a lot done<: :> Feels good<:\e"
 	}
 	
 	if CurrentMood == "Random"
 	{
-		"\0%(typing):> Things are going alright<: :> I'm not really in The Zone<: :> but I'm making ok progress<:\e"
+		"\0%(typing):> Things are going alright<: :> I'm not really in<: :> The Zone<: :> but I'm making ok progress<:\e"
 	}
 }

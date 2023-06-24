@@ -429,6 +429,10 @@ animation6.pattern9,overlay,1369,885,0,0
 animation6.pattern10,overlay,1370,885,0,0
 animation6.pattern11,overlay,1371,885,0,0
 animation6.pattern12,overlay,1372,885,0,0
+
+//black screen
+animation7.interval,never
+animation7.pattern0,overlay,1696,0,0,0
 }
 
 //notepad tab 1
@@ -1188,4 +1192,10 @@ surface.append10-24
 {
 	animation999999.interval,bind
 	animation999999.pattern0,replace,999999,0,0,0
+}
+
+//notepad tab 1
+surface25
+{
+element0,overlay,surface1696.png,0,0
 }

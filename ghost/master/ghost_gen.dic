@@ -26,6 +26,19 @@ OnGhostGen.Thing : nonoverlap
 	"octopus"
 	"mermaid"
 	"basket"
+	"man"
+	"girl"
+	"pile of goo"
+	"big big biiiiig chicken"
+	"three mugs"
+	"a piece of cheese"
+	"robot"
+	"ninja"
+	"cat"
+	"dreamy anime guy"
+	"house"
+	"actual ghost"
+	"fish"
 }
 
 OnGhostGen.Feature : nonoverlap
@@ -38,6 +51,12 @@ OnGhostGen.Feature : nonoverlap
 	"just says random stuff"
 	"lets the user collect various items"
 	"interacts with other ghosts"
+	"does random dances"
+	"tells user their future"
+	"you can romance"
+	"pretends to look over user's files"
+	"gives helpful advice"
+	"gives terrible advice"
 }
 
 OnGhostGen.Modifier : nonoverlap
@@ -49,4 +68,11 @@ OnGhostGen.Modifier : nonoverlap
 	"it's actually all a front"
 	"in a really unexpected way"
 	"it does literally nothing else"
+	"is incredibly sad"
+	"has a mustache for some reason"
+	"comes with like a dozen dress-ups"
+	"has a banana-themed shell"
+	"has a terrible secret"
+	"has a lot of eyes in unexpected places"
+	"has a gun"
 }

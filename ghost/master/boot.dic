@@ -13,8 +13,10 @@ OnFirstBoot
 	KeroScale = 100
 	WhiteText = 0
 	
-	"\1\s[10]\0\s[0]Hello, and welcome to the Simplicity Template, %(username).\w8 As the name implies, this template is very simple.\w8 You will notice there is not much here.\w8 That's on purpose!\w8 This template's primary goal is to make ghost creation less intimidating.\w8 You really need almost nothing to make a ghost;\w4 a basic shell with some interesting randomtalk can be an incredible and fun experience.\w8 So all those boring functions to do with email checking and such?\w8 Not here, unless you decide you want to add them.\w8 Don't let tedious functions tire you out before you can finish your ghost!\w8 Make something simple and fun, or start small and expand upon it later!\w8 Embrace the freedom of simplicity!"
+	"\1\s[25]\0%(typing):> Hello<: :> You're a Ghost enthusiast  too, right?<: :> Cool. I go by @funkylittlemoothman<: :> But you can just call me Moth<: :> Do I call you %(username), or you got another nickname?"
 }
+
+//"\1\s[25]\0%(typing):> %(username)?<: :> Okay<: :> So<: :> You like ghosts<: :> I like ghosts too<: :> I'm mostly into making them<: :> I already made, like, three<: :> You might've seen them before, idk<: :> But yeah lemme share my screen<:\w2\s[3]\w8\w8\1\s[10]\w8 :> There<: :> I'll be working on ghosts, and if you want to chat you can text me here\e"
 
 OnInitialize
 {
@@ -44,18 +46,33 @@ OnBoot
 	}
 	else //Normal boot
 	{
-		"\0%(typing):> OKAY break is over<: :> Let's work on some ghosts\e"
-		"\0%(typing):> Just woke up<: :> Don't question my sleep schedule<: :> Time to code\e"
-		"\0%(typing):> Heyo<: :> You're up?<: :> I'm up<: :> For some ghost work\e"
-		"\0%(typing):> Gaming break is over<: :> Time to work on some ghosts while my energy is restoring\e"
-		"\0%(typing):> Finally home!!!<: :> Full of ideas!!!<: :> work time work time\e"
+		"\0%(typing):> OKAY break is over<: :> Let's work on some ghosts<:\e"
+		"\0%(typing):> Just woke up<: :> Don't question my sleep schedule<: :> Time to code<:\e"
+		"\0%(typing):> Heyo<: :> You're up?<: :> I'm up<: :> For some ghost work<:\e"
+		"\0%(typing):> Gaming break is over<: :> Time to work on some ghosts while my energy is restoring<:\e"
+		"\0%(typing)\i[5]:> Finally home!!!<: :> Full of ideas!!!<: :> work time work time<:\e"
+		"\0%(typing):> Hey<: :> It's this time of day<: :> LET'S GO<:\e"
+		"\0%(typing)\i[5]:> I GOT IT<: :> I FIGURED IT OUT<: :> In theory<: :> Let's see the actual code and see<:\e"
+		"\0%(typing):> %(username) you here?<: :> %(username)<: :> %(username)<: :> Ghost's are calling<:\e"
+		"\0%(typing):> Hey hey hey<: :> I'm all fired up to work<: :> Let's goooo<:\e"
+		"\0%(typing):> Just had some food<: :> Ready to work now<:\e"
 	}
 }
 
 OnClose
 {
-	"\0%(typing)> You're done? <: :> I'll work some more and then call it a day<: :> Cyaaa"
-	"\0%(typing)> Tireeeed<: :> Gonna pick this up later<: :> Catch you later"
+	"\0%(typing)> You're done? <: :> I'll work some more and then call it a day<: :> Catch you later<:"
+	"\0%(typing)> Tireeeed<: :> Gonna pick this up later<: :> Cyaaaa<:"
+	"\0%(typing)> Okay I made some progress<: :> Enough for now<: :> Cya<:"
+	"\0%(typing)>\i[5] I'm done I'm done I'm done<: :> It is finished it is done<: :> I will leave bug testing for later:> But for now I'M FREE<:"
+	"\0%(typing)> I think I'll take a break now<: :> My focus is gone and I can't recatch it<: :> Hopefully I can focus more later<:"
+	"\0%(typing)> It's snack tiiiiime<: :> I've been hungry for like the past hour but I really wanted to finish this<: :> Cyaaaa<:"
+	"\0%(typing)> You're done?<: :> Cool<: :> Catch you later @lligator<:"
+	"\0%(typing)> I did like<: :> nothing today<: :> I hope you acomplished more<:"
+	"\0%(typing)> Okay I gotta run<: :> Hanging out with a friend<: :> Cya later for some more ghost shinenigans<:"
+	"\0%(typing)> That's enough for today<: :> Break time<: :> You take a break too, okay?<:"
+	"\0%(typing)> I finished my thing<: :> Probably<: :> For now<: :> Hopefully<: :> Anyways, later<:"
+	"\0%(typing)> You know what<: :> I wanna play some games<: :> Ghost work can wait<:"
 	--
 	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
 }

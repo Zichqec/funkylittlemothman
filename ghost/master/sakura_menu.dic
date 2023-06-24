@@ -63,6 +63,15 @@ OnTalkMenu : all
 
 OnTalk.Ghosts
 {
+	"\0%(typing):> My favourite part of working on a ghost<: :> Coding<: :> Because when I'm coding it usually means I'm already done with everything else lol<:"
+	"\0%(typing):> dialogue<:"
+	"\0%(typing):> dialogue<:"
+	"\0%(typing):> dialogue<:"
+	"\0%(typing):> dialogue<:"
+	"\0%(typing):> dialogue<:"
+	"\0%(typing):> dialogue<:"
+	"\0%(typing):> dialogue<:"
+	"\0%(typing):> dialogue<:"
 	"\0%(typing):> dialogue<:"
 	--
 	backbuttons
@@ -92,21 +101,40 @@ OnTalk.HisGhosts : all
 
 OnTalkGhost.OC
 {
-	"\0%(typing):> dialogue<:"
+	//first dialogue
+	"\0%(typing):> This one is my first ghost<: :> I kinda just made him up as I went<: :> His name is Chesster<: :> And he plays chess<: :> And that's it<: \w8\w8:> Weeeeell he's packed with default template functions<: :> 'cuz I followed the tutorial and the template while I was making him<: :> But overall he just sits there and thinks about chess moves<: :> And that's pretty much it<:"
+	
+	"\0%(typing):> Funny thing is<: :> I'm atrocious at playing chess<: :> But I made Chesster chess-themed because I made first surface for him balck and white<: :> And rolled with it:<"
+	"\0%(typing):> Chesster was his work-in-progress name<: :> I just put in something dumb when I decided on the whole chess theme<: :> But then idk I got attached?<: :> Silly little mothman<: :> me:<"
+	"\0%(typing):> Imagine programming a working game of chess in SSP<: :> Couldn't be me<: :> Because literally<: :> Skill issue<:"
+	"\0%(typing):> So Chesster is usually all timid<: :> Just chess man doing chess stuff<: :> Thinking chess thoughts<: :> But he has<: :> A DARK SIIIDE<: :> tho rn I didn't really programm in him being angry<: :> I need to give user and option to flip the table or something<: :> But then Chesster will hate you forever<: :> Hmm...<:"
+	"\0%(typing):> On some days I think<: :> Does anyone else even like Chesster?<: :> I mean he's a mess<: :> But<: :> idk<: :> I think he's kinda neat still<: :> Maybe it's just cuz I wroked on him for like two months and want someone to see it lol<:"
+	"\0%(typing):> Look at this ghost man<: :> Just sitting at his table<: :> Thinking perperually<: :> top ghost experience, am I right<:\w8\s[7]"
 	--
 	backbuttonsghost
 }
 
 OnTalkGhost.Fandom
 {
-	"\0%(typing):> dialogue<:"
+	//first dialogue
+	"\0%(typing)\i[5]:> Oh oh oh %(username) that's my most popular ghost<: :> If you heard about me before that's probably why<: :> But yeah it's Molnia from the TV show 'Fairyland Forever'<: :> She's one of the fairies<: :> The cool one with lightning powers<: :> Fandom looooves her so when I posted this ghost it got popular faaast<: :> Still feels wild<:"
+	
+	"\0%(typing):> I tried to make Molnia as close to canon as possible<: :> Which was<: :> more hard than I expected<: :> but people say I did a pretty good job so I'll believe them lol<:"
+	"\0%(typing)\i[5]:> Dude dude dude you GOTTA show the Fairyland Forever<: :> Well not must<: :> But I really recommend it<: :> I know it looks like a kid's show about fairies<: :> but there's SO MUCH<: :> LORE<: :> ANIMATION<: :> CHARACTER DRAMA<: :> SECRETS<: :> THAT ONE SCENE OH GOD<: :> Watch it watch it trust me<: :> And if you watch it tell me<: :> Don't worry Molnia doesn't have a lot of spoilers<: :> Only like<: :> Up to season 8<:"
+	"\0%(typing)\i[5]:> I'm really proud of the little animations I did on this one<: :> And also just the surfaces in general<: :> I spent soooooooo much time on the wings<: :> Worth it tho<:"
 	--
 	backbuttonsghost
 }
 
 OnTalkGhost.Jam
 {
-	"\0%(typing):> dialogue<:"
+	//first dialogue
+	"\0%(typing):> I participated in a Ghost Jam once<: :> Since it was my first one I decided to go small<: :> So it's just<: :> an egg<: :> You click it and it moves sometimes<: :> And if you click it a lot you discover<: :> THE SECRET INSIIIIDE<: :> What's the secret?<: :> \i[5]Click the egg like a thousand times to find out<:"
+	
+	"\0%(typing):> Don't ask me why this egg took me a week<: :> It was my first jam<: :> Maybe I was nervous<: :> Or. lazy.<: :> Who can say<:"
+	"\0%(typing):> I did make a lot of dress-ups for it<: :> I want to add more so badly<: :> but<: :> better add more functions first<: :> At least that's what I keep telling myself<:"
+	"\0%(typing):> I went into the Jam with no real plan<: :> Just wanted to test my skills<: :> in the end<: :> I should've planned more lol<:"
+	
 	--
 	backbuttonsghost
 }
