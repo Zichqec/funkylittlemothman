@@ -28,20 +28,28 @@ OnSakuraMenu : all
 	if SHIORI3FW.DebugMode; "\n\nProject: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nWork: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nMood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)\nSurface: %(SurfaceModeTime - GETSECCOUNT)"
 }
 
-OnLastTalk
+OnLastTalk : all
 {
-	LastTalk
+	"\C\![lock,balloonrepaint]\c\0\b[2]\_q\*"
+	
+	foreach LastTalk; _talk
+	{
+		_talk + "\n\n"
+		//Maybe a separator?
+	}
+	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Done,blank]"
+	"\![unlock,balloonrepaint]"
 }
 
 OnTalkMenu : all
 {
-	"\C\![lock,balloonrepaint]\c\0\s[1]\_q"
+	"\C\![lock,balloonrepaint]\c\0\_q"
 	"\![set,autoscroll,disable]"
 	
 	if !DefaultBalloon; "\b[2]"
 	else; "\b[6]"
 	
-	"Talk about...\n\n"
+	"\f[italic,1]Talk about...\f[italic,default]\n\n"
 	
 	"\![*]\q[Ghosts,OnTalk.Ghosts]\n"
 	"\![*]\q[Your ghosts,OnTalk.HisGhosts]\n"
@@ -55,18 +63,20 @@ OnTalkMenu : all
 
 OnTalk.Ghosts
 {
-	
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttons
 }
 
 OnTalk.HisGhosts : all
 {
-	"\C\![lock,balloonrepaint]\c\0\s[1]\_q"
+	"\C\![lock,balloonrepaint]\c\0\_q"
 	"\![set,autoscroll,disable]"
 	
 	if !DefaultBalloon; "\b[2]"
 	else; "\b[6]"
 	
-	"Which ghost?"
+	"\f[italic,1]Which ghost?\f[italic,default]\n\n"
 	"\![*]\q[OC ghost,OnTalkGhost.OC]\n"
 	"\![*]\q[Fandom ghost,OnTalkGhost.Fandom]\n"
 	"\![*]\q[Jam ghost,OnTalkGhost.Jam]\n"
@@ -80,14 +90,77 @@ OnTalk.HisGhosts : all
 	"\![unlock,balloonrepaint]"
 }
 
+OnTalkGhost.OC
+{
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttonsghost
+}
+
+OnTalkGhost.Fandom
+{
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttonsghost
+}
+
+OnTalkGhost.Jam
+{
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttonsghost
+}
+
+OnTalkGhost.BigFandom
+{
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttonsghost
+}
+
+OnTalkGhost.MiniFandom
+{
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttonsghost
+}
+
+OnTalkGhost.Obscure
+{
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttonsghost
+}
+
+OnTalkGhost.Object
+{
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttonsghost
+}
+
 OnTalk.CurrentProject
 {
-	
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttons
 }
 
 OnTalk.GhostTips
 {
-	
+	"\0%(typing):> dialogue<:"
+	--
+	backbuttons
+}
+
+backbuttons
+{
+	"\w8\w8\n\n\_q\![*]\q[Back,OnTalkMenu]  \![*]\q[Nevermind,blank]"
+}
+
+backbuttonsghost
+{
+	"\w8\w8\n\n\_q\![*]\q[Back,OnTalk.HisGhosts]  \![*]\q[Nevermind,blank]"
 }
 
 //ALL THE DIALOGUES ASSOCIATED WITH THIS ARE PLACEHOLDER
@@ -162,7 +235,7 @@ OnEncourageWater
 OnSettings : all
 {
 	if !ISVAR("SpecialFont"); SpecialFont = ("",DefaultFontSize)
-	"\C\![lock,balloonrepaint]\c\0\_q"
+	"\C\![lock,balloonrepaint]\c\0\_q\f[anchorvisitedfontcolor,default.anchor]"
 	"\![set,autoscroll,disable]"
 	"\![close,inputbox,OnNewNickname]\![close,inputbox,OnFontSizeSlider]"
 	"\f[align,center]%(emdash) Chat Preferences %(emdash)\n\n\f[align,left]"
@@ -178,9 +251,41 @@ OnSettings : all
 	_font = "Default"
 	if SpecialFont[0] != ""; _font = SpecialFont[0]
 	"Font: \![*]\_a[OnChangeFont]%(_font)\_a (\_a[OnFontSizeSlider]%(SpecialFont[1])\_a) \f[height,default]\q[▲,OnFontSize,up] \q[▼,OnFontSize,down]\f[height,%(SpecialFont[1])]"
-	
 	if SpecialFont[0] != "" || SpecialFont[1] != DefaultFontSize; " \__q[OnResetFont](reset)\__q"
+	"\n"
+	if DefaultBalloon
+	{
+		"Text color: "
+		switch WhiteText
+		{
+			"\__q[OnToggleTextColor,green]Green\__q  \f[color,disable]\__q[OnToggleTextColor,white]White\__q\f[color,default]"
+			"\f[color,disable]\__q[OnToggleTextColor,green]Green\__q\f[color,default]  \__q[OnToggleTextColor,white]White\__q"
+		}
+	}
+	else; "\n"
 	"\n\n"
+	
+	
+	"Screenshare: \_a[OnToggleScreenshare]%(('On','Off')[KeroHidden])\_a\n"
+	_scales = (25,50,100,150,200,300)
+	
+	if KeroHidden; "\f[color,disable]"
+	
+	"Screenshare size:\n"
+	
+	foreach _scales; _scale
+	{
+		if KeroHidden; "%(_scale)% "
+		else
+		{
+			_tag = ""
+			if KeroScale == _scale; _tag = "\_a"
+			else; _tag = "\__q"
+			_tag + "[OnChangeKeroScale,%(_scale)]%(_scale)%" + _tag + " "
+		}
+	}
+	"\n\n"
+	if KeroHidden; "\f[color,default]"
 	
 	"\![*]\q[Change message frequency,OnTalkRateMenu]\n\n"
 	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
@@ -207,23 +312,24 @@ OnChangeNickname : all
 	"\0\s[1]"
 	"\![open,inputbox,OnNewNickname,-1]"
 	
-	"\_q> what should I call you?"
+	":> what should I call you?<:"
 	
-	"\n\n\![*]\q[Back,OnSettings]  \![*]\q[Nevermind,OnCancelInput]"
+	"\w8\w8\_q\n\n\![*]\q[Back,OnSettings]  \![*]\q[Nevermind,OnCancelInput]"
 }
 
 OnNewNickname : all
 {
 	nickname = reference0
-	"\_q> k, %(nickname) it is.\_q\w8\w5\n\n:> cool.<:\w8\w5"
+	OnSettings
+	// "\_q> k, %(nickname) it is.\_q\w8\w8\n\n:> cool.<:\w8\w8"
 	
-	"\n\n\_q\![*]\q[Back,OnSettings]  \![*]\q[Done,blank]"
-	"\_w[%((RAND(3) + 1) * 1000)]%(OnSurfaceRestore)"
+	// "\n\n\_q\![*]\q[Back,OnSettings]  \![*]\q[Done,blank]"
+	// "\_w[%((RAND(3) + 1) * 1000)]%(OnSurfaceRestore)"
 }
 
 OnCancelInput
 {
-	"\![close,inputbox,OnNewNickname]\![close,inputbox,OnFontSizeSlider]%(OnSurfaceRestore)"
+	"\C\![close,inputbox,OnNewNickname]\![close,inputbox,OnFontSizeSlider]%(OnSurfaceRestore)"
 }
 
 OnResetNickname
@@ -239,18 +345,42 @@ OnNotifyFontInfo
 
 OnChangeFont : all
 {
+	_totalpages = (ARRAYSIZE(FontList) / 10) - 1
+	if ARRAYSIZE(FontList) % 10 != 0; _totalpages++
+	
+	if reference0 == ""; reference0 = 0
+	if reference0 < 0; reference0 = 0
+	if reference0 > _totalpages; reference0 = _totalpages
+	
 	"\C\![lock,balloonrepaint]\c\0\_q"
 	"\![set,autoscroll,disable]"
 	if !DefaultBalloon; "\b[2]"
 	else; "\b[6]"
 	
 	"\f[align,center]%(emdash) Font Selection %(emdash)\n\f[align,left]"
-	"\n\![*]\__q[OnNewFont,]Reset to default\__q  \![*]\q[Back,OnSettings]  \![*]\q[Nevermind,blank]\n\n"
 	
-	foreach FontList; _font
+	switch reference0 == 0
 	{
+		"\q[<<,OnChangeFont,%(reference0 - 1)]"
+		"\f[color,disable]<<\f[color,default]"
+	}
+	"\n \n[-100]\f[align,center] Page %(reference0 + 1) / %(_totalpages + 1) \n \n[-100]\f[align,right]"
+	
+	switch reference0 >= _totalpages
+	{
+		"\q[>>,OnChangeFont,%(reference0 + 1)]"
+		"\f[color,disable]>>\f[color,default]"
+	}
+	"\n\n\f[align,left]"
+	"\![*]\__q[OnNewFont,]Reset to default\__q\n\n"
+	
+	
+	for _i = reference0 * 10; _i < ARRAYSIZE(FontList) && _i < (reference0 + 1) * 10; _i++
+	{
+		_font = FontList[_i]
 		"\![*]\f[name,""%(_font)""]\__q[OnNewFont,""%(_font)""]%(_font)\__q\n"
 	}
+	
 	if SpecialFont[0] != ""; "\f[name,%(SpecialFont[0])]"
 	else; "\f[name,default]"
 	"\n\_q\![*]\q[Back,OnSettings]  \![*]\q[Nevermind,blank]\![unlock,balloonrepaint]"
@@ -295,6 +425,24 @@ OnResetFont
 {
 	SpecialFont = ("",DefaultFontSize)
 	OnSettings
+}
+
+OnToggleTextColor
+{
+	if reference0 == "white"; WhiteText = 1
+	else; WhiteText = 0
+	OnSettings
+}
+
+OnToggleScreenshare
+{
+	"\C\![lock,balloonrepaint]\1\![bind,Hide,Toggle]"
+}
+
+OnChangeKeroScale
+{
+	KeroScale = reference0
+	"\C\![lock,balloonrepaint]\1\![set,scaling,%(KeroScale)]\0\![raise,OnSettings]"
 }
 
 OnTalkRateMenu : all

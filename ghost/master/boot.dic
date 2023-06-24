@@ -6,19 +6,22 @@ OnFirstBoot
 	CheckModeTimes
 	
 	stroke = 0
-	LastTalk = ""
+	LastTalk = IARRAY
 	nickname = ""
 	SpecialFont = ("",DefaultFontSize)
+	KeroHidden = 0
+	KeroScale = 100
+	WhiteText = 0
 	
 	"\1\s[10]\0\s[0]Hello, and welcome to the Simplicity Template, %(username).\w8 As the name implies, this template is very simple.\w8 You will notice there is not much here.\w8 That's on purpose!\w8 This template's primary goal is to make ghost creation less intimidating.\w8 You really need almost nothing to make a ghost;\w4 a basic shell with some interesting randomtalk can be an incredible and fun experience.\w8 So all those boring functions to do with email checking and such?\w8 Not here, unless you decide you want to add them.\w8 Don't let tedious functions tire you out before you can finish your ghost!\w8 Make something simple and fun, or start small and expand upon it later!\w8 Embrace the freedom of simplicity!"
 }
 
 OnInitialize
 {
-	if !ISVAR(SpecialFont); SpecialFont = ("",DefaultFontSize)
+	if !ISVAR("SpecialFont"); SpecialFont = ("",DefaultFontSize)
 	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
 	{
-		LastTalk = ""
+		LastTalk = IARRAY
 	}
 	CheckModeTimes
 }
@@ -29,30 +32,30 @@ OnBoot
 	_user_birthday = "%(_temp[1])/%(_temp[2])" //M/D, if you want it D/M you can switch it around
 	_today = "%(month)/%(day)" //Again, switch this around if using D/M
 	
-	"\1\s[10]\0\s[0]"
+	"\1\s[10]\![set,scaling,%(KeroScale)]\0\s[0]"
 	--
 	if _today == _user_birthday
 	{
-		"\0\s[1]> Birthdays are one day\w8\w5\n\n[half]> Ghosts are forever\w8\w5\n\n[half]> but yes happy birthday\w8\w5\n\n[half]> Ghost time?"
+		"\0%(typing):> Birthdays are one day<: :> Ghosts are forever<: :> but yes happy birthday<: :> Ghost time?\e"
 	}
 	elseif _today == "1/1" //You can add whatever cool dates you want with more elseifs here
 	{
-		"\0\s[0]It's new year's day.\w8 Happy %(year),\w4 %(username)."
+		"\0\s[0]:> New year, new ghosts<: :> Just kidding I have too many projects already<:\e"
 	}
 	else //Normal boot
 	{
-		"\0\s[1]> OKAY break is over\w8\w5\n\n[half]> Let's work on some ghosts"
-		"\0\s[1]> Just woke up\w8\w5\n\n[half]> Don't question my sleep schedule\w8\w5\n\n[half]> Time to code"
-		"\0\s[1]> Heyo\w8\w5\n\n[half]> You're up?\w8\w5\n\n[half]> I'm up\w8\w5\n\n[half]> For some ghost work"
-		"\0\s[1]> Gaming break is over\w8\w5\n\n[half]> Time to work on some ghosts while my energy is restoring"
-		"\0\s[1]> Finally home!!!\w8\w5\n\n[half]> Full of ideas!!!\w8\w5\n\n[half]> work time work time"
+		"\0%(typing):> OKAY break is over<: :> Let's work on some ghosts\e"
+		"\0%(typing):> Just woke up<: :> Don't question my sleep schedule<: :> Time to code\e"
+		"\0%(typing):> Heyo<: :> You're up?<: :> I'm up<: :> For some ghost work\e"
+		"\0%(typing):> Gaming break is over<: :> Time to work on some ghosts while my energy is restoring\e"
+		"\0%(typing):> Finally home!!!<: :> Full of ideas!!!<: :> work time work time\e"
 	}
 }
 
 OnClose
 {
-	"\0\s[1]> You're done? \w8\w5\n\n[half]> I'll work some more and then call it a day\w8\w5\n\n[half]> Cyaaa"
-	"\0\s[1]> Tireeeed\w8\w5\n\n[half]> Gonna pick this up later\w8\w5\n\n[half]> Catch you later"
+	"\0%(typing)> You're done? <: :> I'll work some more and then call it a day<: :> Cyaaa"
+	"\0%(typing)> Tireeeed<: :> Gonna pick this up later<: :> Catch you later"
 	--
 	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
 }

@@ -1,10 +1,3 @@
-//Some quick notes:
-//1: SERIKO does NOT support same line comments. If you want to write a comment, ALWAYS PUT IT ON ITS OWN LINE. If you put comments after other bits of code in the same line, it may seem to work at first, but it can cause cryptic errors down the line. Save yourself the trouble. Always put comments on their own lines in here. Additionally, it doesn't do block comments with /* and */
-//2: The example blink code is set up with the new definition, which I recommend you use. Here is my guide to what that means: https://zichqec.github.io/s-the-skeleton/olddef_vs_newdef
-//If you want to use old definition, make sure to erase that 'version,1' bit.
-//3: It is very common for people to feel stuck on how to start, because they don't know what expressions to make without having dialogue, but they don't know what dialogue to write without having expressions. If you're feeling that way, I highly suggest using emoji as substitutes just to get you started! That may sound weird if you're not fond of emoji, but seriously, just give it a try. I've found that just writing a few messages in Discord and using the emoji to signify surface changes is a great help to get me past that initial hump where it feels impossible.
-
-
 descript
 {
 	version,1
@@ -25,9 +18,6 @@ animation0.pattern4,replace,-1,30,0,0
 
 animation1.interval,random,1
 animation1.pattern0,alternativestart,(2.3.4.5)
-
-//You can see some unique things about this block. The interval is set to talk,4, which means it'll run for every four characters or so that appear in the balloon. You can change 4 to a different number but there's no reason to, I wouldn't do it myself.
-//Below that line, you can see alternativestart, then some numbers in some brackets. What this does is that it will randomly select an interval with that number as it runs. Look below, do you see the intervals numbered 2, 3, and 4? Those are the intervals this animation will call. You can add numbers to those brackets or take them away if you want, so you could do things like (2.3.4.5) or (2.3) or whatever.
 
 animation2.interval,never
 animation2.pattern0,overlay,1004,160,0,0
@@ -59,10 +49,6 @@ animation5.pattern1,replace,1012,500,0,0
 animation5.pattern2,replace,1013,300,0,0
 animation5.pattern3,replace,1010,500,0,0
 animation5.pattern4,replace,-1,200,0,0
-
-//smile
-animation6.interval,never
-animation6.pattern0,overlay,1008,0,0,0
 }
 
 
@@ -94,10 +80,6 @@ animation4.interval,never
 animation4.pattern0,overlay,1004,210,0,0
 //animation4.pattern0,overlay,1004,270,0,0
 animation4.pattern1,replace,-1,150,0,0
-
-//smile
-animation5.interval,never
-animation5.pattern0,overlay,1008,0,0,0
 }
 
 //Dude idle-typing
@@ -138,10 +120,6 @@ animation4.pattern1,overlay,1004,170,0,0
 animation4.pattern2,overlay,1002,190,0,0
 animation4.pattern3,overlay,1004,160,0,0
 animation4.pattern4,replace,-1,160,0,0
-
-//smile
-animation5.interval,never
-animation5.pattern0,overlay,1008,0,0,0
 }
 
 //moving mouse only
@@ -171,10 +149,13 @@ animation3.pattern1,replace,1011,550,0,0
 animation4.interval,never
 animation4.pattern0,replace,1011,400,0,0
 animation4.pattern1,replace,1012,500,0,0
+}
 
+surface.append0-3
+{
 //smile
-animation5.interval,never
-animation5.pattern0,overlay,1008,0,0,0
+animation6.interval,never
+animation6.pattern0,overlay,1008,0,0,0
 }
 
 //Drawing 1
@@ -947,85 +928,6 @@ animation2.pattern1,overlay,1650,355,0,0
 animation2.pattern2,overlay,1651,355,0,0
 animation2.pattern3,overlay,1652,355,0,0
 animation2.pattern4,overlay,1653,355,0,0
-
-//template
-animation3.interval,never
-animation3.pattern0,overlay,1695,0,0,0
-
-//fandom ghost 1
-animation4.interval,never
-animation4.pattern0,overlay,1692,0,0,0
-
-//fandom ghost 2
-animation5.interval,never
-animation5.pattern0,overlay,1692,0,0,0
-animation5.pattern1,overlay,1675,300,0,0
-animation5.pattern2,overlay,1692,305,0,0
-animation5.pattern3,overlay,1675,305,0,0
-
-//fandom ghost 3
-animation6.interval,never
-animation6.pattern0,overlay,1676,0,0,0
-
-//fandom ghost 4
-animation7.interval,never
-animation7.pattern0,overlay,1677,0,0,0
-
-//OC ghost
-animation8.interval,never
-animation8.pattern0,overlay,1693,0,0,0
-
-//OC ghost 1
-animation9.interval,never
-animation9.pattern0,overlay,1679,0,0,0
-
-//OC ghost 2
-animation10.interval,never
-animation10.pattern0,overlay,1680,0,0,0
-
-//OC ghost 3
-animation11.interval,never
-animation11.pattern0,overlay,1681,0,0,0
-
-//OC ghost 4
-animation12.interval,never
-animation12.pattern0,overlay,1682,0,0,0
-
-//OC ghost 5
-animation13.interval,never
-animation13.pattern0,overlay,1683,0,0,0
-
-//OC ghost 6
-animation14.interval,never
-animation14.pattern0,overlay,1684,0,0,0
-
-//jam ghost
-animation15.interval,never
-animation15.pattern0,overlay,1694,0,0,0
-
-//jam ghost 1
-animation16.interval,never
-animation16.pattern0,overlay,1686,0,0,0
-
-//jam ghost 2
-animation17.interval,never
-animation17.pattern0,overlay,1687,0,0,0
-
-//jam ghost 3
-animation18.interval,never
-animation18.pattern0,overlay,1688,0,0,0
-
-//jam ghost 4
-animation19.interval,never
-animation19.pattern0,overlay,1689,0,0,0
-
-//jam ghost 5
-animation20.interval,never
-animation20.pattern0,overlay,1690,0,0,0
-
-//jam ghost 6
-animation21.interval,never
-animation21.pattern0,overlay,1691,0,0,0
 }
 
 //small balloon
@@ -1079,8 +981,48 @@ animation4.interval,never
 animation4.pattern0,overlay,1643,0,0,0
 animation4.pattern1,overlay,1644,305,0,0
 animation4.pattern2,overlay,1645,305,0,0
+}
 
-//template
+//send commands
+surface21
+{
+element0,overlay,surface10.png,0,0
+
+//animation 1
+animation0.interval,never
+animation0.pattern0,overlay,1654,0,0,0
+animation0.pattern1,overlay,1655,305,0,0
+animation0.pattern2,overlay,1656,305,0,0
+animation0.pattern3,overlay,1657,305,0,0
+animation0.pattern4,overlay,1658,305,0,0
+animation0.pattern5,overlay,1659,305,0,0
+animation0.pattern6,overlay,1660,305,0,0
+
+//animation 2
+animation1.interval,never
+animation1.pattern0,overlay,1654,0,0,0
+animation1.pattern1,overlay,1661,305,0,0
+animation1.pattern2,overlay,1662,305,0,0
+
+//animation 3
+animation2.interval,never
+animation2.pattern0,overlay,1654,0,0,0
+animation2.pattern1,overlay,1663,305,0,0
+animation2.pattern2,overlay,1664,305,0,0
+animation2.pattern3,overlay,1665,305,0,0
+animation2.pattern4,overlay,1666,305,0,0
+animation2.pattern5,overlay,1667,305,0,0
+animation2.pattern6,overlay,1668,305,0,0
+animation2.pattern7,overlay,1669,305,0,0
+animation2.pattern8,overlay,1670,305,0,0
+animation2.pattern9,overlay,1671,305,0,0
+animation2.pattern10,overlay,1672,305,0,0
+animation2.pattern11,overlay,1673,305,0,0
+}
+
+surface.append19-21
+{
+	//template
 animation5.interval,never
 animation5.pattern0,overlay,1695,0,0,0
 
@@ -1158,122 +1100,6 @@ animation22.pattern0,overlay,1690,0,0,0
 //jam ghost 6
 animation23.interval,never
 animation23.pattern0,overlay,1691,0,0,0
-}
-
-//send commands
-surface21
-{
-element0,overlay,surface10.png,0,0
-
-//animation 1
-animation0.interval,never
-animation0.pattern0,overlay,1654,0,0,0
-animation0.pattern1,overlay,1655,305,0,0
-animation0.pattern2,overlay,1656,305,0,0
-animation0.pattern3,overlay,1657,305,0,0
-animation0.pattern4,overlay,1658,305,0,0
-animation0.pattern5,overlay,1659,305,0,0
-animation0.pattern6,overlay,1660,305,0,0
-
-//animation 2
-animation1.interval,never
-animation0.pattern0,overlay,1654,0,0,0
-animation1.pattern1,overlay,1661,305,0,0
-animation1.pattern2,overlay,1662,305,0,0
-
-//animation 3
-animation2.interval,never
-animation0.pattern0,overlay,1654,0,0,0
-animation2.pattern1,overlay,1663,305,0,0
-animation2.pattern2,overlay,1664,305,0,0
-animation2.pattern3,overlay,1665,305,0,0
-animation2.pattern4,overlay,1666,305,0,0
-animation2.pattern5,overlay,1667,305,0,0
-animation2.pattern6,overlay,1668,305,0,0
-animation2.pattern7,overlay,1669,305,0,0
-animation2.pattern8,overlay,1670,305,0,0
-animation2.pattern9,overlay,1671,305,0,0
-animation2.pattern10,overlay,1672,305,0,0
-animation2.pattern11,overlay,1673,305,0,0
-
-//template
-animation3.interval,never
-animation3.pattern0,overlay,1695,0,0,0
-
-//fandom ghost 1
-animation4.interval,never
-animation4.pattern0,overlay,1692,0,0,0
-
-//fandom ghost 2
-animation5.interval,never
-animation5.pattern0,overlay,1692,0,0,0
-animation5.pattern1,overlay,1675,300,0,0
-animation5.pattern2,overlay,1692,305,0,0
-animation5.pattern3,overlay,1675,305,0,0
-
-//fandom ghost 3
-animation6.interval,never
-animation6.pattern0,overlay,1676,0,0,0
-
-//fandom ghost 4
-animation7.interval,never
-animation7.pattern0,overlay,1677,0,0,0
-
-//OC ghost
-animation8.interval,never
-animation8.pattern0,overlay,1693,0,0,0
-
-//OC ghost 1
-animation9.interval,never
-animation9.pattern0,overlay,1679,0,0,0
-
-//OC ghost 2
-animation10.interval,never
-animation10.pattern0,overlay,1680,0,0,0
-
-//OC ghost 3
-animation11.interval,never
-animation11.pattern0,overlay,1681,0,0,0
-
-//OC ghost 4
-animation12.interval,never
-animation12.pattern0,overlay,1682,0,0,0
-
-//OC ghost 5
-animation13.interval,never
-animation13.pattern0,overlay,1683,0,0,0
-
-//OC ghost 6
-animation14.interval,never
-animation14.pattern0,overlay,1684,0,0,0
-
-//jam ghost
-animation15.interval,never
-animation15.pattern0,overlay,1694,0,0,0
-
-//jam ghost 1
-animation16.interval,never
-animation16.pattern0,overlay,1686,0,0,0
-
-//jam ghost 2
-animation17.interval,never
-animation17.pattern0,overlay,1687,0,0,0
-
-//jam ghost 3
-animation18.interval,never
-animation18.pattern0,overlay,1688,0,0,0
-
-//jam ghost 4
-animation19.interval,never
-animation19.pattern0,overlay,1689,0,0,0
-
-//jam ghost 5
-animation20.interval,never
-animation20.pattern0,overlay,1690,0,0,0
-
-//jam ghost 6
-animation21.interval,never
-animation21.pattern0,overlay,1691,0,0,0
 }
 
 //fandom ghost
@@ -1354,4 +1180,12 @@ animation4.pattern0,overlay,1690,0,0,0
 //animation 6
 animation5.interval,never
 animation5.pattern0,overlay,1691,0,0,0
+}
+
+
+//Hi! This is a dressup to hide the kero. If you add more kero surfaces, change the 24 to whatever the highest surface for the kero is! Or just let me know and I'll get it
+surface.append10-24
+{
+	animation999999.interval,bind
+	animation999999.pattern0,replace,999999,0,0,0
 }

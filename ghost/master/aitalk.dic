@@ -1,14 +1,35 @@
 OnAiTalk
 {
+	_lasttalk = ""
 	if CHAIN.IDName == ""
 	{
-		LastTalk = RandomTalk
+		_lasttalk = RandomTalk
 	}
 	else
 	{
-		LastTalk = ChainTalk
+		_lasttalk = ChainTalk
 	}
-	LastTalk
+	
+	_font = ""
+	if SpecialFont[0] != ""; _font += "\f[name,%(SpecialFont[0])]"
+	if SpecialFont[1] != DefaultFontSize; _font += "\f[height,%(SpecialFont[1])]"
+	
+	_talk = _font + _lasttalk
+	
+	_talk = REPLACE(_talk,"\f","||f")
+	_talk = SHIORI3FW.RemoveAllTags(_talk)
+	
+	_talk = REPLACE(_talk,":> ","> ",1)
+	_talk = REPLACE(_talk,":> ","\n\n[half]> ")
+	_talk = REPLACE(_talk,"<:","")
+	
+	_talk = REPLACE(_talk,"[[","\f[align,center]\f[bold,1]@funkylittlemothman\f[bold,default] ")
+	_talk = REPLACE(_talk,"]]","\n\f[align,left]\n[-100]")
+	
+	_talk = REPLACE(_talk,"||f","\f")
+	
+	LastTalk ,= _talk
+	_lasttalk
 }
 
 RandomTalk : nonoverlap_pool
@@ -17,104 +38,104 @@ RandomTalk : nonoverlap_pool
 	if CurrentProject == "OC Ghost" //first ghost
 	{
 		//OH YEAH this is narration now, let me know if you want me to switch this to envelopes or something. Atm it's [[ to start and ]] to end, and that'll do all the formatting for you + add his name
-		"\0\s[1][[is working on one of his ghosts]]\s[2]\e"
+		"\0%(typing)[[is working on one of his ghosts]]\s[2]\e"
 		
-		"\0\s[1]:> I totally forgot I wanted to work on more chains<: :> and I also forgot<: :> what I wanted them to be about lol<:\e"
+		"\0%(typing):> I totally forgot I wanted to work on more chains<: :> and I also forgot<: :> what I wanted them to be about lol<:\e"
 		
-		"\0\s[1]:> why<: :> why emails don't work<: :> they worked before<: :> what did i break<: :> darnit<:\e"
+		"\0%(typing):> why<: :> why emails don't work<: :> they worked before<: :> what did i break<: :> darnit<:\e"
 		
-		"\0\s[1]:> Do you think i should update balloon on this?<: :> idk<:\e"
+		"\0%(typing):> Do you think i should update balloon on this?<: :> idk<:\e"
 		
-		"\0\s[1]:> Surfaces<: :> I'm so tired of surfaces<: :> Why did I set them up this way<:\e"
+		"\0%(typing):> Surfaces<: :> I'm so tired of surfaces<: :> Why did I set them up this way<:\e"
 		
-		"\0\s[1]:> I really should've removed this function<: :> but now we're sticking with it<: :> which means<: :> I gotta fix it now lol<:\e"
+		"\0%(typing):> I really should've removed this function<: :> but now we're sticking with it<: :> which means<: :> I gotta fix it now lol<:\e"
 		
-		"\0\s[1]:> Chesster please<: :> Chesster<: :> he doesn't listen to me can you believe it<:\e"
+		"\0%(typing):> Chesster please<: :> Chesster<: :> he doesn't listen to me can you believe it<:\e"
 		
-		"\0\s[1]:> Piece of advice<: :> use new deifinition<: :> will save you a loooooooooooooooooooooot of trouble<:\e"
+		"\0%(typing):> Piece of advice<: :> use new deifinition<: :> will save you a loooooooooooooooooooooot of trouble<:\e"
 		
-		"\0\s[1]:> do i even bother updating<: :> whole three new lines<:\e"
+		"\0%(typing):> do i even bother updating<: :> whole three new lines<:\e"
 		
-		"\0\s[1]:> Oh Chesster<: :> we're really in it now<:\e"
+		"\0%(typing):> Oh Chesster<: :> we're really in it now<:\e"
 	}
 	
 	if CurrentProject == "Fandom Ghost" //big phandom ghost - a fairy
 	{
-		"\0\s[1]:> oh god I just got like<: :> 4 new questions<: :> no bug reports thankfully<: :> just. lore<:\e"
+		"\0%(typing):> oh god I just got like<: :> 4 new questions<: :> no bug reports thankfully<: :> just. lore<:\e"
 		
-		"\0\s[1]:> %(username) can you help me fight my temptation<: :> of starting on a new shell<: :> please<:\e"
+		"\0%(typing):> %(username) can you help me fight my temptation<: :> of starting on a new shell<: :> please<:\e"
 		
-		"\0\s[1]:> Why fairies have such complicated designs<: :> wings alone are a nightmare\w8\w8<: :> but also wings are pretty idk<:\e"
+		"\0%(typing):> Why fairies have such complicated designs<: :> wings alone are a nightmare\w8\w8<: :> but also wings are pretty idk<:\e"
 		
-		"\0\s[1]:> Alright<: :> Time to think like a teenage fairy<:\e"
+		"\0%(typing):> Alright<: :> Time to think like a teenage fairy<:\e"
 		
-		"\0\s[1]:> stressed stressed STRESSED<: :> i have SO MANY UPDATES in mind<: :> what the hell do I start with<:\e"
+		"\0%(typing):> stressed stressed STRESSED<: :> i have SO MANY UPDATES in mind<: :> what the hell do I start with<:\e"
 		
-		"\0\s[1]:> I'm trying to write<: :> but it's not really coming to my head rn<: :> Maybe I should rewatch the show<: :> or at least episodes with Molnia in them<: :> will hopefully put me in the mood<:\e"
+		"\0%(typing):> I'm trying to write<: :> but it's not really coming to my head rn<: :> Maybe I should rewatch the show<: :> or at least episodes with Molnia in them<: :> will hopefully put me in the mood<:\e"
 		
-		"\0\s[1]:> Writing writing<: :> Need to do more writing<:\e"
+		"\0%(typing):> Writing writing<: :> Need to do more writing<:\e"
 		
-		"\0\s[1]:> Finished setting up new surfaces!!<: :> Time to insert them everywhere<: :> hehehehehehehehehehehe<:\e"
+		"\0%(typing):> Finished setting up new surfaces!!<: :> Time to insert them everywhere<: :> hehehehehehehehehehehe<:\e"
 		
-		"\0\s[1]:> Crap<: :> I got another bug report<: :> Molniaaaa whyyyy<:\e"
+		"\0%(typing):> Crap<: :> I got another bug report<: :> Molniaaaa whyyyy<:\e"
 		
-		"\0\s[1]:> Ugh I am so slow<: :> I should change my name to @funkylittlesnail<: :> this update is taking me eons<: :> feels bad<:\e"
+		"\0%(typing):> Ugh I am so slow<: :> I should change my name to @funkylittlesnail<: :> this update is taking me eons<: :> feels bad<:\e"
 		
-		"\0\s[1]:> I need more surfaces<: :> Need to grab more screenshots<: :> References<: :> Or just, like, draw another head tilt<: :> It counts too<:\e"
+		"\0%(typing):> I need more surfaces<: :> Need to grab more screenshots<: :> References<: :> Or just, like, draw another head tilt<: :> It counts too<:\e"
 		
-		"\0\s[1]:> End me<: :> I updated aitalk wrong<:\e"
+		"\0%(typing):> End me<: :> I updated aitalk wrong<:\e"
 		
-		"\0\s[1]:> I really really really want to add this one headcanon in<: :> but idk<: :> half the fandom will flame me<:\e"
+		"\0%(typing):> I really really really want to add this one headcanon in<: :> but idk<: :> half the fandom will flame me<:\e"
 		
-		"\0\s[1]:> FINALLY<: :> DONE WITH THIS PART<: :> JUST<: :> GOTTA MAKE UPDATE POST<:\e"
+		"\0%(typing):> FINALLY<: :> DONE WITH THIS PART<: :> JUST<: :> GOTTA MAKE UPDATE POST<:\e"
 	}
 	
 	if CurrentProject == "Jam Ghost" //object ghost (egg?)
 	{
-		"\0\s[1]:> I kinda hope they'll have another ghost jam soon<: :> This ghost was fun but I think now I can top it no prob<:\e"
+		"\0%(typing):> I kinda hope they'll have another ghost jam soon<: :> This ghost was fun but I think now I can top it no prob<:\e"
 		
-		"\0\s[1]:> I haven't added much to this one post-jam<: :> Time to<: :> Add something<:\e"
+		"\0%(typing):> I haven't added much to this one post-jam<: :> Time to<: :> Add something<:\e"
 		
-		"\0\s[1]:> Pros of an inanimate object<: :> No dialogue needed<: :> Cons are<: :> What the hell do I write then<:\e"
+		"\0%(typing):> Pros of an inanimate object<: :> No dialogue needed<: :> Cons are<: :> What the hell do I write then<:\e"
 		
-		"\0\s[1]:> Dress up dress up I should add a dress up<:\e"
+		"\0%(typing):> Dress up dress up I should add a dress up<:\e"
 		
-		"\0\s[1]:> Testing this is weird<: :> so much RNG<: :> I guess I just hope nothing is broken<:\e"
+		"\0%(typing):> Testing this is weird<: :> so much RNG<: :> I guess I just hope nothing is broken<:\e"
 		
-		"\0\s[1]:> Egg<: :> how do you improve an egg<: :> it's already egg-celent<:\e"
+		"\0%(typing):> Egg<: :> how do you improve an egg<: :> it's already egg-celent<:\e"
 		
-		"\0\s[1]:> I need to write more stuff<: :> While jam was going I ran out of time<: :> Now I have all of the time<: :> But still no writing lol<:\e"
+		"\0%(typing):> I need to write more stuff<: :> While jam was going I ran out of time<: :> Now I have all of the time<: :> But still no writing lol<:\e"
 		
-		"\0\s[1]:> Why did I code it like this<: :> because I ran out of time that's why<: :> But do I<: :> fix it now?..<:\e"
+		"\0%(typing):> Why did I code it like this<: :> because I ran out of time that's why<: :> But do I<: :> fix it now?..<:\e"
 		
-		"\0\s[1]:> Do I expand youuuu<: :> Or are you perfect as you are<: :> Hmmmmmm<: :> Decisions, decisions<:\e"
+		"\0%(typing):> Do I expand youuuu<: :> Or are you perfect as you are<: :> Hmmmmmm<: :> Decisions, decisions<:\e"
 		
-		"\0\s[1]:> Okay okay I finally fixed that typo<: :> I just hope I didn't put in like five more like I always do<:\e"
+		"\0%(typing):> Okay okay I finally fixed that typo<: :> I just hope I didn't put in like five more like I always do<:\e"
 	}
 	
 	if CurrentProject == "Big Fandom Ghost"
 	{
-		"\0\s[1]:> Refs refs refs I need more refs<:\e"
+		"\0%(typing):> Refs refs refs I need more refs<:\e"
 		
-		"\0\s[1]:> I hope this fandom won't eat me alive for my writing choices<:\e"
+		"\0%(typing):> I hope this fandom won't eat me alive for my writing choices<:\e"
 		
-		"\0\s[1]:> Oh God I just saw such a good fanart<: :> I am PUMPED to work more now<:\e"
+		"\0%(typing):> Oh God I just saw such a good fanart<: :> I am PUMPED to work more now<:\e"
 		
-		"\0\s[1]:> I can't decide how much stuff I want to add before releasing this into the world<: :> Ugh<: :> It needs to be gooood<: :> Good enouuuugh<:\e"
+		"\0%(typing):> I can't decide how much stuff I want to add before releasing this into the world<: :> Ugh<: :> It needs to be gooood<: :> Good enouuuugh<:\e"
 		
-		"\0\s[1]:> Remind me to work on a balloon later<: :> I got one from balloon town but idk<: :> Probably should make one myself<:\e"
+		"\0%(typing):> Remind me to work on a balloon later<: :> I got one from balloon town but idk<: :> Probably should make one myself<:\e"
 		
-		"\0\s[1]:> Do I add a shell<: :> or do I do it after the release<: :> It's not a priority<: :> But I really feel like working on a shell rn...<:\e"
+		"\0%(typing):> Do I add a shell<: :> or do I do it after the release<: :> It's not a priority<: :> But I really feel like working on a shell rn...<:\e"
 		
-		"\0\s[1]:> Writing this is SO HARD<: :> Trying to get into charcter<: :> And do it RIGHT<: :> AGH<:\e"
+		"\0%(typing):> Writing this is SO HARD<: :> Trying to get into charcter<: :> And do it RIGHT<: :> AGH<:\e"
 		
-		"\0\s[1]:> I wonder how many people will be interested in like<: :> The ~Ghost~ as a whole<: :> It's not my first fandom ghost but<: :> I hope it will be at least<: :> Like<: :> Three<: :> Three people<:\e"
+		"\0%(typing):> I wonder how many people will be interested in like<: :> The ~Ghost~ as a whole<: :> It's not my first fandom ghost but<: :> I hope it will be at least<: :> Like<: :> Three<: :> Three people<:\e"
 		
-		"\0\s[1]:> Ugh<: :> Mind's blanking<: :> maybe I should check the wiki<:\e"
+		"\0%(typing):> Ugh<: :> Mind's blanking<: :> maybe I should check the wiki<:\e"
 		
-		"\0\s[1]:> I really want to add this one dialogue line in<: :> But it will require me to add like<: :> Three new poses<: :> JUST for it<: :> Hm.\w8\w8\w8\w7\n\n[half]:> I'll think about it<:\e"
+		"\0%(typing):> I really want to add this one dialogue line in<: :> But it will require me to add like<: :> Three new poses<: :> JUST for it<: :> Hm.\w8\w8\w8\w7\n\n[half]:> I'll think about it<:\e"
 		
-		"\0\s[1]:> Progress, progress<: :> Still nowhere near release but. Progress.<:\e"
+		"\0%(typing):> Progress, progress<: :> Still nowhere near release but. Progress.<:\e"
 	}
 	
 	if CurrentProject == "Mini Fandom Ghost"
@@ -139,27 +160,27 @@ RandomTalk : nonoverlap_pool
 	
 	if CurrentProject == "Idle"
 	{
-		"\0\s[1]:> what do I do now what do I do<:\e"
+		"\0%(typing):> what do I do now what do I do<:\e"
 		
-		"\0\s[1]:> Decisions, decisions<: :> do I update an oldie or keep working on a new one<:\e"
+		"\0%(typing):> Decisions, decisions<: :> do I update an oldie or keep working on a new one<:\e"
 		
-		"\0\s[1]:> Do I feel like drawing<: :> Or writing<: :> Or coding<: :> Or a new anime episode<: :> Or coding<: :> Or episode<: :> Or drawing<: :> Or episode<:\e"
+		"\0%(typing):> Do I feel like drawing<: :> Or writing<: :> Or coding<: :> Or a new anime episode<: :> Or coding<: :> Or episode<: :> Or drawing<: :> Or episode<:\e"
 		
-		"\0\s[1]:> I need to work<: :> Tell me to work<:\e"
+		"\0%(typing):> I need to work<: :> Tell me to work<:\e"
 		
-		"\0\s[1]:> Are you also working<: :> Or like me<: :> Thinking about working instead<:\e"
+		"\0%(typing):> Are you also working<: :> Or like me<: :> Thinking about working instead<:\e"
 		
-		"\0\s[1]:> Maybe I should finally get to updating ghost wiki page...<:\e"
+		"\0%(typing):> Maybe I should finally get to updating ghost wiki page...<:\e"
 		
-		"\0\s[1]:> Okay.<: :> It's ghost time.<: :> After I decide.<: :> Which ghost.<:\e"
+		"\0%(typing):> Okay.<: :> It's ghost time.<: :> After I decide.<: :> Which ghost.<:\e"
 		
-		"\0\s[1]:> ukagaka day ukagaka day<: :> time to ukagaka all day<:\e"
+		"\0%(typing):> ukagaka day ukagaka day<: :> time to ukagaka all day<:\e"
 		
-		"\0\s[1]:> Trying to decide what do I work on now<: :> Maybe I should put my ideas down on a list<: :> And not forget them<: :> Like I always do<:\e"
+		"\0%(typing):> Trying to decide what do I work on now<: :> Maybe I should put my ideas down on a list<: :> And not forget them<: :> Like I always do<:\e"
 		
-		"\0\s[1]:> Oh, SSP<: :> Don't let me down<:\e"
+		"\0%(typing):> Oh, SSP<: :> Don't let me down<:\e"
 		
-		"\0\s[1]:> Bless the tutorials<:\e"
+		"\0%(typing):> Bless the tutorials<:\e"
 	}
 	
 	
@@ -171,64 +192,64 @@ RandomTalk : nonoverlap_pool
 	
 	if CurrentWork == "Writing"
 	{
-		"\0\s[1]:> In a writing mood<: :> At last<:\e"
+		"\0%(typing):> In a writing mood<: :> At last<:\e"
 		
-		"\0\s[1]:> God I had so many writing ideas before sleep<: :> And now I am blanking<: :> I knew I should've put them down when I thought of them right away<:\e"
+		"\0%(typing):> God I had so many writing ideas before sleep<: :> And now I am blanking<: :> I knew I should've put them down when I thought of them right away<:\e"
 		
-		"\0\s[1]:> Grammar<: :> Not my strong suit<: :> Maybe I should find a proper beta<: :> Hmmm...<:\e"
+		"\0%(typing):> Grammar<: :> Not my strong suit<: :> Maybe I should find a proper beta<: :> Hmmm...<:\e"
 		
-		"\0\s[1]:> %(username) I just wrote<: :> SO MUCH<: :> Still not finished but<: :> SO MUCH<:\e"
+		"\0%(typing):> %(username) I just wrote<: :> SO MUCH<: :> Still not finished but<: :> SO MUCH<:\e"
 		
-		"\0\s[1]:> Fortmatting this, formatting that<: :> Maybe there's an easier way to do this<: :> But I don't know it<: :> So time to format<:\e"
+		"\0%(typing):> Fortmatting this, formatting that<: :> Maybe there's an easier way to do this<: :> But I don't know it<: :> So time to format<:\e"
 		
-		"\0\s[1]:> I REMEMBERED WHAT I WANTED TO WRITE<: :> YES<: :> FINALLY<: :> writewritewritewrite<:\e"
+		"\0%(typing):> I REMEMBERED WHAT I WANTED TO WRITE<: :> YES<: :> FINALLY<: :> writewritewritewrite<:\e"
 		
-		"\0\s[1]:> Ugh I wrote stuff but idk<: :> how good it is<: :> the more the merrier and all but I still have my doubts<:\e"
+		"\0%(typing):> Ugh I wrote stuff but idk<: :> how good it is<: :> the more the merrier and all but I still have my doubts<:\e"
 		
-		"\0\s[1]:> I either write twenty lines a day<: :> Or one line a week<: :> Writing, why<:\e"
+		"\0%(typing):> I either write twenty lines a day<: :> Or one line a week<: :> Writing, why<:\e"
 		
-		"\0\s[1]:> Okay okay I got into the flow of writing this<: :> Hopefully gonna have some work done now<:\e"
+		"\0%(typing):> Okay okay I got into the flow of writing this<: :> Hopefully gonna have some work done now<:\e"
 		
-		"\0\s[1]:> Need more idle dialogue<: :> Always<:\e"
+		"\0%(typing):> Need more idle dialogue<: :> Always<:\e"
 	}
 	
 	if CurrentWork == "Programming"
 	{
-		"\0\s[1]:> I broke it again<: :> Tama please help me<:\e"
+		"\0%(typing):> I broke it again<: :> Tama please help me<:\e"
 		
-		"\0\s[1]:> I need SO MANY variables<: :> I should start documenting what's what<: :> Maybe I wouldn't need this many if I was smarter about this<: :> But it's too late we're rolling<:\e"
+		"\0%(typing):> I need SO MANY variables<: :> I should start documenting what's what<: :> Maybe I wouldn't need this many if I was smarter about this<: :> But it's too late we're rolling<:\e"
 		
-		"\0\s[1]:> Coding is a beast<: :> Thankfully Mothman is also a beast<: :> So we're trying to get along<:\e"
+		"\0%(typing):> Coding is a beast<: :> Thankfully Mothman is also a beast<: :> So we're trying to get along<:\e"
 		
-		"\0\s[1]:> DONE, DONE<: :> I never want to see that function again<: :> If it error's one more time I swear<:\e"
+		"\0%(typing):> DONE, DONE<: :> I never want to see that function again<: :> If it errors one more time I swear<:\e"
 		
-		"\0\s[1]:> Oh no<: :> My coding sins are catching up to me<: :> By which I mean<: :> I mixed up the variables again<:\e"
+		"\0%(typing):> Oh no<: :> My coding sins are catching up to me<: :> By which I mean<: :> I mixed up the variables again<:\e"
 		
-		"\0\s[1]:> I dunno if I like coding<: :> Or hate coding<: :> It's good when you know what you're doing<: :> But it's bad when it turns out what you're doing spawns like 20 errors<:\e"
+		"\0%(typing):> I dunno if I like coding<: :> Or hate coding<: :> It's good when you know what you're doing<: :> But it's bad when it turns out what you're doing spawns like 20 errors<:\e"
 		
-		"\0\s[1]:> I forgot again<: :> The = and == thing<: :> Watch out for them<:\e"
+		"\0%(typing):> I forgot again<: :> The = and == thing<: :> Watch out for them<:\e"
 		
-		"\0\s[1]:> I need to make a proper test function<: :> And not<: :> Whatever I am doing at the moment<:\e"
+		"\0%(typing):> I need to make a proper test function<: :> And not<: :> Whatever I am doing at the moment<:\e"
 		
-		"\0\s[1]:> Yes!<: :> It works!<: :> Code!<: :> Code works!<:\e"
+		"\0%(typing):> Yes!<: :> It works!<: :> Code!<: :> Code works!<:\e"
 		
-		"\0\s[1]:> I can code it like a smart person<: :> Or like a funky little mothman<: :> The choice is obvious<:\e"
+		"\0%(typing):> I can code it like a smart person<: :> Or like a funky little mothman<: :> The choice is obvious<:\e"
 	}
 	
 	
 	//—————————————————————————————— Mood comments ——————————————————————————————
 	if CurrentMood == "Short"
 	{
-		"\0\s[1]:> i'm not focusing very well today lol<: :> maybe I should call it a day<: :> or get a snack<:\e"
+		"\0%(typing):> i'm not focusing very well today lol<: :> maybe I should call it a day<: :> or get a snack<:\e"
 	}
 	
 	if CurrentMood == "Long"
 	{
-		"\0\s[1]:> I've been getting a lot done<: :> Feels good<:\e"
+		"\0%(typing):> I've been getting a lot done<: :> Feels good<:\e"
 	}
 	
 	if CurrentMood == "Random"
 	{
-		"\0\s[1]:> Things are going alright<: :> I'm not really in The Zone<: :> but I'm making ok progress<:\e"
+		"\0%(typing):> Things are going alright<: :> I'm not really in The Zone<: :> but I'm making ok progress<:\e"
 	}
 }

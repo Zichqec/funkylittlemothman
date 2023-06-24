@@ -1,5 +1,220 @@
 
 
+//—————————————————————————————— Surfaces ——————————————————————————————
+
+/*
+
+0 - general typing + mouse movement
+1 - typing when talking
+2 - typing idly
+3 - only mouse movement
+	↑ All 4 of these share 6 as a smile
+
+4 - drawing quickly?
+5 - drawing slowly?
+6 - moving the mouse in drawing pose
+
+7 - thinking
+8 - thinking but HMMMMMM >:|
+
+9 - slump
+*/
+
+/*
+
+10 - blank desktop
+	0 - Mouse movement
+	1 - Mose move to folder
+	2 - surfaces.txt typing
+	3 - Drag and cut in dic files
+	4 - copy and paste in dic files
+	5 - fussing in dic files
+	6 - switching tabs
+	
+11 - notepad++ tab 1
+12 - notepad++ tab 2
+13 - notepad++ tab 3
+14 - All the notepad++ stuff together
+
+15 - Chat window
+	0 - Chat 1
+	1 - Chat 2
+	2 - Chat 3
+	3 - Chat 4 - sad?
+	4 - Chat 5
+	
+16 - All chats together
+
+17 - Art program
+	0-9 various drawings
+
+18 - Template
+
+19 - Menu balloon ; 20 - small balloon ; 21 - send commands
+	0-2 - text animations
+	5 - template
+	6 - fandom ghost stand
+	7 - fandom ghost wave
+	8 - fandom ghost sad
+	9 - fandom ghost cheer
+	
+	10 - OC ghost normal
+	11 - OC ghost red eye
+	12 - OC ghost E4
+	13 - OC ghost D5
+	14 - OC ghost B8
+	15- OC ghost F2
+	16 - OC ghost E1
+	
+	17-23 - Jam ghost with different patterns
+
+22 - fandom ghost
+	0 - wave
+	1 - sad
+	2 - cheer
+
+23 - OC ghost normal
+	0 - OC ghost red eye
+	1 - OC ghost E4
+	2 - OC ghost D5
+	3 - OC ghost B8
+	4 - OC ghost F2
+	5 - OC ghost E1
+
+24 - Jam ghost
+	0-5 - various colors
+*/
+
+programming : pool
+{
+	/*
+		needs to pick a typing pose, and a notepad++ tab
+		can mooostly be random but it would be nice to make him mouse when there are click and drag ones
+	*/
+	
+	"\1\s[10]\i[2]\0\s[2]"
+	"\1\s[10]\i[3]\0\s[3]"
+	"\1\s[10]\i[4]\0\s[0]"
+	"\1\s[14]\0\s[0]"
+}
+
+writing : pool
+{
+	/*
+		notepad++, but the ones that are like... more typey
+		typing pose specifically
+	*/
+	
+	"\1\s[10]\i[5]\0\s[2]"
+	"\1\s[10]\i[4]\0\s[2]"
+}
+
+drawing : pool
+{
+	"\1\s[17]\i[%(RAND(10))]\0\s[%(ANY(4,5))]"
+}
+
+ghosting : pool
+{
+	/*
+		Pick ghost based on project, pick random bloons, random poses
+	*/
+	
+	_bloon = ANY(19,20,21)
+	"\1\s[%(_bloon)]\i[%(RAND(3))]"
+	--
+	if CurrentProject == "Fandom Ghost"; "\i[%(ANY(6,7,8,9))]"
+	elseif CurrentProject == "OC Ghost"; "\i[%(ANY(10,11,12,13,14,15,16))]"
+	elseif CurrentProject == "Jam Ghost"; "\i[%(ANY(17,18,19,20,21,22,23))]"
+	else; "\i[18]"
+	--
+	if _bloon == 21
+	{
+		"\0\s[0]"
+		"\0\s[2]"
+	}
+	else; "\0\s[3]"
+}
+
+thinking : pool
+{
+	/*
+		Random thinking pose
+		either a ghost based on project type, or a work window based on work type
+	*/
+	"\1"
+	--
+	parallel stillscreen
+	
+	if CurrentProject == "Idle"; "\s[10]"
+	--
+	"\0\s[7]"
+	"\0\s[8]"
+}
+
+slump : pool
+{
+	/*
+		slumped
+		ghost based on project type, or work window based on work type
+	*/
+	"\1"
+	--
+	parallel stillscreen
+	
+	if CurrentProject == "Idle"; "\s[10]"
+	{
+		"\s[10]"
+		"\s[15]"
+	}
+	--
+	"\0\s[9]"
+}
+
+stillscreen : array
+{
+	//to go with the slump and thinking
+	if CurrentProject == "Fandom Ghost"; "\s[22]\i[%(RAND(3))]"
+	elseif CurrentProject == "OC Ghost"; "\s[23]\i[%(RAND(6))]"
+	elseif CurrentProject == "Jam Ghost"; "\s[24]\i[%(RAND(6))]"
+	else; "\s[18]"
+	
+	if CurrentWork == "Programming" || CurrentWork == "Writing"; "\s[%(ANY(11,12,13))]"
+	elseif CurrentWork == "Drawing"; "\s[17]"
+}
+
+idling
+{
+	/*
+		typing and chatting
+		slumped and looking at a ghost
+		moving mouse on blank screen
+	*/
+	
+	"\1\s[15]\i[%(RAND(5))]\0\s[%(ANY(0,2))]"
+	"\1\s[16]\0\s[0]"
+	{
+		"\1"
+		--
+		if CurrentProject == "Fandom Ghost"; "\s[22]\i[%(RAND(3))]"
+		elseif CurrentProject == "OC Ghost"; "\s[23]\i[%(RAND(6))]"
+		elseif CurrentProject == "Jam Ghost"; "\s[24]\i[%(RAND(6))]"
+		else; "\s[18]"
+		--
+		"\0\s[9]"
+	}
+	"\1\s[10]\i[0]\0\s[3]"
+}
+
+typing
+{
+	//needs to make the screen be still, and do the typing pose
+	"\1"
+	--
+	parallel stillscreen
+	--
+	"\0\s[1]"
+}
 
 
 //—————————————————————————————— Utility ——————————————————————————————
@@ -46,3 +261,17 @@ DefaultFontSize
 {
 	14
 }
+
+username
+{
+	if nickname == ""; origname
+	else; nickname
+}
+
+origname
+{
+	"@" + REPLACE(TOLOWER(SHIORI3FW.UserNameFull)," ","_")
+}
+
+
+

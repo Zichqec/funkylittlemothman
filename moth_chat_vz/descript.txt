@@ -13,9 +13,9 @@ homeurl,https://zichqec.github.io/s-the-skeleton/updates/balloons/moth_chat_vz/
 origin.x,12
 origin.y,-28
 
-validrect.left,14
+validrect.left,15
 validrect.top,14
-validrect.right,-14
+validrect.right,-15
 validrect.bottom,-14
 
 wordwrappoint.x,-24
@@ -23,60 +23,59 @@ wordwrappoint.y,0
 
 font.name,homespun.ttf
 font.height,14
-font.color.r,255
-font.color.g,255
-font.color.b,255
+font.color.r,176
+font.color.g,243
+font.color.b,083
 font.bold,0
 
 windowposition.x,0
 windowposition.y,0
 
-anchor.font.color.r,176
-anchor.font.color.g,243
-anchor.font.color.b,083
+anchor.font.color.r,255
+anchor.font.color.g,255
+anchor.font.color.b,255
 
-// disable.font.color.r,170
-// disable.font.color.g,170
-// disable.font.color.b,170
+disable.font.color.r,110
+disable.font.color.g,166
+disable.font.color.b,162
 
 cursor.blendmethod,none
 cursor.style,underline
 
-cursor.font.color.r,176
-cursor.font.color.g,243
-cursor.font.color.b,083
+cursor.font.color.r,255
+cursor.font.color.g,255
+cursor.font.color.b,255
 
-cursor.pen.color.r,176
-cursor.pen.color.g,243
-cursor.pen.color.b,083
+cursor.pen.color.r,255
+cursor.pen.color.g,255
+cursor.pen.color.b,255
 
-arrow0.x,-14
-arrow0.y,5
+arrow0.x,-18
+arrow0.y,7
 
-arrow1.x,-14
-arrow1.y,-15
+arrow1.x,-18
+arrow1.y,-17
 
-onlinemarker.x,8
+onlinemarker.x,10
 onlinemarker.y,0
 
 sstpmarker.x,6
 sstpmarker.y,-14
 
 sstpmessage.font.height,10
-sstpmessage.font.color.r,236
-sstpmessage.font.color.g,230
-sstpmessage.font.color.b,210
-sstpmessage.x,15
+sstpmessage.font.color.r,176
+sstpmessage.font.color.g,243
+sstpmessage.font.color.b,083
+sstpmessage.x,16
 sstpmessage.xr,-50
 sstpmessage.y,-14
 
-number.font.name,Candara
 number.font.height,10
-number.font.color.r,236
-number.font.color.g,230
-number.font.color.b,210
+number.font.color.r,176
+number.font.color.g,243
+number.font.color.b,083
 number.xr,-16
-number.y,1
+number.y,2
 
 communicatebox.x,14
 communicatebox.y,16

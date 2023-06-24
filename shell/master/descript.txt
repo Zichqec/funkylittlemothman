@@ -7,3 +7,22 @@ craftmanurl,
 
 seriko.alignmenttodesktop,free
 seriko.use_self_alpha,1
+
+menu.foreground.alignment,lefttop + repeatx
+menu.background.alignment,lefttop + repeatx
+
+menu.foreground.font.color.r,255
+menu.foreground.font.color.g,255
+menu.foreground.font.color.b,255
+
+menu.background.font.color.r,255
+menu.background.font.color.g,255
+menu.background.font.color.b,255
+
+menu.disable.font.color.r,200
+menu.disable.font.color.g,200
+menu.disable.font.color.b,200
+
+
+kero.bindgroup999999.name,Hide,Toggle
+kero.menu,hidden
