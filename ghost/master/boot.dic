@@ -13,10 +13,31 @@ OnFirstBoot
 	KeroScale = 100
 	WhiteText = 0
 	
-	"\1\s[25]\0%(typing):> Hello<: :> You're a Ghost enthusiast  too, right?<: :> Cool. I go by @funkylittlemoothman<: :> But you can just call me Moth<: :> Do I call you %(username), or you got another nickname?"
+	ProjectsDiscussed = (0,0,0,0,0,0,0,0)
+	
+	"\t\*\1\s[25]\0\s[1]:> Hello<: :> You're a Ghost enthusiast too, right?<: :> Cool. I go by @funkylittlemoothman<: :> But you can just call me Moth<: :> Do I call you %(username), or you got another nickname?<: "
+	--
+	"\![open,inputbox,OnFirstBoot2,-1]"
+	--
+	"\n\n\_q\![*]\__q[OnFirstBoot2,,username]%(username) is fine\__q"
 }
 
-//"\1\s[25]\0%(typing):> %(username)?<: :> Okay<: :> So<: :> You like ghosts<: :> I like ghosts too<: :> I'm mostly into making them<: :> I already made, like, three<: :> You might've seen them before, idk<: :> But yeah lemme share my screen<:\w2\s[3]\w8\w8\1\s[10]\w8 :> There<: :> I'll be working on ghosts, and if you want to chat you can text me here\e"
+OnFirstBoot2
+{
+	if reference0 != ""; nickname = reference0
+	"\1\s[25]\0\s[1]"
+	--
+	if reference1 == "username"; "\![close,inputbox,OnFirstBoot2]:> Ok, just %(username)<:"
+	else; ":> %(username)?<:"
+	--
+	" :> Okay<: :> So<: :> You like ghosts<: :> I like ghosts too<: :> I'm mostly into making them<: :> I already made, like, three<: :> You might've seen them before, idk<: :> But yeah lemme share my screen<:\w2\s[3]\w8\w8\1\s[10]\0\w8 :> There<: :> I'll be working on ghosts, and if you want to chat you can text me here\e"
+}
+
+OnUserInputCancel
+{
+	if reference0 == "OnFirstBoot2"; "\C\![open,inputbox,OnFirstBoot2,-1]"
+	//elseif reference0 == "OnNewNickname"; //maybe later idk
+}
 
 OnInitialize
 {
@@ -50,10 +71,10 @@ OnBoot
 		"\0%(typing):> Just woke up<: :> Don't question my sleep schedule<: :> Time to code<:\e"
 		"\0%(typing):> Heyo<: :> You're up?<: :> I'm up<: :> For some ghost work<:\e"
 		"\0%(typing):> Gaming break is over<: :> Time to work on some ghosts while my energy is restoring<:\e"
-		"\0%(typing)\i[5]:> Finally home!!!<: :> Full of ideas!!!<: :> work time work time<:\e"
+		"\0%(typing)\i[6]:> Finally home!!!<: :> Full of ideas!!!<: :> work time work time<:\e"
 		"\0%(typing):> Hey<: :> It's this time of day<: :> LET'S GO<:\e"
-		"\0%(typing)\i[5]:> I GOT IT<: :> I FIGURED IT OUT<: :> In theory<: :> Let's see the actual code and see<:\e"
-		"\0%(typing):> %(username) you here?<: :> %(username)<: :> %(username)<: :> Ghost's are calling<:\e"
+		"\0%(typing)\i[6]:> I GOT IT<: :> I FIGURED IT OUT<: :> In theory<: :> Let's see the actual code and see<:\e"
+		"\0%(typing):> %(username) you here?<: :> %(username)<: :> %(username)<: :> Ghosts are calling<:\e"
 		"\0%(typing):> Hey hey hey<: :> I'm all fired up to work<: :> Let's goooo<:\e"
 		"\0%(typing):> Just had some food<: :> Ready to work now<:\e"
 	}
@@ -61,18 +82,18 @@ OnBoot
 
 OnClose
 {
-	"\0%(typing)> You're done? <: :> I'll work some more and then call it a day<: :> Catch you later<:"
-	"\0%(typing)> Tireeeed<: :> Gonna pick this up later<: :> Cyaaaa<:"
-	"\0%(typing)> Okay I made some progress<: :> Enough for now<: :> Cya<:"
-	"\0%(typing)>\i[5] I'm done I'm done I'm done<: :> It is finished it is done<: :> I will leave bug testing for later:> But for now I'M FREE<:"
-	"\0%(typing)> I think I'll take a break now<: :> My focus is gone and I can't recatch it<: :> Hopefully I can focus more later<:"
-	"\0%(typing)> It's snack tiiiiime<: :> I've been hungry for like the past hour but I really wanted to finish this<: :> Cyaaaa<:"
-	"\0%(typing)> You're done?<: :> Cool<: :> Catch you later @lligator<:"
-	"\0%(typing)> I did like<: :> nothing today<: :> I hope you acomplished more<:"
-	"\0%(typing)> Okay I gotta run<: :> Hanging out with a friend<: :> Cya later for some more ghost shinenigans<:"
-	"\0%(typing)> That's enough for today<: :> Break time<: :> You take a break too, okay?<:"
-	"\0%(typing)> I finished my thing<: :> Probably<: :> For now<: :> Hopefully<: :> Anyways, later<:"
-	"\0%(typing)> You know what<: :> I wanna play some games<: :> Ghost work can wait<:"
+	"\0%(typing):> You're done? <: :> I'll work some more and then call it a day<: :> Catch you later<:"
+	"\0%(typing):> Tireeeed<: :> Gonna pick this up later<: :> Cyaaaa<:"
+	"\0%(typing):> Okay I made some progress<: :> Enough for now<: :> Cya<:"
+	"\0%(typing):>\i[6] I'm done I'm done I'm done<: :> It is finished it is done<: :> I will leave bug testing for later:> But for now I'M FREE<:"
+	"\0%(typing):> I think I'll take a break now<: :> My focus is gone and I can't recatch it<: :> Hopefully I can focus more later<:"
+	"\0%(typing):> It's snack tiiiiime<: :> I've been hungry for like the past hour but I really wanted to finish this<: :> Cyaaaa<:"
+	"\0%(typing):> You're done?<: :> Cool<: :> Catch you later @lligator<:"
+	"\0%(typing):> I did like<: :> nothing today<: :> I hope you acomplished more<:"
+	"\0%(typing):> Okay I gotta run<: :> Hanging out with a friend<: :> Cya later for some more ghost shenanigans<:"
+	"\0%(typing):> That's enough for today<: :> Break time<: :> You take a break too, okay?<:"
+	"\0%(typing):> I finished my thing<: :> Probably<: :> For now<: :> Hopefully<: :> Anyways, later<:"
+	"\0%(typing):> You know what<: :> I wanna play some games<: :> Ghost work can wait<:"
 	--
 	"\w8\w8\-" //This is what makes the ghost close (after a short pause), do not remove the \- , and MAKE SURE you don't use a \e before this point or it won't work
 }

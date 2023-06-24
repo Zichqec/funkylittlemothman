@@ -264,7 +264,11 @@ DefaultFontSize
 
 username
 {
-	if nickname == ""; origname
+	if nickname == ""
+	{
+		if _argv[0] == 'raw'; origname
+		else; "\f[bold,1]\f[color,default.anchor]" + origname + "\f[color,default]\f[bold,default]"
+	}
 	else; nickname
 }
 

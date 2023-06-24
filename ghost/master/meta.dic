@@ -72,7 +72,7 @@ OnUpdateComplete
 	}
 	else
 	{
-		"\0%(typing)\i[5]:> Update is dooooooooone<: :> I wonder what they added<: :> I should've read the update log<:"
+		"\0%(typing)\i[6]:> Update is dooooooooone<: :> I wonder what they added<: :> I should've read the update log<:"
 	}
 }
 
@@ -81,7 +81,7 @@ OnUpdateFailure //If the update fails
 {
 	if reference0 == "timeout" //If it timed out
 	{
-		"\0%(typing)\i[5]:> Connection timed out<:\w1\s[9]"
+		"\0%(typing)\i[6]:> Connection timed out<:\w1\s[9]"
 	}
 	elseif reference0 == "md5 miss" //If the update files have not been uploaded correctly and don't match the updates2.dau
 	{
@@ -91,7 +91,7 @@ OnUpdateFailure //If the update fails
 	}
 	elseif reference0 == "artificial" //If the user cancels the update by double clicking the balloon
 	{
-		"\0%(typing)\i[5]:> update cancelled wth<:\w1\s[9]"
+		"\0%(typing)\i[6]:> update cancelled wth<:\w1\s[9]"
 	}
 	else //Any other errors
 	{

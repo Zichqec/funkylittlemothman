@@ -25,25 +25,25 @@ OnTranslate
 	}
 	
 	_wait = "1.5"
-	
+
 	_talk = REPLACE(_talk,":> ","\![set,balloonwait,%(_wait)]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]%(_font)> ",1)
 	_talk = REPLACE(_talk,":> ","\![set,balloonwait,%(_wait)]\w8\w8\w8\n\n[half]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]\n\n[half]%(_font)> ")
 	_talk = REPLACE(_talk,"<:","\![set,balloonwait,1]\w8\w8\![unlock,balloonrepaint]")
 	
 	
 	
-	_talk = REPLACE(_talk,"[[","\![set,balloonwait,%(_wait)]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]%(_font)\f[align,center]\f[bold,1]%(_pingcolor)@funkylittlemothman\f[color,default]\f[bold,default] ")
+	_talk = REPLACE(_talk,"[[","\![set,balloonwait,%(_wait)]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]%(_font)\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
 	_talk = REPLACE(_talk,"]]","\![set,balloonwait,1]\n\f[align,left]\n[-100]\w8\w8\w8\![unlock,balloonrepaint]")
 	
-	if SHIORI3FW.EventidOld == "OnAITalkNewEvent" || SHIORI3FW.EventidOld == "OnKeyPress" || (reference1 == "" && reference2 == "")
+	if SHIORI3FW.EventidOld == "OnAITalkNewEvent" || SHIORI3FW.EventidOld == "OnKeyPress" || SHIORI3FW.EventidOld == "OnSecondChange" || SHIORI3FW.EventidOld == "OnLastTalk" || SHIORI3FW.EventidOld == "OnFirstBoot2" || (reference1 == "" && reference2 == "")
 	{
 		/*if reference1 == "" && reference2 == "" //input box - screw it man its jam and im tired so im being bad about making debug stuff easier
 		{
 			_talk = REPLACE(_talk,"\e\e","\_w[%((RAND(3) + 1) * 1000)]\![embed,OnSurfaceRestore]",1)
 		}
 		else;*/ _talk = REPLACE(_talk,"\e","\_w[%((RAND(3) + 1) * 1000)]\![embed,OnSurfaceRestore]",1)
-		
-		_talk = REPLACE(_talk,origname,"\f[bold,1]\f[color,default.anchor]%(origname)\f[color,default]\f[bold,default]")
+
+		//_talk = REPLACE(_talk,origname,"\f[bold,1]\f[color,default.anchor]%(origname)\f[color,default]\f[bold,default]")
 	}
 	
 	if DefaultBalloon && WhiteText
@@ -84,7 +84,8 @@ OnSurfaceRestore : pool //I suppose I will have to build the kero surfaces into 
 	if CurrentWork == "Idle"; idling
 	else; ghosting
 	
-	ANY(thinking,slump)
+	if RAND(4) == 0; slump
+	else; thinking
 }
 
 //Happens when the ghost is unminimized. You *can* include dialogue, but you don't *have* to. I have included this event because if you don't, it defaults to \0\s[0]\1\s[10], which you don't want in some cases, such as if your ghost uses different surfaces or has a different number of characters.

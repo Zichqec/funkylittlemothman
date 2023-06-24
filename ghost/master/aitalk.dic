@@ -10,25 +10,25 @@ OnAiTalk
 		_lasttalk = ChainTalk
 	}
 	
-	_font = ""
-	if SpecialFont[0] != ""; _font += "\f[name,%(SpecialFont[0])]"
-	if SpecialFont[1] != DefaultFontSize; _font += "\f[height,%(SpecialFont[1])]"
-	
-	_talk = _font + _lasttalk
+	_talk = _lasttalk
 	
 	_talk = REPLACE(_talk,"\f","||f")
+	_talk = REPLACE(_talk,"||f[height,","\f[height,")
+	_talk = REPLACE(_talk,"||f[name,","\f[name,")
 	_talk = SHIORI3FW.RemoveAllTags(_talk)
 	
 	_talk = REPLACE(_talk,":> ","> ",1)
 	_talk = REPLACE(_talk,":> ","\n\n[half]> ")
 	_talk = REPLACE(_talk,"<:","")
 	
-	_talk = REPLACE(_talk,"[[","\f[align,center]\f[bold,1]@funkylittlemothman\f[bold,default] ")
+	_talk = REPLACE(_talk,"[[","\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
 	_talk = REPLACE(_talk,"]]","\n\f[align,left]\n[-100]")
 	
 	_talk = REPLACE(_talk,"||f","\f")
 	
 	LastTalk ,= _talk
+
+	if ARRAYSIZE(LastTalk) >= 50; LastTalk[0] = IARRAY
 	_lasttalk
 }
 
@@ -153,9 +153,9 @@ RandomTalk : nonoverlap_pool
 		
 	}
 	
-	if CurrentProject == "Balloon"
+	if CurrentProject == "Balloon" //Currently does not happen, ran out of time lol
 	{
-		"\0%(typing):> God how do you code a balloon<: :> There should be more tutorial on this\e"
+		"\0%(typing):> God how do you code a balloon<: :> There should be more tutorial on this<:\e"
 		
 		"\0%(typing)[[is working on a balloon]]\e"
 	}
@@ -197,6 +197,8 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Oh, SSP<: :> Don't let me down<:\e"
 		
 		"\0%(typing):> Bless the tutorials<:\e"
+		
+		"\0%(typing):> I'm gonna work on a balloon<: :> thats a lie no im not<:\e"
 	}
 	
 	
