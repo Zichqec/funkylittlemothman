@@ -42,6 +42,7 @@ OnUserInputCancel
 OnInitialize
 {
 	if !ISVAR("SpecialFont"); SpecialFont = ("",DefaultFontSize)
+	if !ISVAR("ProjectsDiscussed"); ProjectsDiscussed = (0,0,0,0,0,0,0,0)
 	if reference0 != "reload" //For things you want to reset EXCEPT when just reloading; a convenience for you the dev, basically
 	{
 		LastTalk = IARRAY
