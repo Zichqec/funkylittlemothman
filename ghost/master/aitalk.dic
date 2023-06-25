@@ -33,13 +33,17 @@ RandomTalk : nonoverlap_pool
 		
 		"\0%(typing):> I really should've removed this function<: :> but now we're sticking with it<: :> which means<: :> I gotta fix it now lol<:\e"
 		
-		"\0%(typing):> Chesster please<: :> Chesster<: :> he doesn't listen to me can you believe it<:\e"
+		"\0%(typing):> Chesster please<: :> Chesster<: :> he doesn't listen to me can you believe it<:\s[9]\e"
 		
 		"\0%(typing):> Piece of advice<: :> use new deifinition<: :> will save you a loooooooooooooooooooooot of trouble<:\e"
 		
 		"\0%(typing):> do i even bother updating<: :> three whole new lines<:\e"
 		
 		"\0%(typing):> Oh Chesster<: :> we're really in it now<:\e"
+		
+		"\0%(typing):> Maybe I can randomize chess moves...<: :> But surfaces...<: :> Hmmmm...<:\e"
+		
+		"\0%(typing):> I need to google chess parties<: :> Or play chess online myself<: :> But I'm not great at it and Chesster is supposed to be great<: :> So I'll probably just google<:\e"
 	}
 	
 	if CurrentProject == "Fandom Ghost" //big phandom ghost - a fairy
@@ -52,13 +56,15 @@ RandomTalk : nonoverlap_pool
 		
 		"\0%(typing):> Alright<: :> Time to think like a teenage fairy<:\e"
 		
-		"\0%(typing):> stressed stressed STRESSED<: :> i have SO MANY UPDATES in mind<: :> what the hell do I start with<:\e"
+		"\0%(typing)\i[6]:> YES<: :> I worked in show's quote into dialogue and it's SO SMOOTH<: :> SO GOOD<:\e"
+		
+		"\0%(typing):> stressed stressed STRESSED<: :> i have SO MANY UPDATES in mind<: :> what the hell do I start with<:\s[9]\e"
 		
 		"\0%(typing):> I'm trying to write<: :> but it's not really coming to my head rn<: :> Maybe I should rewatch the show<: :> or at least episodes with Molnia in them<: :> will hopefully put me in the mood<:\e"
 		
 		"\0%(typing):> Writing writing<: :> Need to do more writing<:\e"
 		
-		"\0%(typing):> Finished setting up new surfaces!!<: :> Time to insert them everywhere<: :> hehehehehehehehehehehe<:\e"
+		"\0%(typing)\i[6]:> Finished setting up new surfaces!!<: :> Time to insert them everywhere<: :> hehehehehehehehehehehe<:\e"
 		
 		"\0%(typing):> Crap<: :> I got another bug report<: :> Molniaaaa whyyyy<:\e"
 		
@@ -71,6 +77,8 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> I really really really want to add this one headcanon in<: :> but idk<: :> half the fandom will flame me<:\e"
 		
 		"\0%(typing):> FINALLY<: :> DONE WITH THIS PART<: :> JUST<: :> GOTTA MAKE UPDATE POST<:\e"
+		
+		"\0%(typing):> bugbugbug I need to find what cuses this bug<: :> Before like 20 other people report it<: :> I KNOW IT'S THERE I DON'T KNOW WHERE IT IS<:\e"
 	}
 	
 	if CurrentProject == "Jam Ghost" //object ghost (egg?)
@@ -94,6 +102,8 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Do I expand youuuu<: :> Or are you perfect as you are<: :> Hmmmmmm<: :> Decisions, decisions<:\e"
 		
 		"\0%(typing):> Okay okay I finally fixed that typo<: :> I just hope I didn't put in like five more like I always do<:\e"
+		
+		"\0%(typing):> Updating the Egg always feels like blasphemy<: :> Because it's a jam ghost<: :> And working on it outside of the Jam feels like cheating<:\e"
 	}
 	
 	if CurrentProject == "Big Fandom Ghost"
@@ -237,6 +247,10 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing)[[thinks about working on a ghost]] [[then proceeds to not do that]]\e"
 		"\0%(typing)[[is sleepy]]\e"
 		"\0%(typing)[[ponders going back to bed]]\e"
+		"\0%(typing)[[thinks about taking a break]]\e"
+		"\0%(typing)[[thinks about getting a snack]]\e"
+		"\0%(typing)[[is thinking moth thoughts]]\e"
+		"\0%(typing)[[thinks about going to play some games instead]]\e"
 	}
 	
 	
@@ -264,6 +278,8 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> I don't really need this surface<: :> But it will look cool<: :> So who cares<:\e"
 		
 		"\0%(typing)[[is scribbling]]\e"
+		"\0%(typing)[[is doodling]]\e"
+		"\0%(typing)[[is sketching]]\e"
 		"\0%(typing):> Always more surfaces<: :> they take so long<: :> want to make them look nice<: :> and want multiple shells...<:\e"
 		"\0%(typing):> Dressups are fun<: :> kind of a pain tho<: :> when you have a lot of poses<:\e"
 		"\0%(typing):> to shade or not to shade<: :> adds so much extra time with several poses<: :> looks so nice tho<:\e"
@@ -375,6 +391,7 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Maybe today is a good research day<: :> you know<: :> watch some episodes<: :> make some notes<: :> mostly watch episodes<:\e"
 		"\0%(typing):> uuugggghhhh NOTHING wants to work today<: :> ugh ugh ugh<:\e"
 		"\0%(typing):> today isn't going very well tbh<:\e"
+		"\0%(typing):> today I feel like @distractedlittlemothman<:\e"
 		
 		"\0%(typing):> I'm kinda thinking about writing a guide one of these days<: :> not like<: :> a huge tutorial or anything<: :> but maybe some of the tricks I've picked up and the things I consider now<: :> so that other people don't repeat my early mistakes lol<:\e"
 		"\0%(typing):> I should make better thumbnails<: :> mine are pretty basic<: :> but idk<: :> thumbnails just need to be functional so like<: :> mine are fine<: :> just plain<:\e"
@@ -392,7 +409,7 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing)[[is very focused]]\e"
 		"\0%(typing)[[is getting a lot done]]\e"
 		"\0%(typing):> Sorry if I don't have much to say<: :> Getting a lot done<:\e"
-		"\0%(typing):> check check check<: :> checking things off my list<: :> real progress!!<:\e"
+		"\0%(typing)\i[6]:> check check check<: :> checking things off my list<: :> real progress!!<:\e"
 		"\0%(typing):> ghosts go brrrrrrrr<: :> why can't every day be like this lol<:\e"
 		"\0%(typing):> it's a good day today<: :> ghost work going good<: :> just gotta keep going<:\e"
 		"\0%(typing):> watching stuff actually take shape is so satisfying<: :> once one part is complete, then other parts are able to move forward<: :> and so on and so forth<: :> until suddenly<: :> you're just down to little details<: :> and those little details are hard<: :> but you're so close you almost can't help but push through<:\e"
@@ -401,6 +418,7 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing)[[is unstoppable]]\e"
 		"\0%(typing)[[is on a roll]] \w8\w8 [[kinda wants rolls for dinner now lol]]\e"
 		"\0%(typing):> I have a long todo list today<: :> but<: :> I'm also checking lots of things off of it<: \i[6] :> feels really good<:\e"
+		"\0%(typing)\i[6]:> I'm on a rooooooooooll<:\e"
 		"\0%(typing)[[hasn't stretched in a while]] [[should do better]] [[probably isn't going to, at least today]]\e"
 		"\0%(typing):> I need to sit up a little straighter<: :> back kinda hurts a little<:\e"
 		"\0%(typing):> I want to look something up on the wiki<: :> but I don't really want to wiki crawl for 3 hours<: :> and I know I will if I look at the wiki right now lol<: :> so<: :> I'll wait<:\e"
