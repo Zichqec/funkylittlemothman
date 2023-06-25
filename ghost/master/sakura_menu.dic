@@ -48,12 +48,13 @@ OnTalkMenu : all
 	if !DefaultBalloon; "\b[0]"
 	else; "\b[4]"
 	
-	"\f[italic,1]Talk about...\f[italic,default]\n\n"
+	"\f[italic,1]Talk about...\f[italic,default]\n\n[99]"
 	
 	"\![*]\q[Ghosts,OnTalk.Ghosts]\n"
 	"\![*]\q[Your ghosts,OnTalk.HisGhosts]\n"
 	"\![*]\q[Your current project,OnTalk.CurrentProject]\n"
 	"\![*]\q[Ghost tips,OnTalk.GhostTips]\n"
+	"\![*]\q[Ghost ideas,OnTalk.GhostIdeas]\n"
 	"\n"
 	"\![*]\q[Back,OnSakuraMenu]  \![*]\q[Nevermind,blank]"
 	"\![unlock,balloonrepaint]"
@@ -474,6 +475,18 @@ OnTalk.GhostTips : nonoverlap_pool
 	"\0%(typing):> Learn how to use all the features of your program<: :> notepad++ has macros<: :> column editing which is a lifesaver for shell code<: :> you can save sessions for each ghost so you can open their files quickly<: :> all kinds of great key combos<: :> the more I learn the more efficient I get<: :> tho sometimes I learn a feature and it's just never useful for me lol<:"
 	--
 	backbuttons
+}
+
+OnTalk.GhostIdeas : nonoverlap
+{
+	"\0%(typing):> I saw an interesting one in a group the other day<: :> It was a ghost of %(GhostIdeaGenerator)<: :> kinda bizarre, but<: :> idk seems like it could be fun<:"
+	"\0%(typing):> Someone was dumping ideas the other day<: :> A couple were interesting<: :> like a ghost of %(GhostIdeaGenerator)<: :> or a ghost of %(GhostIdeaGenerator)<: :> so there's something for you if you're struggling with what to make<:"
+	"\0%(typing):> I saw some people discussing ghost ideas the other day<: :> They were talking about a ghost of %(GhostIdeaGenerator)<: :> They weren't taking it very seriously but like<: :> I bet someone could pull that off<:"
+	"\0%(typing):> Sure, I've seen plenty of ideas being thrown out there<: :> Like a ghost of %(GhostIdeaGenerator)<: :> Kind of a weird one but I feel like you could make something of it<:"
+	"\0%(typing):> Here's a challenge for you<: :> A ghost of %(GhostIdeaGenerator)<: :> Have fun<:"
+	"\0%(typing):> I came up with a random idea myself actually<: :> I was just daydreaming<: :> I don't want it tho, so<: :> If you want it you can have it<: :> The idea was a ghost of %(GhostIdeaGenerator)<:"
+	--
+	"\w8\w8\n\n\![quicksection,true]\![*]\q[Again,OnTalk.GhostIdeas]  \![*]\q[Back,OnTalkMenu]  \![*]\q[Nevermind,blank]"
 }
 
 backbuttons

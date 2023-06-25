@@ -654,7 +654,7 @@ animation0.pattern6,replace,1407,635,0,0
 animation0.pattern7,replace,1408,635,0,0
 animation0.pattern8,replace,1409,740,0,0
 animation0.pattern9,replace,1410,535,0,0
-animation0.pattern10,replace,1411,635,0,0
+//animation0.pattern10,replace,1411,635,0,0
 animation0.pattern11,replace,1412,635,0,0
 animation0.pattern12,replace,1413,535,0,0
 animation0.pattern13,replace,1414,735,0,0
@@ -810,8 +810,8 @@ animation7.pattern15,replace,14142,755,0,0
 animation7.pattern16,replace,14143,660,0,0
 animation7.pattern17,replace,14144,755,0,0
 animation7.pattern18,replace,14145,755,0,0
-animation7.pattern19,replace,14146,760,0,0
-animation7.pattern20,replace,14147,755,0,0
+//animation7.pattern19,replace,14146,760,0,0
+//animation7.pattern20,replace,14147,755,0,0
 animation7.pattern21,replace,14148,755,0,0
 animation7.pattern22,replace,14149,755,0,0
 animation7.pattern23,replace,14150,760,0,0

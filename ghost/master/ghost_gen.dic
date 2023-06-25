@@ -2,13 +2,18 @@
 
 GhostIdeaGenerator : nonoverlap
 {
-	"%(an(thing)) that %(feature), but %(modifier)."
-	"%(an(thing)) that %(feature)."
+	"%(an(thing)) that %(feature), and %(and)"
+	"%(an(thing)) that %(feature)"
+	"%(an(thing)) that always %(always), and %(feature)"
+	"%(an(thing)) that %(feature), but never %(never)"
 }
 
 thing{OnGhostGen.Thing}
 feature{"\![embed,OnGhostGen.Feature]"}
-modifier{"\![embed,OnGhostGen.Modifier]"}
+and{"\![embed,OnGhostGen.And]"}
+object{"\![embed,OnGhostGen.Object]"}
+always{"\![embed,OnGhostGen.Always]"}
+never{"\![embed,OnGhostGen.Never]"}
 
 OnGhostGen.Thing : nonoverlap
 {
@@ -30,7 +35,7 @@ OnGhostGen.Thing : nonoverlap
 	"girl"
 	"pile of goo"
 	"big big biiiiig chicken"
-	"three mugs"
+	"set of three mugs"
 	"piece of cheese"
 	"robot"
 	"ninja"
@@ -40,6 +45,52 @@ OnGhostGen.Thing : nonoverlap
 	"actual ghost"
 	"fish"
 	"loaf of bread"
+	"blanket"
+	"leopard"
+	"random dude"
+	"plain ol' guy"
+	"girl with a hoodie"
+	"witch"
+	"floating set of sparkles"
+	"pair of glasses"
+	"computer monitor"
+	"trash can"
+	"vinyl record"
+	"bone"
+	"bowl of plants"
+	"sketchbook"
+	"speaker"
+	"journal"
+	"doll"
+	"wig"
+	"mannequin"
+	"rug"
+	"sink"
+	"pile of %(trash)"
+	"giraffe"
+	"book"
+	"stack of books"
+	"jester"
+	"person in a cheap firefighter costume"
+	"cloud"
+	"rusty fork"
+	"coil of rope"
+	"old flip phone"
+}
+
+trash
+{
+	"sticks"
+	"stones"
+	"coins"
+	"garbage"
+	"plastic cups"
+	"old tires"
+	"rusty cutlery"
+	"paper shreddings"
+	"pine needles"
+	"torn up old jackets"
+	"dead flowers"
 }
 
 OnGhostGen.Feature : nonoverlap
@@ -54,15 +105,55 @@ OnGhostGen.Feature : nonoverlap
 	"interacts with other ghosts"
 	"does random dances"
 	"tells the user their future"
-	"pretends to look over user's files"
+	"pretends to look over the user's files"
 	"gives helpful advice"
 	"gives terrible advice"
+	"gives bizarre advice"
+	"generates art ideas"
+	"plays music"
+	"gets hungry over time and has to be fed"
+	"generates random maze games"
+	"says longer dialogues the longer it's open"
+	"talks less the longer it is open"
+	"hypes the user up"
+	"gives the user thematic self care advice"
+	"wants to fight the user"
+	"thinks the user is super cool and the user has to convince it that they're not"
+	"is guarding the user"
+	"is long-time friends with the user but the user doesn't remember it"
+	"is an assassin sent to kill the user"
+	"was summoned to the mortal plane by the user"
+	"is meeting up with the user somewhere sketchy to exchange secret information"
+	"is on the run from something"
+	"is looking for a safe place to hide"
+	"is trying really hard to write music"
+	"appears in random places on the user's desktop"
+	"thinks the user is someone else and so the user gets swept up into a position as %(position)"
+	"cares deeply for the user but gets weaker every time they talk via their magical connection"
+	"wants to talk to the user but can never figure out what to say"
+	"makes meal plans but they make no sense"
+	"schedules random things for the user without asking"
+	"has something different to say for every day of the year"
+	"tries to clean the user's desktop"
+	"is only half visible"
 }
 
-OnGhostGen.Modifier : nonoverlap
+position
 {
-	"with horror elements"
-	"you have to unlock it first"
+	"royalty"
+	"a bodyguard"
+	"a janitor"
+	"a CEO"
+	"an assassin"
+	"the pilot of a space ship"
+	"caretaker of %(an(animal)) that is in poor health"
+	"a plant waterer"
+}
+
+OnGhostGen.And : nonoverlap
+{
+	"has horror elements"
+	"you have to unlock the features first"
 	"only when clicked"
 	"gets tired if it's open for too long"
 	"it's actually all a front"
@@ -75,4 +166,118 @@ OnGhostGen.Modifier : nonoverlap
 	"has a terrible secret"
 	"has a lot of eyes in unexpected places"
 	"has a gun"
+	"doesn't know when to quit"
+	"thinks it's the greatest thing in existence"
+	"constantly sparkles"
+	"shifts constantly"
+	"likes to whistle"
+	"can do tricks"
+	"has hidden content if you use voice commands"
+	"has a fancy animated icon"
+	"wants %(an(animal)) %(oneday)"
+	"is despicable"
+	"is annoying"
+	"gets in the way"
+	"obviously doesn't want to be there"
+}
+
+oneday
+{
+	"one day"
+	"immediately"
+	"within the next 5 minutes or else something really bad will happen"
+	"as soon as possible"
+	"as soon as is convenient"
+	"soon"
+	"before the user leaves"
+	"right now that is a threat"
+}
+
+OnGhostGen.Object : nonoverlap
+{
+	"cane"
+	"staff"
+	"set of juggling balls"
+	"can of %(magical) worms"
+	"empty paper bag"
+	"broken watch"
+	"%(animal) plush"
+	"picture of %(an(magical)) %(animal)"
+	"broken coffee cup"
+	"%(magical) blanket"
+}
+
+OnGhostGen.Always : nonoverlap
+{
+	"carries around %(an(object))"
+	"asks the user for favors"
+	"seems scared"
+	"whispers"
+	"seems a little lost"
+	"keeps its hands hidden"
+	"covers its face"
+}
+
+OnGhostGen.Never : nonoverlap
+{
+	"looks at the user"
+	"opens its eyes"
+	"says anything out loud"
+	"listens to a thing the user has to say"
+	"pays attention"
+	"makes any sense"
+	"speaks in plain text"
+}
+
+magical
+{
+	"magical"
+	"smelly"
+	"strange"
+	"funky"
+	"sparkly"
+	"wriggly"
+	"fluffy"
+}
+
+//equal parts animal and food?????????
+animal
+{
+	"flamingo"
+	"rat"
+	"worm"
+	"mushroom"
+	"poptart"
+	"kangaroo"
+	"rose"
+	"groundhog"
+	"swan"
+	"potato"
+	"ice cube"
+	"dragon"
+	"elephant"
+	"seal"
+	"duck"
+	"tiger"
+	"lion"
+	"hippo"
+	"raisin"
+	"mermaid"
+	"pig"
+	"cow"
+	"chicken"
+	"balloon"
+	"noodle"
+	"panda"
+	"snake"
+	"possum"
+	"badger"
+	"squirrel"
+	"chipmunk"
+	"skunk"
+	"alien"
+	"fly"
+	"bee"
+	"buzzard"
+	"raccoon"
 }

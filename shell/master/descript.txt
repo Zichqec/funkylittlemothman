@@ -2,11 +2,14 @@ charset,UTF-8
 type,shell
 
 name,Default Shell
-craftman,
-craftmanurl,
+craftman,Venelona
+craftmanurl,Venelona
 
 seriko.alignmenttodesktop,free
 seriko.use_self_alpha,1
+
+sakura.balloon.offsetx,130
+sakura.balloon.offsety,-100
 
 menu.foreground.alignment,lefttop + repeatx
 menu.background.alignment,lefttop + repeatx

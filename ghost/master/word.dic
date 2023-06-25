@@ -272,9 +272,12 @@ username
 	else; nickname
 }
 
-origname
+origname : all
 {
+	//yes this is bad yes i am tired
+	if _argv[0] != 'raw'; "\f[bold,1]\f[color,default.anchor]"
 	"@" + REPLACE(TOLOWER(SHIORI3FW.UserNameFull)," ","_")
+	if _argv[0] != 'raw'; "\f[color,default]\f[bold,default]"
 }
 
 

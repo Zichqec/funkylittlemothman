@@ -124,15 +124,54 @@ ChatlogFormatting
 	_talk = REPLACE(_talk,"||f[name,","\f[name,")
 	_talk = SHIORI3FW.RemoveAllTags(_talk)
 	
-	_talk = REPLACE(_talk,"::> ","> ",1)
-	_talk = REPLACE(_talk,":> ","> ",1)
-	_talk = REPLACE(_talk,":> ","\n\n[half]> ")
-	_talk = REPLACE(_talk,"::> ","\n\n[half]> ")
-	_talk = REPLACE(_talk,"<:","")
-	_talk = REPLACE(_talk,"<::","")
+	_typing = ""
+	_typing += "\_l[0,]"
+	_typing += "\f[align,left]"
+	_typing += "\n\n[half]"
 	
-	_talk = REPLACE(_talk,"[[","\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
-	_talk = REPLACE(_talk,"]]","\n\f[align,left]\n[-100]")
+	_first = 1
+	while ":> " _in_ _talk || "::> " _in_ _talk || "[[" _in_ _talk
+	{
+		LOGGING("====================================================================")
+		_normaltalk = STRSTR(_talk,":> ",0)
+		_fasttalk = STRSTR(_talk,"::> ",0)
+		_narrationtalk = STRSTR(_talk,"[[",0)
+		
+		//AHAHAHAHAHA I'M A GENIUS (not really there are 13 hours to go im dying please dont judge this or use it as good code to reference)
+		if _normaltalk == -1; _normaltalk = 999999999999999999
+		if _fasttalk == -1; _fasttalk = 999999999999999999
+		if _narrationtalk == -1; _narrationtalk = 999999999999999999
+		
+		LOGGING("_first: %(_first)")
+		if _normaltalk < _fasttalk && _normaltalk < _narrationtalk && _normaltalk > -1 //:>
+		{
+			_toadd = "%(_typing)\f[align,left]> "
+			//if !_first; _toadd = "\n\n[half]" + _toadd
+			
+			_talk = REPLACE(_talk,":> ",_toadd,1)
+		}
+		elseif _fasttalk < _normaltalk && _fasttalk < _narrationtalk && _fasttalk > -1 //::>
+		{
+			_toadd = "%(_typing)\f[align,left]> "
+			//if !_first; _toadd = "\n\n[half]" + _toadd
+			
+			_talk = REPLACE(_talk,"::> ",_toadd,1)
+		}
+		else //[[
+		{
+			_toadd = "%(_typing)\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] "
+			
+			_talk = REPLACE(_talk,"[[",_toadd,1)
+		}
+		_first = 0
+	}
+	
+	_talk = REPLACE(_talk,"<::","")
+	_talk = REPLACE(_talk,"<:","")
+	
+	//_talk = REPLACE(_talk,"\n\n[half]","",1)
+
+	_talk = REPLACE(_talk,"]]","\n \n[-100]\f[align,left]")
 	
 	_talk = REPLACE(_talk,"||f","\f")
 	
