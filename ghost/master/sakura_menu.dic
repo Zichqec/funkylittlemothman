@@ -155,6 +155,20 @@ OnTalkGhost.Initial.OC
 	
 }
 
+OnTalkGhost.Pool.OC : nonoverlap
+{
+	"\0%(typing):> Funny thing is<: :> I'm atrocious at playing chess<: :> But I made Chesster chess-themed because I made first surface for him black and white<: :> And rolled with it<:"
+	"\0%(typing):> Chesster was his work-in-progress name<: :> I just put in something dumb when I decided on the whole chess theme<: :> But then idk I got attached?<: :> Silly little mothman<: :> me<:"
+	"\0%(typing):> Imagine programming a working game of chess in YAYA<: :> Couldn't be me<: :> Because literally<: :> Skill issue<:"
+	"\0%(typing):> So Chesster is usually all timid<: :> Just chess man doing chess stuff<: :> Thinking chess thoughts<: :> But he has<: :> A DARK SIIIDE<: :> tho rn I didn't really programm in him being angry<: :> I need to give user and option to flip the table or something<: :> But then Chesster will hate you forever<: :> Hmm...<:"
+	"\0%(typing):> On some days I think<: :> Does anyone else even like Chesster?<: :> I mean he's a mess<: :> But<: :> idk<: :> I think he's kinda neat still<: :> Maybe it's just cuz I wroked on him for like two months and want someone to see it lol<:"
+	"\0%(typing):> Look at this ghost man<: :> Just sitting at his table<: :> Thinking perpetually<: :> top ghost experience, am I right<:\w8\s[7]"
+	"\0%(typing):> I don't make OCs usually<: :> but I do like Chesster<: :> I always talk down at this chess nerd and stuff<: :> but if someone else does it<: :> This mothman will get FUNKY<: :> In a threatening way<:\w8\s[7]"
+	"\0%(typing):> I need to remake Chesster's surface<: :> Or add new ones<: :> I can never decide<: :> so I still haven't done either of these<:\w8\s[7]"
+	"\0%(typing):> Chesster has a relationship system<: :> the more he's on our screen the more he likes you<: :> aside from a few random events<: :> where he gets tired and closes himself<: :> Terrible design<: :> but funny<:\w8\s[7]"
+	"\0%(typing):> Chesster is a mess<: :> 'cuz when I made him I took out zero things from the template<: :> And added like<: :> every neat function I could get working<: :> For a man dude sitting at the table all the time he can do A LOT<:\w8\s[7]"
+}
+
 OnTalkGhost.OC : nonoverlap_pool
 {
 	if !ProjectsDiscussed[1]
@@ -164,16 +178,7 @@ OnTalkGhost.OC : nonoverlap_pool
 	}
 	else
 	{
-		"\0%(typing):> Funny thing is<: :> I'm atrocious at playing chess<: :> But I made Chesster chess-themed because I made first surface for him black and white<: :> And rolled with it<:"
-		"\0%(typing):> Chesster was his work-in-progress name<: :> I just put in something dumb when I decided on the whole chess theme<: :> But then idk I got attached?<: :> Silly little mothman<: :> me<:"
-		"\0%(typing):> Imagine programming a working game of chess in YAYA<: :> Couldn't be me<: :> Because literally<: :> Skill issue<:"
-		"\0%(typing):> So Chesster is usually all timid<: :> Just chess man doing chess stuff<: :> Thinking chess thoughts<: :> But he has<: :> A DARK SIIIDE<: :> tho rn I didn't really programm in him being angry<: :> I need to give user and option to flip the table or something<: :> But then Chesster will hate you forever<: :> Hmm...<:"
-		"\0%(typing):> On some days I think<: :> Does anyone else even like Chesster?<: :> I mean he's a mess<: :> But<: :> idk<: :> I think he's kinda neat still<: :> Maybe it's just cuz I wroked on him for like two months and want someone to see it lol<:"
-		"\0%(typing):> Look at this ghost man<: :> Just sitting at his table<: :> Thinking perpetually<: :> top ghost experience, am I right<:\w8\s[7]"
-		"\0%(typing):> I don't make OCs usually<: :> but I do like Chesster<: :> I always talk down at this chess nerd and stuff<: :> but if someone else does it<: :> This mothman will get FUNKY<: :> In a threatening way<:\w8\s[7]"
-		"\0%(typing):> I need to remake Chesster's surface<: :> Or add new ones<: :> I can never decide<: :> so I still haven't done either of these<:\w8\s[7]"
-		"\0%(typing):> Chesster has a relationship system<: :> the more he's on our screen the more he likes you<: :> aside for a few random events<: :> where he gets tired and closes himself<: :> Terrible design<: :> but funny<:\w8\s[7]"
-		"\0%(typing):> Chesster is a mess<: :> 'cuz when I made him I took out zero things from the template<: :> And added like<: :> every neat function I could get working<: :> For a man dude sitting at the table all the time he can do A LOT<:\w8\s[7]"
+		OnTalkGhost.Pool.OC
 	}
 	--
 	backbuttonsghost
@@ -183,6 +188,21 @@ OnTalkGhost.Initial.Fandom
 {
 	"\0%(typing)\i[6]:> Oh oh oh %(username) that's my most popular ghost<: :> If you heard about me before that's probably why<: :> But yeah it's Molnia from the TV show 'Fairyland Forever'<: :> She's one of the fairies<: :> The cool one with lightning powers<: :> Fandom looooves her so when I posted this ghost it got popular faaast<: :> Still feels wild<:"
 	
+}
+
+OnTalkGhost.Pool.Fandom : nonoverlap
+{
+	"\0%(typing):> I tried to make Molnia as close to canon as possible<: :> Which was<: :> more difficult than I expected<: :> but people say I did a pretty good job so I'll believe them lol<:"
+	"\0%(typing)\i[6]:> Dude dude dude you GOTTA show the Fairyland Forever<: :> Well not must<: :> But I really recommend it<: :> I know it looks like a kid's show about fairies<: :> but there's SO MUCH<: :> LORE<: :> ANIMATION<: :> CHARACTER DRAMA<: :> SECRETS<: :> THAT ONE SCENE OH GOD<: :> Watch it watch it trust me<: :> And if you watch it tell me<: :> Don't worry Molnia doesn't have a lot of spoilers<: :> Only like<: :> Up to season 8<:"
+	"\0%(typing)\i[6]:> I'm really proud of the little animations I did on this one<: :> And also just the surfaces in general<: :> I spent soooooooo much time on the wings<: :> Worth it tho<:"
+	"\0%(typing):> I have like 100 asks about Molnia in my inbox<: :> which is kinda anxiety inducing<: :> because I want to answer them<: :> but also make more updates to make those people happy<: :> but when I make updates I get even more asks<: :> idk man<:"
+	"\0%(typing)\i[6]:> Molnia is the fun bubbly fairy<: :> She's not the comic relief tho<: :> Wendy is the comic relief<: :> but Molnia is just so cheery she makes you smile<:\s[1] :> And then they traumatized her<: :> And her past turned to be messed up too<: :> LORE<: :> LOOOORE<: :> I want to say so much but hhhh SPOILERS<:"
+	"\0%(typing)\i[6]:> So I drew Molnia in her fairy outfit<: :> but I really want to add another shell for her usual outfit<: :> and season 4 transformation<: :> and one of the toys of her has such a cool look<:\s[1] :> I don't own any toys tho<: :> AND I HATE IT GAH<: :> DARN SHIPPING PRICE<:"
+	"\0%(typing):> People's been making short videos about Molnia<: :> With thousand of views<: :> makes me wonder if I should record videos on my Molnia making experience<:\w8 :> but idk<:\w8 :> maybe<:"
+	"\0%(typing):> I still need to update Molnia for the latest season of the show<: :> We learned a lot about her backstory<: :> But also its kinda<: :> Hard to write in??<: :> Like? How does it affect her on your screen??<: :> I don't know<: :> Maybe I'll throw a couple of dialogue lines referencing it<: :> But it feels so IMPORTANT<: :> Decisions, decisions<:"
+	"\0%(typing):> It feels weird to program in sad stuff<: :> Like, the things that user can do that make Molnia sad<: :> people keep writing to me how they find attached they are to her<: :> so sometimes I feel like I make her too nice<: :> just so I don't traumatize people<: :> ghosts are supposed to be fun<: :> BUT<: :> CHARACTER CONSISTENCY<:"
+	"\0%(typing)\i[6]:> Molnia is my second favourite character<: :> But I chose to make her into a ghost because I thought she'd work the best<: :> also she's easier to draw<: :> and easier to write<:"
+
 }
 
 OnTalkGhost.Fandom : nonoverlap_pool
@@ -195,16 +215,7 @@ OnTalkGhost.Fandom : nonoverlap_pool
 	}
 	else
 	{
-		"\0%(typing):> I tried to make Molnia as close to canon as possible<: :> Which was<: :> more difficult than I expected<: :> but people say I did a pretty good job so I'll believe them lol<:"
-		"\0%(typing)\i[6]:> Dude dude dude you GOTTA show the Fairyland Forever<: :> Well not must<: :> But I really recommend it<: :> I know it looks like a kid's show about fairies<: :> but there's SO MUCH<: :> LORE<: :> ANIMATION<: :> CHARACTER DRAMA<: :> SECRETS<: :> THAT ONE SCENE OH GOD<: :> Watch it watch it trust me<: :> And if you watch it tell me<: :> Don't worry Molnia doesn't have a lot of spoilers<: :> Only like<: :> Up to season 8<:"
-		"\0%(typing)\i[6]:> I'm really proud of the little animations I did on this one<: :> And also just the surfaces in general<: :> I spent soooooooo much time on the wings<: :> Worth it tho<:"
-		"\0%(typing):> I have like 100 asks about Molnia in my inbox<: :> which is kinda anxiety inducing<: :> because I want to answer them<: :> but also make more updates to make those people happy<: :> but when I make updates I get even more asks<: :> idk man<:"
-		"\0%(typing)\i[6]:> Molnia is the fun bubbly fairy<: :> She's not the comic relief tho<: :> Wendy is the comic relief<: :> but Molnia is just so cheery she makes you smile<:\s[1] :> And then they traumatized her<: :> And her past turned to be messed up too<: :> LORE<: :> LOOOORE<: :> I want to say so much but hhhh SPOILERS<:"
-		"\0%(typing)\i[6]:> So I drew Molnia in her fairy outfit<: :> but I really want to add another shell for her usual outfit<: :> and season 4 transformation<: :> and one of the toys of her has such a cool look<:\s[1] :> I don't own any toys tho<: :> AND I HATE IT GAH<: :> DARN SHIPPING PRICE<:"
-		"\0%(typing):> People's been making short videos about Molnia<: :> With thousand of views<: :> makes me wonder if I should record videos on my Molnia making experience<:\w8 :> but idk<:\w8 :> maybe<:"
-		"\0%(typing):> I still need to update Molnia for the latest season of the show<: :> We learned a lot about her backstory<: :> But also its kinda<: :> Hard to write in??<: :> Like? How does it affect her on your screen??<: :> I don't know<: :> Maybe I'll throw a couple of dialogue lines referencing it<: :> But it feels so IMPORTANT<: :> Decisions, decisions<:"
-		"\0%(typing):> It feels weird to program in sad stuff<: :> Like, the things that user can do that make Molnia sad<: :> people keep writing to me how they find attached they are to her<: :> so sometimes I feel like I make her too nice<: :> just so I don't traumatize people<: :> ghosts are supposed to be fun<: :> BUT<: :> CHARACTER CONSISTENCY<:"
-		"\0%(typing)\i[6]:> Molnia is my second favourite character<: :> But I chose to make her into a ghost because I thought she'd work the best<: :> also she's easier to draw<: :> and easier to write<:"
+		OnTalkGhost.Pool.Fandom
 	}
 	--
 	backbuttonsghost
@@ -216,6 +227,21 @@ OnTalkGhost.Initial.Jam
 	
 }
 
+OnTalkGhost.Pool.Jam : nonoverlap
+{
+	"\0%(typing):> Don't ask me why this egg took me a week<: :> It was my first jam<: :> Maybe I was nervous<: :> Or. lazy.<: :> Who can say<:"
+	"\0%(typing):> I did make a lot of dress-ups for it<: :> I want to add more so badly<: :> but<: :> better add more functions first<: :> At least that's what I keep telling myself<:"
+	"\0%(typing):> I went into the Jam with no real plan<: :> Just wanted to test my skills<: :> in the end<: :> I should've planned more lol<:"
+	"\0%(typing):> Egg<: :> It's an egg<: :> what do you want me to say<: :> egg<: :> Egg<: :> THE Egg<:"
+	"\0%(typing):> Initially egg was supposed to be simple<: :> Like all eggs are<: :> but then I wanted to give a player a joke choice<: :> but that choice opened like nine different paths for the player to take<: :> and I commited to it<: :> Just for the joke<:\w8\w4 \i[6]:> I mean<: :> Worth it<:"
+	"\0%(typing):> I wonder if I should remake surface I made for egg during the jam<: :> You know, make EGG HD Edition<: :> or I should just keep the old ones<: :> They're not thaaat bad<:"
+	"\0%(typing):> I remember when I described Egg idea to my friends<: :> One of them wanted it to hatch into something<: :> and another wanted to smash it<: :> and they started to yell in caps at each other<: :> and I was just sitting there<: :> with my egg<: :> even more confused with what to do<:"
+	"\0%(typing):> Honestly<: :> Egg might be my most polished ghost<: :> That thought makes me low-key depressed<:"
+	"\0%(typing):> I personally like my eggs fried<:"
+	"\0%(typing):> I think for this ghost I've done most of the work on the last Jam day<: :> Because for most of the week I was like<: :> I have time<: :> I can take a break<: :> And on last day I sat there into the night<: :> working working working<: :> Right until the end of the Jam<:"
+	"\0%(typing):> People were kinda :[ at me at the end of the egg<: :> But I think its poetic<: :> and sweet<: :> and I ran out of time and didn't have any other ideas<:"
+}
+
 OnTalkGhost.Jam : nonoverlap_pool
 {
 	if !ProjectsDiscussed[3]
@@ -225,17 +251,7 @@ OnTalkGhost.Jam : nonoverlap_pool
 	}
 	else
 	{
-		"\0%(typing):> Don't ask me why this egg took me a week<: :> It was my first jam<: :> Maybe I was nervous<: :> Or. lazy.<: :> Who can say<:"
-		"\0%(typing):> I did make a lot of dress-ups for it<: :> I want to add more so badly<: :> but<: :> better add more functions first<: :> At least that's what I keep telling myself<:"
-		"\0%(typing):> I went into the Jam with no real plan<: :> Just wanted to test my skills<: :> in the end<: :> I should've planned more lol<:"
-		"\0%(typing):> Egg<: :> It's an egg<: :> what do you want me to say<: :> egg<: :> Egg<: :> THE Egg<:"
-		"\0%(typing):> Initially egg was supposed to be simple<: :> Like all eggs are<: :> but then I wanted to give a player a joke choice<: :> but that choice opened like nine different paths for the player to take<: :> and I commited to it<: :> Just for the joke<:\w8\w4 \i[6]:> I mean<: :> Worth it<:"
-		"\0%(typing):> I wonder if I should remake surface I made for egg during the jam<: :> You know, make EGG HD Edition<: :> or I should just keep the old ones<: :> They're not thaaat bad<:"
-		"\0%(typing):> I remember when I described Egg idea to my friends<: :> One of them wanted it to hatch into something<: :> and another wanted to smash it<: :> and they started to yell in caps at each other<: :> and I was just sitting there<: :> with my egg<: :> even more confused with what to do<:"
-		"\0%(typing):> Honestly<: :> Egg might be my most polished ghost<: :> That thought makes me low-key depressed<:"
-		"\0%(typing):> I personally like my eggs fried<:"
-		"\0%(typing):> I think for this ghost I've done most of the work on the last Jam day<: :> Because for most of the week I was like<: :> I have time<: :> I can take a break<: :> And on last day I sat there into the night<: :> working working working<: :> Right until the end of the Jam<:"
-		"\0%(typing):> People were kinda :[ at me at the end of the egg<: :> But I think its poetic<: :> and sweet<: :> and I ran out of time and didn't have any other ideas<:"
+		OnTalkGhost.Pool.Jam
 	}
 	--
 	backbuttonsghost
@@ -247,6 +263,20 @@ OnTalkGhost.Initial.BigFandom
 	
 }
 
+OnTalkGhost.Pool.BigFandom : nonoverlap
+{
+	"\0%(typing):> The ghost is going to be kind of a rag-tag found family sort of thing<: :> I love those kinds of stories<: :> and I really wish these characters in the show got more attention<: :> One of them, Diane, knows Molnia<: :> But that means I probably have to figure out how to get two different ghosts to interact...<:"
+	"\0%(typing):> I'm going to have to write<: :> SO MUCH dialogue<: :> so much<: \w8\w8\s[6] :> It'll be pretty cool if I can pull it off tho<: \s[1]:> I guess I'll just have to keep chipping away at it<: :> But first I need to get the shell done...<: :> oh god it's so much to draw<:"
+	"\0%(typing):> Since there are 3 characters I want to make it so that they face each other when talking<: :> Since, you know, the user might rearrange the order they're standing in<: :> but it's going to be<: :> hell<: :> because that instantly doubles the amount of poses I need for them talking to each other<: :> Don't be like me, keep your projects a reasonable size<:"
+	"\0%(typing):> I'm not too worried about writing Diane, I feel like her dialogue will come to me easily<: :> but \f[italic,1]Elliot\f[italic,default]<: :> he's going to be hard to get right<: :> he's just so<: :> so<: :> \f[italic,1]intense\f[italic,default]<: :> He's easy to mess up and I want to do him justice<:"
+	"\0%(typing):> Yoyo is a really underrated character I think<: :> I see a lot of people complaining she's annoying, so I guess I need to be careful when writing her<: :> but the group wouldn't be the same without her, you know?<: :> She's important too<:"
+	"\0%(typing):> I know I'm setting my sights really high on this one<: :> I may never be able to complete it<: :> But I'm really excited about this idea<: :> If I keep working at it I have to get somewhere eventually right?<:"
+	"\0%(typing):> Working on three characters at once is<: :> A lot of work<: :> Especially drawing-wise<: :> But it's also pretty fun<: :> Really different from one character ghost<: :> Exciting!!<:"
+	"\0%(typing):> I was sooo tempted to add a forth character, too<: :> But I think I'll stick with Diane, Elliot and Yoyo for now<: :> for now<: :> That's more than enough work for me<:\w8\w5 :> for now<:"
+	"\0%(typing):> I don't know if having three characters at once will make writing dialogue easier<: :> Or sooooo much worse<: :> So many combinations!!<: :> But also<: :> Sooo many combinations... to utilize them all fairly and properly...<:"
+	"\0%(typing):> I hope people won't mind a couple of my headcanons<: :> Nobody seemed to mind them with Molnia, but...<: :> idk<: :> fandoms are vicious, unforgiving places sometimes<:"
+}
+
 OnTalkGhost.BigFandom : nonoverlap_pool
 {
 	if !ProjectsDiscussed[4]
@@ -256,16 +286,7 @@ OnTalkGhost.BigFandom : nonoverlap_pool
 	}
 	else
 	{
-		"\0%(typing):> The ghost is going to be kind of a rag-tag found family sort of thing<: :> I love those kinds of stories<: :> and I really wish these characters in the show got more attention<: :> One of them, Diane, knows Molnia<: :> But that means I probably have to figure out how to get two different ghosts to interact...<:"
-		"\0%(typing):> I'm going to have to write<: :> SO MUCH dialogue<: :> so much<: \w8\w8\s[6] :> It'll be pretty cool if I can pull it off tho<: \s[1]:> I guess I'll just have to keep chipping away at it<: :> But first I need to get the shell done...<: :> oh god it's so much to draw<:"
-		"\0%(typing):> Since there are 3 characters I want to make it so that they face each other when talking<: :> Since, you know, the user might rearrange the order they're standing in<: :> but it's going to be<: :> hell<: :> because that instantly doubles the amount of poses I need for them talking to each other<: :> Don't be like me, keep your projects a reasonable size<:"
-		"\0%(typing):> I'm not too worried about writing Diane, I feel like her dialogue will come to me easily<: :> but \f[italic,1]Elliot\f[italic,default]<: :> he's going to be hard to get right<: :> he's just so<: :> so<: :> \f[italic,1]intense\f[italic,default]<: :> He's easy to mess up and I want to do him justice<:"
-		"\0%(typing):> Yoyo is a really underrated character I think<: :> I see a lot of people complaining she's annoying, so I guess I need to be careful when writing her<: :> but the group wouldn't be the same without her, you know?<: :> She's important too<:"
-		"\0%(typing):> I know I'm setting my sights really high on this one<: :> I may never be able to complete it<: :> But I'm really excited about this idea<: :> If I keep working at it I have to get somewhere eventually right?<:"
-		"\0%(typing):> Working on three characters at once is<: :> A lot of work<: :> Especially drawing-wise<: :> But it's also pretty fun<: :> Really different from one character ghost<: :> Exciting!!<:"
-		"\0%(typing):> I was sooo tempted to add a forth character, too<: :> But I think I'll stick with Diane, Elliot and Yoyo for now<: :> for now<: :> That's more than enough work for me<:\w8\w5 :> for now<:"
-		"\0%(typing):> I don't know if having three characters at once will make writing dialogue easier<: :> Or sooooo much worse<: :> So many combinations!!<: :> But also<: :> Sooo many combinations... to utilize them all fairly and properly...<:"
-		"\0%(typing):> I hope people won't mind a couple of my headcanons<: :> Nobody seemed to mind them with Molnia, but...<: :> idk<: :> fandoms can be are vicious, unforgiving places sometimes<:"
+		OnTalkGhost.Pool.BigFandom
 	}
 	--
 	backbuttonsghost
@@ -273,8 +294,21 @@ OnTalkGhost.BigFandom : nonoverlap_pool
 
 OnTalkGhost.Initial.MiniFandom
 {
-	"\0%(typing)\i[6]:> Ok ok ok I'm so excited about this one<: :> Like, it's just a little thing, right?<: :> A side project while I keep chipping away at the Big One<: :> It's also related to 'Fairyland Forever'<: :> But this time it's one little side character, Alastria, and it's gonna be a really different kind of story from the other ghosts I'm working on<: \s[1] :> It's inspired by some Japanese ghosts I was messing with<: :> I wanted to try writing the same style of story<: :> I think fans of my other ghosts are going to find it kind of weird<: :> But I hope the reaction is 'wow this is cool' and not 'wow this sucks'<: :> You know?<: :> It's kinda scary, because it really could go either way<:"
-	
+	"\0%(typing)\i[6]:> Ok ok ok I'm so excited about this one<: :> Like, it's just a little thing, right?<: :> A side project while I keep chipping away at the Big One<: :> It's also related to 'Fairyland Forever'<: :> But this time it's one little side character, Alastria, and it's gonna be a really different kind of story from the other ghosts I'm working on<: \s[1] :> It's inspired by some Japanese ghosts I was messing with<: :> I wanted to try writing the same style of story<: :> I think fans of my other ghosts are going to find it kind of weird<: :> But I hope the reaction is 'wow this is cool' and not 'wow this sucks'<: :> You know?<: :> It's kinda scary, because it really could go either way<:"	
+}
+
+OnTalkGhost.Pool.MiniFandom : nonoverlap
+{
+	"\0%(typing):> The shell for this ghost is going to be fairly small I hope<: :>FAIRYly small you can say<: :> I'm trying to keep the scope in general really small and focused<: :> It's so easy to want to make it bigger and bigger<: :> But I don't have time<: :> I got soooo many other projects to work on<: :> I need to keep this one small and just make it good<: \w8\w8\w8\w8 :> I want to add a lot more tho<:"
+	"\0%(typing):> I still need to sit down and plot how her story progression is going to go exactly<: :> It's the kind of thing where I need a plan in place you know<: :> There are only a few branches, but it's really important they all work together<: :> One of these days I'll sit down and figure out the details<:"
+	"\0%(typing):> She's going to be in a different art style from the other ghosts I'm working on for 'Fairyland Forever'<: :> People might find that weird too<: :> idk<: :> but I don't want to always have to make them the same way you know<: :> So variety is good<:"
+	"\0%(typing):> This ghost isn't going to talk to any of the other 'Fairyland Forever' ghosts<: :> It's going to be all self contained<: :> Because<: :> It takes place at a different point in the timeline<: :> And in a specific place<: :> So it would be really difficult and weird to have them talk<:"
+	"\0%(typing):> Once I get my planning done and finish the shell I think the rest will go pretty fast<: :> There's a lot to write<: :> but like<: :> there's not anything else super complicated<:"
+	"\0%(typing):> The idea for this ghost came to me while I was trying to sleep one night<: :> I had been looking at some cool Japanese ghosts<: :> they're really hard to understand even through machine translation if you would believe it<: :> Anyways, I was wondering if I could make anything with that style of story<: :> And then it hit me all at once and I knew Alastria was the one<: \w8\w8\w8 :> I wrote down so many plans on my phone that night<: :> and then I couldn't sleep lol<:"
+	"\0%(typing):> I remember rewatching the show after I made Molnia<: :> Thinking of ghost possibilities<: :> And some people even wrote to me whether or not I'd ever make an Alastria ghost<: :> And back then I was like NO WAY<: :> I got ZERO ideas on Alastria and I don't see anything new I could've done with her I haven't made for Molnia already<: :> but look at me now<: :> @foolishlittlemothman<:"
+	"\0%(typing):> I feel like I'll get a lot of ??? asks about this ghost when I finally make her<: :> If I ever finish making her<: :> Which I hopefully will<: :> Tho it might be just<: :> Anxiety lol<:"
+	"\0%(typing):> Honestly I think I have most fun working on Alastria than any of my other ghosts<: :> She's just so DIFFERENT<:\w8 :> No offense, Chesster<:\w8\w8 :> No offense, Printer<:"
+	"\0%(typing):> Coolest thing about Alastria<: :> She has<: :> MOTH WINGS<: :> IT WAS MEANT TO BE<:"
 }
 
 OnTalkGhost.MiniFandom : nonoverlap_pool
@@ -287,16 +321,7 @@ OnTalkGhost.MiniFandom : nonoverlap_pool
 	}
 	else
 	{
-		"\0%(typing):> The shell for this ghost is going to be fairly small I hope<: :>FAIRYly small you can say<: :> I'm trying to keep the scope in general really small and focused<: :> It's so easy to want to make it bigger and bigger<: :> But I don't have time<: :> I got soooo many other projects to work on<: :> I need to keep this one small and just make it good<: \w8\w8\w8\w8 :> I want to add a lot more tho<:"
-		"\0%(typing):> I still need to sit down and plot how her story progression is going to go exactly<: :> It's the kind of thing where I need a plan in place you know<: :> There are only a few branches, but it's really important they all work together<: :> One of these days I'll sit down and figure out the details<:"
-		"\0%(typing):> She's going to be in a different art style from the other ghosts I'm working on for 'Fairyland Forever'<: :> People might find that weird too<: :> idk<: :> but I don't want to always have to make them the same way you know<: :> So variety is good<:"
-		"\0%(typing):> This ghost isn't going to talk to any of the other 'Fairyland Forever' ghosts<: :> It's going to be all self contained<: :> Because<: :> It takes place at a different point in the timeline<: :> And in a specific place<: :> So it would be really difficult and weird to have them talk<:"
-		"\0%(typing):> Once I get my planning done and finish the shell I think the rest will go pretty fast<: :> There's a lot to write<: :> but like<: :> there's not anything else super complicated<:"
-		"\0%(typing):> The idea for this ghost came to me while I was trying to sleep one night<: :> I had been looking at some cool Japanese ghosts<: :> they're really hard to understand even through machine translation if you would believe it<: :> Anyways, I was wondering if I could make anything with that style of story<: :> And then it hit me all at once and I knew Alastria was the one<: \w8\w8\w8 :> I wrote down so many plans on my phone that night<: :> and then I couldn't sleep lol<:"
-		"\0%(typing):> I remember rewatching the show after I made Molnia<: :> Thinking of ghost possibilities<: :> And some people even wrote to me whether or not I'd ever make an Alastria ghost<: :> And back then I was like NO WAY<: :> I got ZERO ideas on Alastria and I don't see anything new I could've done with her I haven't made for Molnia already<: :> but look at me now<: :> @foolishlittlemothman<:"
-		"\0%(typing):> I feel like I'll get a lot of ??? asks about this ghost when I finally make her<: :> If I ever finish making her<: :> Which I hopefully will<: :> Tho it might be just<: :> Anxiety lol<:"
-		"\0%(typing):> Honestly I think I have most fun working on Alastria than any of my other ghosts<: :> She's just so DIFFERENT<:\w8 :> No offence, Chesster<:\w8\w8 :> No offence, Printer<:"
-		"\0%(typing):> Coolest thing about Alastria<: :> She has<: :> MOTH WINGS<: :> IT WAS MEANT TO BE<:"
+		OnTalkGhost.Pool.MiniFandom
 	}
 	--
 	backbuttonsghost
@@ -306,6 +331,20 @@ OnTalkGhost.Initial.Obscure
 {
 	"\0%(typing):> If you haven't watched 'Starlight Sword Squad 3000'<: :> go. watch. it.<: :> please<: :> it's so underrated<: :> nobody ever knows what 3s3 is but it's really good<: :> The whole dynamic with Super Snail and Birdie Beauty is so complex<: :> I don't want to spoil it for you if you don't know<: :> But I'm making a ghost of Super Snail<: \w8\w8\w8 :> Even if nobody else knows who she is<: :> I'll know<: \i[6] :> And maybe other 3s3 fans will find it and join me in ghost hell<:"
 	
+}
+
+OnTalkGhost.Pool.Obscure : nonoverlap
+{
+	"\0%(typing):> BirdSnail shippers might get upset with me for this ghost<: :> But I have a lot of feelings about BirdSnail<: :> I guess I'll put some warnings so people know what angle I'm taking<: :> Snailkey fans probably aren't going to be happy with me either lol<:"
+	"\0%(typing):> It's really sad that the show only got a few seasons<: :> But hey<: :> Plenty of space for fans to make our own content right<: :> Like my ghost<: :> Maybe this ghost will get more people into the show<: \i[6] :> Then I would have more people to chat with about it<:"
+	"\0%(typing):> I've been debating if Meteor Monkey should make an appearance as a side character<: :> Not like, all the time, but it might be nice as an event now and then<: :> That's a lot of extra surfaces to draw tho...<: \w8\w8\w8\w8 :> Maybe in an update<:"
+	"\0%(typing):> This ghost is going to spoil the whole show<: :> So I guess I will put strong warnings on it<: \w8\w8 ::> go<:: ::> watch<:: ::> 3s3<::"
+	"\0%(typing)\i[6]:> 3s3 is my favorite<: :> And Super Snail is my favorite 3s3 character<: :> So I have to<: :> You know?<: :> Probably nobody will see it<: :> But that's ok<: :> I want her to exist on my computer<: :> Would be nice if it got a few fans though lol<:"
+	"\0%(typing):> I really need to get this ghost correct<: :> Because some of my friends and just ghost hell community people check out my ghosts even without knowing the source material<: :> So I need to make Super Snail so good it will make people want to watch the show!!<:"
+	"\0%(typing):> I used to be afraid of snails as a kid<: :> Well, not afraid<: :> They were just so<: :> Gooey<: :> AND THEY TURNED INTO SLUGS<: :> But then I watched 3s3<:\i[6] :> And I can never hate snails now<: :> Thank you Super Snail<:"
+	"\0%(typing):> A part of me hopes people would see this ghost<: :> Even people who have never seen Ghosts before<: :> Or the show before<: :> And go<: :> Look!! A cool looking thing!<: :> Show it came from must be cool, too!<: :> I wonder if it's worth a shot!<: :> AND IT IS IT'S WORTH SO MANY SHOTS<: :> But yeah that's my hopes and dreams for Super Snail<:"
+	"\0%(typing):> Dude<: :> %(username)<: :> The pain of being into something<: :> And NONE OF YOUR FRIENDS RELATING<: :> Is so real<: :> Even the 3s3 fandom is t i n y<: :> Need more content need more content<: :> More snail content more 3s3 content more more more<:"
+	"\0%(typing):> Since I love the characters and the show so much it makes me want to expand this ghost sooo much<: :> Like I have ideas for a lot of cool features<: :> Like joining the Starlight Sword Squad and having missions<: :> And ranks<: :> But that requires so much work<: :> And writing<: :> And thinking<: :> It's tough<: :> I need to plan better<: :> I can always update and add cool stuff in later<:"
 }
 
 OnTalkGhost.Obscure : nonoverlap_pool
@@ -318,16 +357,7 @@ OnTalkGhost.Obscure : nonoverlap_pool
 	}
 	else
 	{
-		"\0%(typing):> BirdSnail shippers might get upset with me for this ghost<: :> But I have a lot of feelings about BirdSnail<: :> I guess I'll put some warnings so people know what angle I'm taking<: :> Snailkey fans probably aren't going to be happy with me either lol<:"
-		"\0%(typing):> It's really sad that the show only got a few seasons<: :> But hey<: :> Plenty of space for fans to make our own content right<: :> Like my ghost<: :> Maybe this ghost will get more people into the show<: \i[6] :> Then I would have more people to chat with about it<:"
-		"\0%(typing):> I've been debating if Meteor Monkey should make an appearance as a side character<: :> Not like, all the time, but it might be nice as an event now and then<: :> That's a lot of extra surfaces to draw tho...<: \w8\w8\w8\w8 :> Maybe in an update<:"
-		"\0%(typing):> This ghost is going to spoil the whole show<: :> So I guess I will put strong warnings on it<: \w8\w8 ::> go<:: ::> watch<:: ::> 3s3<::"
-		"\0%(typing)\i[6]:> 3s3 is my favorite<: :> And Super Snail is my favorite 3s3 character<: :> So I have to<: :> You know?<: :> Probably nobody will see it<: :> But that's ok<: :> I want her to exist on my computer<: :> Would be nice if it got a few fans though lol<:"
-		"\0%(typing):> I really need to get this ghost correct<: :> Because some of my friends and just ghost hell community people check out my ghosts even without knowing source material<: :> So I need to make Super Snail so good it will make people want to watch the show!!<:"
-		"\0%(typing):> I used to be afraid of snails as a kid<: :> Well, not afraid<: :> They were just so<: :> Gooey<: :> AND THEY TURNED INTO SLUGS<: :> But then I watched s3s<:\i[6] :> And I can never hate snails now<: :> Thank you Super Snail<:"
-		"\0%(typing):> A part of me hopes people would see this ghost<: :> Even people who never seen Ghosts before<: :> Or the show before<: :> And go<: :> Look!! A cool looking thing!<: :> Show it came from must be cool, too!<: :> I wonder if it's worth a shot!<: :> AND IT IS IT'S WORTH SO MANY SHOTS<: :> But yeah that's my hopes and dreams for Super Snail<:"
-		"\0%(typing):> Dude<: :> %(username)<: :> The pain of being into something<: :> And NONE OF YOUR FRIENDS RELATING<: :> Is so real<: :> Even s3s fandom is t i n y<: :> Need more content need more content<: :> More snail content more s3s content more more more<:"
-		"\0%(typing):> Since I love the characters and the show so much it makes me want to expand this ghost sooo much<: :> Like I have ideas for a lot of cool features<: :> Like joining the Starlight Sword Squad and having missions<: :> And ranks<: :> But that requires so much work<: :> And writing<: :> And thinking<: :> It's tough<: :> I need to plan better<: :> I can always update cool stuff in later<:"
+		OnTalkGhost.Pool.Obscure
 	}
 	--
 	backbuttonsghost
@@ -336,7 +366,20 @@ OnTalkGhost.Obscure : nonoverlap_pool
 OnTalkGhost.Initial.Object
 {
 	"\0%(typing):> Ever since I made the Egg ghost I've become kind of obsessed with object ghosts<: :> like they don't seem like much at first right<: :> but actually it's really freeing<: :> because you get to ditch the standard format and make something silly<: :> A lot less drawing, too<: :> Anyways, so after Ghost Jam I decided I wanted to make another one<: :> This time it's gonna be a printer<: :> but the best bit is<: :> the printer always has some kind of printing trouble<: :> so you have to piece together what it's saying from bits and pieces<: :> rather than seeing the whole picture all at once<: :> I just think it will be fun<:"
-	
+}
+
+OnTalkGhost.Pool.Objects : nonoverlap
+{
+	"\0%(typing):> What does a printer talk about?<: \i[6] :> Printer self-care, for starters<: :> Make sure you run your diagnostics<: :> Make sure to refill your ink regularly<: :> If you think your ink is getting low, cause a fuss until someone gets you more<: :> Don't settle for sub-par paper<: \s[1] :> That kind of stuff<:"
+	"\0%(typing):> I'm debating if I want to add beeping noises<: :> I guess if I do I will need a volume control<: :> Or a way to turn it off<: \w8\w8 :> Sounds get pretty annoying<:"
+	"\0%(typing):> I think I want to have extra characters that are sheets of paper<: :> And they have different images printed on them<: :> So you can collect and display them<: :> that is a lot of extra art tho...<:"
+	"\0%(typing):> I don't want to make this ghost too complicated<: :> just like<: :> 1 or 2 solid mechanics<: :> and then a lot of dialogue<:"
+	"\0%(typing):> I don't know how I'm going to sell people on this printer ghost<: :> Unless they're like<: :> Big printer fans lol<: :> I guess other fans of object ghosts will probably be the main audience<: :> we'll see<:"
+	"\0%(typing):> I think it would be \f[strike,1]annoying\f[strike,default] fun if the printer complains about being out of ink every hour or so<: \i[6] :> gotta make it realistic you know<: :> give people The Home Printer Experience(tm)<: :> that everyone is looking for<:"
+	"\0%(typing):> I hope Egg ghost won't get jealous<: :> Tho I can make it and Printer friends<: :> the Printegg duo!<: :> ... it sounded better in my head<:"
+	"\0%(typing):> I'm considering adding some horror content<: :> Maybe with some way to toggle it on and off<: :> So that people who want a more chill experience don't have to worry about it lol<:"
+	"\0%(typing):> I hope people don't think that like<: :> This will actually access their printer or something<: :> bet I get a few asks about that<:"
+	"\0%(typing):> Printer is going to be so annoying lol<: :> but in like<: :> a fun way<: :> if you get this ghost you are signing up to be hassled by it<:"
 }
 
 OnTalkGhost.Object : nonoverlap_pool
@@ -348,13 +391,7 @@ OnTalkGhost.Object : nonoverlap_pool
 	}
 	else
 	{
-		"\0%(typing):> What does a printer talk about?<: \i[6] :> Printer self-care, for starters<: :> Make sure you run your diagnostics<: :> Make sure to refill your ink regularly<: :> If you think your ink is getting low, cause a fuss until someone gets you more<: :> Don't settle for sub-par paper<: \s[1] :> That kind of stuff<:"
-		"\0%(typing):> I'm debating if I want to add beeping noises<: :> I guess if I do I will need a volume control<: :> Or a way to turn it off<: \w8\w8 :> Sounds get pretty annoying<:"
-		"\0%(typing):> I think I want to have extra characters that are sheets of paper<: :> And they have different images printed on them<: :> So you can collect and display them<: :> that is a lot of extra art tho...<:"
-		"\0%(typing):> I don't want to make this ghost too complicated<: :> just like<: :> 1 or 2 solid mechanics<: :> and then a lot of dialogue<:"
-		"\0%(typing):> I don't know how I'm going to sell people on this printer ghost<: :> Unless they're like<: :> Big printer fans lol<: :> I guess other fans of object ghosts will probably be the main audience<: :> we'll see<:"
-		"\0%(typing):> I think it would be \f[strike,1]annoying\f[strike,default] fun if the printer complains about being out of ink every hour or so<: \i[6] :> gotta make it realistic you know<: :> give people The Home Printer Experience(tm)<: :> that everyone is looking for<:"
-		"\0%(typing):> I hope Egg ghost won't get jealous<: :> Tho I can make it and Printer friends<: :> the Printegg duo!<: :> ...it sounded better in my head<:"
+		OnTalkGhost.Pool.Objects
 	}
 	--
 	backbuttonsghost
