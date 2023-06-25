@@ -339,6 +339,10 @@ OnTalk.CurrentProject : nonoverlap_pool
 		{
 			"\0%(typing):> dialogue<:"
 		}
+		if CurrentWork == "Idle"
+		{
+			"\0%(typing):> dialogue<:"
+		}
 	}
 	if CurrentProject == "Fandom Ghost"
 	{
@@ -351,6 +355,10 @@ OnTalk.CurrentProject : nonoverlap_pool
 			"\0%(typing):> dialogue<:"
 		}
 		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+		if CurrentWork == "Idle"
 		{
 			"\0%(typing):> dialogue<:"
 		}
@@ -369,6 +377,10 @@ OnTalk.CurrentProject : nonoverlap_pool
 		{
 			"\0%(typing):> dialogue<:"
 		}
+		if CurrentWork == "Idle"
+		{
+			"\0%(typing):> dialogue<:"
+		}
 	}
 	if CurrentProject == "Big Fandom Ghost"
 	{
@@ -382,7 +394,7 @@ OnTalk.CurrentProject : nonoverlap_pool
 		}
 		if CurrentWork == "Writing"
 		{
-			"\0%(typing):> Writing dialogue for Fae Friends Forever<: :> It's pretty fun<: :> With 3 characters there's a lot of back and forth<: :> Makes it easier honestly<:"
+			"\0%(typing):> Writing dialogue for Fae Friends Forever<: :> It's pretty fun<: :> With 3 characters there's a lot of back and forth<: :> Makes it easier honestly<: :> you just say a thing and then the others carry it on for a while<:"
 		}
 	}
 	if CurrentProject == "Mini Fandom Ghost"
@@ -430,7 +442,19 @@ OnTalk.CurrentProject : nonoverlap_pool
 			"\0%(typing):> Printer dialogue<: :> I can basically just dump whatever's in my brain in here lol<: :> I do try to make it printer themed th<: :> like you know<: \i[6] :> BRRRRRRRR-SHK, BRRRRRRRRRR-SHK<: :> printer noises and all<:"
 		}
 	}
-	"\0%(typing):> dialogue<:"
+	if CurrentProject == "Idle"
+	{
+		"\0%(typing):> Working on resting<: \i[6] :> It's exhausting work<:"
+		"\0%(typing):> I'm a bit distracted atm tbqh<: :> I'll get back to work later<:"
+		"\0%(typing):> Not up to much right now<: :> Just need to rest my brain for a bit<:"
+		"\0%(typing):> I'm thinking about what to work on next<: :> but I haven't settled on anything yet lol<:"
+		
+		//Ghost specific
+		"\0%(typing):> Well I'm supposed to be working on Fae Friends Forever<: :> but I'm taking a little break<: :> idk I'll get back to work in a bit<:"
+		"\0%(typing):> I'm working on Alastria<: :> in theory<: :> taking a break, you know<:"
+		"\0%(typing):> Super Snail is my project for now<: :> not that I'm<: :> doing much at the moment<: :> I got a little distracted<:"
+		"\0%(typing):> I'm working on Printer<: :> Or I'm supposed to be<: :> I'm a little tired<: :> So I'm<: :> Having a break<:"
+	}
 	--
 	backbuttons
 }
@@ -447,6 +471,7 @@ OnTalk.GhostTips : nonoverlap_pool
 	"\0%(typing):> Ghost making doesn't have to be a huge task<: :> There are ghost jams where ghosts get made in a week<: :> Sometimes people even submit ghosts within the first day<: :> It's pretty crazy<: :> I'm not that good yet lol<: :> I made Egg for a ghost jam but I took a week on it<: :> I learned a lot tho<: :> It's not a super flashy ghost but it only took 1 week to make<: :> and I was working alone lol<:"
 	"\0%(typing):> The best thing to do is just do it<: :> and if it all seems overwhelming<: :> remember that there are no required events in ghosts<: :> you can leave out anything that you don't want to deal with<: :> and that can make the work a lot more manageable and focused<:"
 	"\0%(typing):> Make a planning doc<: :> You don't need to get super detailed or anything<: :> just outline what you want<: :> and stick to it<: :> don't let your scope bloat so far that you don't complete your ghost<: :> put new ideas into a section for after-release updates or something<: :> make them goals that you have to complete the main ghost before you go after<: :> that helps me, anyways<:"
+	"\0%(typing):> Learn how to use all the features of your program<: :> notepad++ has macros<: :> column editing which is a lifesaver for shell code<: :> you can save sessions for each ghost so you can open their files quickly<: :> all kinds of great key combos<: :> the more I learn the more efficient I get<: :> tho sometimes I learn a feature and it's just never useful for me lol<:"
 	--
 	backbuttons
 }

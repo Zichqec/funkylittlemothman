@@ -119,21 +119,60 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> I really want to add this one dialogue line in<: :> But it will require me to add like<: :> Three new poses<: :> JUST for it<: :> Hm.\w8\w8\w8\w7\n\n[half]:> I'll think about it<:\e"
 		
 		"\0%(typing):> Progress, progress<: :> Still nowhere near release but. Progress.<:\e"
+		
+		
+		"\0%(typing):> Fae Friends Fae Friends<: :> Their dynamics are so fun<: :> I hope I'm capturing them well<:\e"
+		"\0%(typing):> Drawing Fae Friends has been really interesting since their designs are so varied<: :> thank goodness for that because wow I'm having to draw them a ton<: :> gotta keep it interesting somehow<:\e"
+		"\0%(typing):> I have so many plans for this ghost<: :> Maybe too many plans<: :> but if I can get through it all people are gonna be amazed<: :> I hope so anyways<:\e"
+		"\0%(typing)[[is thinking about fae]]\e"
+		"\0%(typing)\i[6][[is dreaming of the day Fae Friends Forever will be released]] :> Ahh it's gonna be great<: :> if I ever get there<:\e"
+		"\0%(typing):> I'm trying to stick pretty close to canon<: :> but like<: :> there will definitely be some headcanons in here<: :> it's sort of unavoidable<: :> they're side characters after all<: :> so like<: :> not all that much canon material to work with for them<:\e"
+		"\0%(typing):> I've made whole lists of notes about these characters<: :> How they talk<: :> How they respond to each other<: :> Trying really hard to make them feel right<:\e"
+		"\0%(typing):> I wonder if a lot of people will see this ghost<: :> or if I got lucky with Molnia<: :> Maybe this one will end up flying under the radar<: :> and then I guess I'll be sad lol<:\e"
+		"\0%(typing):> Themes themes themes<: :> I'm trying to pay close attention to the themes here<: :> cuz like...<: :> They're sort of a hang-out-with-you deal<: ::> but<:: :> I'm trying to tell a story here<: :> just, more subtly than Alastria lol<:\e"
+		"\0%(typing):> I wonder if I'll even remember all their dialogues by the time I've written as many as I want<: :> It's going to take so long and there will be so many<: :> that I wonder if<: :> I'll look at it and go ""did I write that I don't remember that""<: :> you know?<:\e"
 	}
 	
 	if CurrentProject == "Mini Fandom Ghost"
 	{
-		
+		"\0%(typing):> Alastria Alastria Alastria<: :> What am I doing with you<: :> Scheming more probably lol<:\e"
+		"\0%(typing):> I've hardly started with Alastria's assets tbqh<: :> Right now I've mostly been planning<: :> I kind of want to get Printer published before I go all in on her<: ::> but<:: :> style practice and drafting the plot can't hurt<:\e"
+		"\0%(typing):> Tester assets tester assets<: :> what size do I want the shell?<: :> I think I'm gonna do it from the waist up<: :> because it suits the story better<: :> you feel like you're up close and standing in the same room, you know?<: :> and I don't really need the legs for anything<: ::> so<:: :> ditching em so the the arms and face get more detail lol<:\e"
+		"\0%(typing):> Is Alastria my favorite fae?<: \i[6] :> maybe<:\e"
+		"\0%(typing):> Alastria doesn't get as much attention as the main characters in the show do<: :> Molnia's pretty popular, but Alastria's pretty niche<: :> I wonder if the ghost will get less users because of that<:\e"
+		"\0%(typing):> I'm still thinking about what I want Alastria's firstboot to be<: :> I have some ideas in mind<: :> but I want it to be really striking<: :> so you know you're in for a ride<:\e"
+		"\0%(typing):> I think the pacing of this ghost is going to be really important<: :> I wonder if I can get someone to test it privately...<:\e"
+		"\0%(typing):> Whenever I get everything plotted out for Alastria I want to just<: :> pick a month<: :> and sit down and finish the whole ghost<: :> and then I can focus on Fae Friends Forever or something<: :> I dunno depends what I feel like doing afterwards I guess<:\e"
+		"\0%(typing):> Maybe if Alastria doesn't get much attention I cam promote her on Molnia updates<: :> That might be the way to do it<:\e"
+		"\0%(typing):> I need to go back and rewatch episodes with Alastria again<: :> Make more notes on how she speaks and moves<: :> gotta do this right if I'm going to all the effort you know?<:\e"
 	}
 	
 	if CurrentProject == "Obscure Ghost"
 	{
-		
+		"\0%(typing):> Super Snail Super Snail<: :> I need to do a super lot of work on you<:\e"
+		"\0%(typing):> Super Snail's kind of somber in thsi ghost<: :> But I dunno<: :> I think a more somber ghost is kind of interesting<:\e"
+		"\0%(typing):> I want the user to be able to befriend Super Snail<: :> and not like<: :> so that you can make her happy and bubbly again<: :> but it would be cool if your friendship helps her heal a little<: :> I'll have to think about it<:\e"
+		"\0%(typing):> Better not forget to add in those spoiler warnings<: :> Not that many people have seen the show<: :> But you know<:\e"
+		"\0%(typing):> Going to the wiki for information and finding it's run down<: :> it's really sad<: :> maybe I'll make some edits<: :> I do know a lot about this show<: ::> but<:: :> that means less time for ghost<:\e"
+		"\0%(typing)[[is sad about SuperBirdie still]] :> it's such a good plot point but man<: :> hurts<:\e"
+		"\0%(typing)[[is thinking about Super Snail]] \w8\w8\w8\w8 [[is also thinking about Birdie Beauty]] \w8\w8\w8\w8\w8\w8 [[is sad]]\e"
+		"\0%(typing):> Snails are fun to draw actually<: :> and write for<: :> Actually that goes for bugs in general tbh<:\e"
+		"\0%(typing):> I hope I get some people into the show with this ghost<: :> we'll see<:\e"
+		"\0%(typing):> I'm trying to be careful with how I write this ghost<: :> I have to do the show justice ofc<: :> being as it's so small<: :> but it's also sort of a sensitive topic<: :> so<:\e"
 	}
 	
 	if CurrentProject == "Object Ghost"
 	{
-		
+		"\0%(typing):> What kind of things does a printer have to say<: :> A surprising amount actually<:\e"
+		"\0%(typing):> I wonder if anyone will try this ghost<: :> Next time someone shares an object ghost I should try it<: :> Object ghost solidarity<:\e"
+		"\0%(typing):> You wouldn't think a printer would have a lot of content<: :> you would be wrong<: :> this has so much stuff in it and it's not even released yet lol<:\e"
+		"\0%(typing):> I kind of want to make additional shells for printer<: :> but like<: :> with all the printouts that's a lot of work lol<:\e"
+		"\0%(typing):> You'll never guess what printer is inspired by<: :> me?<: :> bad experiences with real printers?<: :> no never<: :> don't know what you're talking about lol<:\e"
+		"\0%(typing):> I kind of want to try adding a scanner function<: :> like<: :> drop an image on the printer and it makes a printout of it<: :> I think there's a SAORI for that...<: ::> but<:: :> I would have to corrupt the image somehow<: :> that sounds hard idk<: :> maybe I'll ask someone for advice sometime<:\e"
+		"\0%(typing):> I'm having fun making envelopes for printer glitching<: :> Really varies things up<: :> They're looooooong envelopes<:\e"
+		"\0%(typing):> Printer go brrrrrrrrrrrr<:\e"
+		"\0%(typing):> I didn't know I needed printer content in my life until I started working on this ghost<: :> I hope other people feel the same way when they try it<: \w8\w8\w8\w8\w8 :> if they try it lol<:\e"
+		"\0%(typing):> How am I gonna sell people on this ghost<: :> idk man I'll figure something out<:\e"
 	}
 	
 	if CurrentProject == "Balloon" //Currently does not happen, ran out of time lol
@@ -182,6 +221,17 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Bless the tutorials<:\e"
 		
 		"\0%(typing):> I'm gonna work on a balloon<: :> thats a lie no im not<:\e"
+		
+		"\0%(typing):> uuuuugggghhhhhhhhh<: :> I want to work on ghosts but I don't want to<: :> you feel me?<:\e"
+		"\0%(typing):> got so much to do<: :> and instead<: :> I'm not doing any of it<:\e"
+		"\0%(typing):> I should be working<: :> in a bit lol<:\e"
+		"\0%(typing):> I gotta find the right music<: :> to get into the mood you know<: :> it's very important<:\e"
+		"\0%(typing):> I'm kinda sleepy<: :> need something to wake me up before I can get back to work<:\e"
+		"\0%(typing):> I gotta catch up on some stuff before I get to work<: :> Check messages<: :> Check bug reports<: :> Check the fandom tag<:\e"
+		"\0%(typing):> Maybe I'll watch some episodes for a while<: :> do some research<:\e"
+		"\0%(typing):> no thoughts<: :> head empty<: :> maybe some anime will help get inspiration flowing<:\e"
+		"\0%(typing):> this post made by the zoning out gang<:\e"
+		"\0%(typing):> too many thing to do<: :> maybe I'll roll a random number to pick which project to work on<: \w8\w8\w8\w8 :> innnnn a bit lol<:\e"
 	}
 	
 	
@@ -207,6 +257,17 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> I should finish this<: :> Preferably today<: :> Need more surfaces<:\e"
 		
 		"\0%(typing):> I don't really need this surface<: :> But it will look cool<: :> So who cares<:\e"
+		
+		"\0%(typing)[[is scribbling]]\e"
+		"\0%(typing):> Always more surfaces<: :> they take so long<: :> want to make them look nice<: :> and want multiple shells...<:\e"
+		"\0%(typing):> Dressups are fun<: :> kind of a pain tho<: :> when you have a lot of poses<:\e"
+		"\0%(typing):> to shade or not to shade<: :> adds so much extra time with several poses<: :> looks so nice tho<:\e"
+		"\0%(typing):> I keep wanting to redraw my older shells<: :> they're not that old but I feel like I could draw them better now<: :> but that will take a while to do<:\e"
+		"\0%(typing):> I'm trying to practice drawing more interesting poses<: :> it's kinda difficult<: :> but idk I think I'm making progress<:\e"
+		"\0%(typing):> Draw draw draw<: :> I might need to change my pen nib soon actually<:\e"
+		"\0%(typing):> Blinking animations<: :> it's always annoying to set them up<: :> but then the shell looks better with them<: :> so I always have to do them now<:\e"
+		"\0%(typing):> talk animations are hard<: :> that's all<:\e"
+		"\0%(typing):> Some days art just doesn't want to work<: :> everything just looks super wonky<: :> thankfully not today<: :> drawdrawdraw<:\e"
 	}
 	
 	if CurrentWork == "Writing"
@@ -230,6 +291,17 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Okay okay I got into the flow of writing this<: :> Hopefully gonna have some work done now<:\e"
 		
 		"\0%(typing):> Need more idle dialogue<: :> Always<:\e"
+		
+		"\0%(typing):> Gonna just empty my whole brain into a word doc<: :> surely there'll be something worthwhile in there<:\e"
+		"\0%(typing):> Ideas ideas ideas<: :> sometimes I just try to think of random words<: :> and then think of what kind of dialogues might use those words<:\e"
+		"\0%(typing):> Original ghosts vs fandom ghosts<: :> On one hand, fandom ghosts have source material to reference and work from<: :> on the other hand, people won't complain that your original characters aren't acting like they should<: \w8\w8\w8\w8 :> either way you still gotta work hard at it tho or they'll feel lifeless and bland<: \w8\w8\w8\w8 :> writing's hard<:\e"
+		"\0%(typing):> words words words<: [[is putting words down]]  [[may erase the words later]]\e"
+		"\0%(typing):> Writing is so much easier after you get started<: :> sometimes it feels impossible until after I've started<:\e"
+		"\0%(typing):> Just gotta<: :> think of<: :> a better word here<: :> there must be something<:\e"
+		"\0%(typing):> cmon cmon cmon<: :> give me some words brain<: :> pls<:\e"
+		"\0%(typing):> thinking thinking<: :> if I smash some letters together maybe it will give me inspiration<: :> sdfkjsdfhsdfkjahad<: \w8\w8\w8\w8 :> nah not doing it for me<:\e"
+		"\0%(typing)[[is writing so much]] [[is gonna write all day]] \w8\w8\w8 [[might write all day]]\e"
+		"\0%(typing)[[is tap tap tapping away]] :> typing is fun<: :> smacksmacksmack the keys<: :> nice rhythm<: :> nice feel<: :> idk man that's just how I feel rn<:\e"
 	}
 	
 	if CurrentWork == "Programming"
@@ -253,22 +325,67 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Yes!<: :> It works!<: :> Code!<: :> Code works!<:\e"
 		
 		"\0%(typing):> I can code it like a smart person<: :> Or like a funky little mothman<: \i[5]:> The choice is obvious<:\e"
+		
+		"\0%(typing):> I'm learning a lot about coding<: :> it's all very logical<: :> but when you get angry you stop being logical<: :> so if you get angry you're just making things harder on yourself lol<:\e"
+		"\0%(typing):> Thank god for tama<: :> Don't know how I ever got by without it before<:\e"
+		"\0%(typing):> I never thought I would get into code<: :> but here I am doing it<: :> I dunno it's alright<:\e"
+		"\0%(typing):> it's a lot of problem solving<: ::> code<:: \i[6] :> it's kinda fun sometimes once you've figured it out and done it the right way around<:\e"
+		"\0%(typing):> Just going to cut and paste this whole thing out into my scratchpad<: :> cuz it's<: :> not working<: :> but I might need it for referencing later<:\e"
+		"\0%(typing):> Uuuughhhh I think I have put myself into a corner again<: :> just gonna<: :> throw a bandaid patch on that...<: :> don't tell anyone<:\e"
+		"\0%(typing):> it works IT WORKS<: :> OH MY GOD IT WORKS<: ::> after<:: :> HOURS of effort<: :> that I have poured into this<: :> I could cry<:\e"
+		"\0%(typing):> well I thought this was working but actually it's not<: :> I'm just gonna<: :> stare sadly at it and will it into working<:\e"
+		"\0%(typing):> but why isn't this working tho<: :> like<: :> it should<: :> but it's not<: :> where did I go wrong<:\e"
+		"\0%(typing):> I think code is magic<: :> I dunno I write some funky words and stuff happens on my computer<: :> like how wild is that<:\e"
 	}
 	
 	
 	//—————————————————————————————— Mood comments ——————————————————————————————
 	if CurrentMood == "Short"
 	{
-		"\0%(typing):> i'm not focusing very well today lol<: :> maybe I should call it a day<: :> or get a snack<:\e"
+		"\0%(typing):> I'm not focusing very well today lol<: :> maybe I should call it a day<: :> or get a snack<:\e"
+		
+		"\0%(typing):> ugh ugh ugh can't focus<: :> gonna just<: :> switch tasks again I guess<:\e"
+		"\0%(typing):> Chipping away at this I guess<: :> but idk might do something else<:\e"
+		"\0%(typing):> I'm not really feeling this right now<: :> maybe I'll do something else for a bit<: :> maybe I should try to stick with it tho<: :> I dunno<:\e"
+		"\0%(typing)[[is getting distracted]]\e"
+		"\0%(typing)[[is trying to focus]] [[is failing]]\e"
+		"\0%(typing)[[considers switching tasks again]]\e"
+		"\0%(typing)[[starts daydreaming]] \w8\w8\w8 :> cmon me<: :> focus<:\e"
+		"\0%(typing):> Maybe today is a good research day<: :> you know<: :> watch some episodes<: :> make some notes<: :> mostly watch episodes<:\e"
+		"\0%(typing):> uuugggghhhh NOTHING wants to work today<: :> ugh ugh ugh<:\e"
+		"\0%(typing):> today isn't going very well tbh<:\e"
 	}
 	
 	if CurrentMood == "Long"
 	{
 		"\0%(typing)\i[5]:> I've been getting a lot done<: :> Feels good<:\e"
+		
+		"\0%(typing)[[is in the zone right now]]\e"
+		"\0%(typing)[[is very focused]]\e"
+		"\0%(typing)[[is getting a lot done]]\e"
+		"\0%(typing):> Sorry if I don't have much to say<: :> Getting a lot done<:\e"
+		"\0%(typing):> check check check<: :> checking things off my list<: :> real progress!!<:\e"
+		"\0%(typing):> ghosts go brrrrrrrr<: :> why can't every day be like this lol<:\e"
+		"\0%(typing):> it's a good day today<: :> ghost work going good<: :> just gotta keep going<:\e"
+		"\0%(typing):> watching stuff actually take shape is so satisfying<: :> once one part is complete, then other parts are able to move forward<: :> and so on and so forth<: :> until suddenly<: :> you're just down to little details<: :> and those little details are hard<: :> but you're so close you almost can't help but push through<:\e"
+		"\0%(typing):> I feel like I want to write an essay about ghost making<: :> I dunno I'm just having a good time today<: :> despite everything lol<:\e"
+		"\0%(typing):> rolling rolling rolling<: :> nothing can stop me today<:\e"
+		"\0%(typing)[[is unstoppable]]\e"
 	}
 	
 	if CurrentMood == "Random"
 	{
 		"\0%(typing):> Things are going alright<: :> I'm not really in<: :> The Zone<: :> but I'm making ok progress<:\e"
+		
+		"\0%(typing)[[is puttering along]]\e"
+		"\0%(typing)[[is making progress slowly but surely]]\e"
+		"\0%(typing)[[is ghost devving]] [[is sure that no one is surprised by that]] [[wanted to say it anyways]]\e"
+		"\0%(typing):> little tired<: :> maybe I should do something else for a bit<: :> let myself recharge<: :> idk we'll see<:\e"
+		"\0%(typing):> trying not to get distracted<: :> it's hard<: :> especially since I want to do another rewatch of 3s3<:\e"
+		"\0%(typing):> Maybe I should get more water<: :> eh I can do it later<: :> After I'm done with this<:\e"
+		"\0%(typing):> am I hungry?<: :> I might be hungry<: :> hmmm<:\e"
+		"\0%(typing):> I need to stop clenching my teeth<: :> I just get so focused on work sometimes<:\e"
+		"\0%(typing):> I keep fussing with this but I don't think it's really getting any better<: :> I suppose I should move on to the next thing<:\e"
+		"\0%(typing):> Just a little more of this I think<: :> Kinda want to switch to something else<: :> but idk maybe if I keep going I'll feel like going for longer<: :> We'll see<:\e"
 	}
 }

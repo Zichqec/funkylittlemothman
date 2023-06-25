@@ -32,7 +32,7 @@ Debug.ResetAllModes
 	SetMoodModeTime
 	SetProjectModeTime
 	SetSurfaceModeTime
-		OnSurfaceRestore
+	OnSurfaceRestore
 	//Work mode will be set as a part of the project
 }
 

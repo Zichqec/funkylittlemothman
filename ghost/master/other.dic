@@ -12,8 +12,6 @@ OnTranslate
 	if SpecialFont[0] != ""; _font += "\f[name,%(SpecialFont[0])]"
 	if SpecialFont[1] != DefaultFontSize; _font += "\f[height,%(SpecialFont[1])]"
 	
-	_pingcolor = "\f[color,default.anchor]"
-	
 	if DefaultBalloon && WhiteText
 	{
 		_font += "\f[color,255,255,255]"
@@ -21,25 +19,78 @@ OnTranslate
 		_font += "\f[cursorfontcolor,176,243,083]"
 		_font += "\f[anchorfontcolor,176,243,083]"
 		_font += "\f[anchorpencolor,176,243,083]"
-		_pingcolor = "\f[color,176,243,083]"
-	}
+	} 
 	
 	_wait = "1.5"
 	
-	_typing = "\![set,balloonwait,%(_wait)]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]"
+	_typing = ""
+	_typing += "\_l[0,]\![set,balloonwait,%(_wait)]"
+	_typing += "\f[color,disable]\_q\_l[,]"
+	_typing += "\n\n[half]\f[align,left]"
+	_typing += "@funkylittlemothman is typing...\_q\![lock,balloonrepaint]"
+	_typing += "\c[line,1]\n\n[half]\f[color,default]"
+	
+	_first = 1
+	while ":> " _in_ _talk || "::> " _in_ _talk || "[[" _in_ _talk
+	{
+		LOGGING("====================================================================")
+		_normaltalk = STRSTR(_talk,":> ",0)
+		_fasttalk = STRSTR(_talk,"::> ",0)
+		_narrationtalk = STRSTR(_talk,"[[",0)
+		
+		//AHAHAHAHAHA I'M A GENIUS (not really there are 13 hours to go im dying please dont judge this or use it as good code to reference)
+		if _normaltalk == -1; _normaltalk = 999999999999999999
+		if _fasttalk == -1; _fasttalk = 999999999999999999
+		if _narrationtalk == -1; _narrationtalk = 999999999999999999
+		
+		LOGGING("_first: %(_first)")
+		if _normaltalk < _fasttalk && _normaltalk < _narrationtalk && _normaltalk > -1 //:>
+		{
+			LOGGING("NORMAL TALK")
+			_toadd = "%(_typing)\f[align,left]> "
+			//if !_first; _toadd = "\n\n[half]" + _toadd
+			if !_first; _toadd = "\w8\w8\w8" + _toadd
+			
+			_talk = REPLACE(_talk,":> ",_toadd,1)
+		}
+		elseif _fasttalk < _normaltalk && _fasttalk < _narrationtalk && _fasttalk > -1 //::>
+		{
+			LOGGING("FAST TALK")
+			_toadd = "%(_typing)\f[align,left]> "
+			//if !_first; _toadd = "\n\n[half]" + _toadd
+			if !_first; _toadd = "\w8" + _toadd
+			
+			_talk = REPLACE(_talk,"::> ",_toadd,1)
+		}
+		else //[[
+		{
+			LOGGING("NARRATION TALK")
+			LOGGING("_normaltalk: %(_normaltalk)")
+			LOGGING("_fasttalk: %(_fasttalk)")
+			LOGGING("_narrationtalk: %(_narrationtalk)")
+			
+			_toadd = "%(_typing)\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] "
+			//if !_first; _toadd = "\n\n[half]" + _toadd
+			if !_first; _toadd = "\w8\w8\w8" + _toadd
+			
+			_talk = REPLACE(_talk,"[[",_toadd,1)
+		}
+		_first = 0
+	}
+	
 
-	//_talk = REPLACE(_talk,"::> ","%(_typing)%(_font)> ",1)
-	_talk = REPLACE(_talk,"::> ","\w4\n\n[half]%(_typing)\n\n[half]%(_font)> ")
-	_talk = REPLACE(_talk,"<::","\![set,balloonwait,1]\w4\![unlock,balloonrepaint]")
+	//_talk = REPLACE(_talk,"::> ","%(_typing)> ",1)
+	//_talk = REPLACE(_talk,"::> ","\w4\n\n[half]%(_typing)\n\n[half]> ")
+	_talk = REPLACE(_talk,"<::","\![set,balloonwait,1]\w8\![unlock,balloonrepaint]")
 
-	_talk = REPLACE(_talk,":> ","%(_typing)%(_font)> ",1)
-	_talk = REPLACE(_talk,":> ","\w8\w8\w8\n\n[half]%(_typing)\n\n[half]%(_font)> ")
+	//_talk = REPLACE(_talk,":> ","%(_typing)\_l[0,]> ",1)
+	//_talk = REPLACE(_talk,":> ","\w8\w8\w8\n\n[half]%(_typing)\n\n[half]> ")
 	_talk = REPLACE(_talk,"<:","\![set,balloonwait,1]\w8\w8\![unlock,balloonrepaint]")
 	
+	_talk = REPLACE(_talk,"\n\n[half]","",1)
 	
-	
-	_talk = REPLACE(_talk,"[[","%(_typing)%(_font)\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
-	_talk = REPLACE(_talk,"]]","\![set,balloonwait,1]\n\f[align,left]\n[-100]\w8\w8\w8\![unlock,balloonrepaint]")
+	//_talk = REPLACE(_talk,"[[","%(_typing)\_l[0,]\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
+	_talk = REPLACE(_talk,"]]","\![set,balloonwait,1]\w8\w8\n \n[-100]\f[align,left]\![unlock,balloonrepaint]")
 	
 	if SHIORI3FW.EventidOld == "OnAITalkNewEvent" || SHIORI3FW.EventidOld == "OnKeyPress" || SHIORI3FW.EventidOld == "OnSecondChange" || SHIORI3FW.EventidOld == "OnLastTalk" || SHIORI3FW.EventidOld == "OnFirstBoot2" || (reference1 == "" && reference2 == "")
 	{
@@ -59,7 +110,7 @@ OnTranslate
 		_talk = REPLACE(_talk,"\f[anchorvisitedfontcolor,default.anchor]","\f[anchorvisitedfontcolor,176,243,083]")
 	}
 	
-	_talk = REPLACE(_talk,"\0","\0%(_font)")
+	_talk = REPLACE(_talk,"\0","\0%(_font)\_l[,]",1)
 	
 	TOSTR(_talk)
 }
