@@ -15,7 +15,7 @@ OnSakuraMenu : all
 	
 	"\_q"
 	
-	"\![*]\q[Observe,OnAiTalk]"
+	"\![*]\q[Listen,OnAiTalk]"
 	if LastTalk != ""; "  \![*]\q[See chat log,OnLastTalk]"
 	"\n\n"
 	"\![*]\q[Talk,OnTalkMenu]\n"
@@ -486,7 +486,7 @@ OnTalk.GhostIdeas : nonoverlap
 	"\0%(typing):> Here's a challenge for you<: :> A ghost of %(GhostIdeaGenerator)<: :> Have fun<:"
 	"\0%(typing):> I came up with a random idea myself actually<: :> I was just daydreaming<: :> I don't want it tho, so<: :> If you want it you can have it<: :> The idea was a ghost of %(GhostIdeaGenerator)<:"
 	--
-	"\w8\w8\n\n\![quicksection,true]\![*]\q[Again,OnTalk.GhostIdeas]  \![*]\q[Back,OnTalkMenu]  \![*]\q[Nevermind,blank]"
+	backbuttons + "  \![*]\q[Again,OnTalk.GhostIdeas]"
 }
 
 backbuttons
