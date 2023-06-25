@@ -15,7 +15,7 @@ OnFirstBoot
 	
 	ProjectsDiscussed = (0,0,0,0,0,0,0,0)
 	
-	"\t\*\1\s[25]\![move,--base=0,--x=-260,--y=100]\0\s[1]:> Hello<: :> You're a Ghost enthusiast too, right?<: :> Cool. I go by @funkylittlemothman<: :> But you can just call me Moth<: :> Do I call you %(username), or you got another nickname?<: "
+	"\t\*\1\s[25]\![move,--base=0,--x=-260,--y=100]\0\s[1]:> Hello<: :> You're a Ghost enthusiast too, right?<: :> Cool. I go by \f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default]<: :> But you can just call me Moth<: :> Do I call you %(username), or you got another nickname?<: "
 	--
 	"\![open,inputbox,OnFirstBoot2,-1]"
 	--

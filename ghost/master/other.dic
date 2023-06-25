@@ -110,7 +110,7 @@ OnTranslate
 		_talk = REPLACE(_talk,"\f[anchorvisitedfontcolor,default.anchor]","\f[anchorvisitedfontcolor,176,243,083]")
 	}
 	
-	_talk = REPLACE(_talk,"\0","\0%(_font)\_l[,]",1)
+	_talk = REPLACE(_talk,"\0","\0%(_font)\_l[,] \_l[0,]",1)
 	
 	TOSTR(_talk)
 }
