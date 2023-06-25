@@ -75,6 +75,7 @@ OnTalk.Ghosts : nonoverlap_pool
 	"\0%(typing):> The more I work on them the more I learn<: :> the more I regret some of my past decisions lol<: :> but I'm getting a lot better at it<: :> And I'm learning how to program<: :> It's pretty neat<:"
 	"\0%(typing):> Writing is so important<: :> that was something I struggled with for a bit<: :> like<: :> what do you even make them say when they're just standing there<: \w8\w8 :> But I've been working on that a lot lately<: :> Especially since I released Egg<: :> And I'm getting more confident in coming up with interesting things to say<: :> If the angle you picked is difficult, you can just pick a new one, you know?<:"
 	"\0%(typing):> I'm glad I found ghosts<: :> I mean sometimes it's frustrating<: :> When stuff's broken<: :> or people are complaining<: :> or not reading your instructions<: :> or asking same question fifteen times<: :> or asking a hundred different questions<: :> or making unreasonable feature requests<: :> But making stuff is fun<:"
+	"\0%(typing)\i[6]:> I really love when the Ghost starts to take shape<: :> One second it's just a template with a different face<: :> But then you reload it with the updates and it just turns into it's own little thing<: :> So nice<:"
 	--
 	backbuttons
 }
@@ -509,6 +510,7 @@ OnTalk.GhostIdeas : nonoverlap
 	"\0%(typing):> Sure, I've seen plenty of ideas being thrown out there<: :> Like a ghost of %(GhostIdeaGenerator)<: :> Kind of a weird one but I feel like you could make something of it<:"
 	"\0%(typing):> Here's a challenge for you<: :> A ghost of %(GhostIdeaGenerator)<: :> Have fun<:"
 	"\0%(typing):> I came up with a random idea myself actually<: :> I was just daydreaming<: :> I don't want it tho, so<: :> If you want it you can have it<: :> The idea was a ghost of %(GhostIdeaGenerator)<:"
+	"\0%(typing):> Okay okay I have an idea<: :> I wanted to do it myself but I have too much on my plate so you can think on it<: :> Imagine, a ghost of %(GhostIdeaGenerator)<: :> Cool, right?<:"
 	--
 	backbuttons + "  \![*]\__q[OnTalk.GhostIdeas]Again\__q"
 }
@@ -557,12 +559,14 @@ OnEncourageWork
 		"\0%(typing):> You're right you're right<: :> I need to just get to it<: :> Get in the zone<: :> Focus focus focus<:\e"
 		"\0%(typing):> Yes I know<: :> I was just taking a break for a bit<: :> But I need to really push today and get through some of this<:\e"
 		"\0%(typing):> Oh, yeah<: :> Got a bit distracted<: :> Back to it, then<:\e"
+		"\0%(typing):> Oh, right, right<: :> Thanks<:\e"
 	}
 	elseif CurrentMood == "Short"
 	{
 		"\0%(typing):> Eh, in a bit<:\e"
 		"\0%(typing):> I'll get there, just taking a break<:\e"
 		"\0%(typing):> I'll get back to it in a few minutes<:\e"
+		"\0%(typing):> Yeah yeah just give me a min<:\e"
 	}
 	else //Random mood
 	{
@@ -580,12 +584,15 @@ OnEncourageBreak
 		"\0%(typing):> I'll take a break in a bit<: :> I'm on a roll<: :> Don't want to lose momentum<:\e"
 		"\0%(typing):> Eh, later<: :> I'm in the zone<: :> Gotta make use of this focus while it's here<:\e"
 		"\0%(typing):> I'm making a lot of progress though<: :> I'll take a break once I finish this part<:\e"
+		"\0%(typing):> I'm cool, thanks<: :> Better do more work while I'm in a working mood<:\e"
+		"\0%(typing):> I'm fine<: :> Don't worry<: :> Still cool to go for a bit longer<:\e"
 	}
 	elseif CurrentMood == "Short"
 	{
 		SetProjectModeTime("idle")
 		"\0%(typing):> Yeah, I'm not really getting much done anyways<: :> Better to rest my brain for a bit lol<:\e"
 		"\0%(typing)\i[6]:> Good idea<: :> Break time<: :> Break time forever<: \s[1] :> break time at least for a bit<:\e"
+		"\0%(typing):> Suuuuuuure thing<:\e"
 		"\0%(typing):> I don't want to but I'm struggling to stay on task anyways<: :> So maybe a break is what I need<: :> Just so long as I don't take a break for the rest of the day<: \w8\w8\w8\w8\i[6] :> does sound kind of tempting tho<:\e"
 	}
 	else //Random mood
