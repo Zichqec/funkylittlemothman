@@ -202,6 +202,7 @@ OnTalkGhost.Pool.Fandom : nonoverlap
 	"\0%(typing):> I still need to update Molnia for the latest season of the show<: :> We learned a lot about her backstory<: :> But also its kinda<: :> Hard to write in??<: :> Like? How does it affect her on your screen??<: :> I don't know<: :> Maybe I'll throw a couple of dialogue lines referencing it<: :> But it feels so IMPORTANT<: :> Decisions, decisions<:"
 	"\0%(typing):> It feels weird to program in sad stuff<: :> Like, the things that user can do that make Molnia sad<: :> people keep writing to me how they find attached they are to her<: :> so sometimes I feel like I make her too nice<: :> just so I don't traumatize people<: :> ghosts are supposed to be fun<: :> BUT<: :> CHARACTER CONSISTENCY<:"
 	"\0%(typing)\i[6]:> Molnia is my second favourite character<: :> But I chose to make her into a ghost because I thought she'd work the best<: :> also she's easier to draw<: :> and easier to write<:"
+	"\0%(typing)\i[6]:> Molnia is a fairy of Lightning<: :> She's maybe like the third in power in the whole fairy squad<: :> But when she goes all out it's SO COOL<: :> I love the animation of her lightning powers they are SO SICK<:"
 
 }
 
@@ -404,14 +405,17 @@ OnTalk.CurrentProject : nonoverlap_pool
 		if CurrentWork == "Programming"
 		{
 			"\0%(typing):> Coding stuff for Chesster now<: :> I need to overhaul this stuff eventually<: :> but for now we carry on<:"
+			"\0%(typing):> Time to code for Chesster<: :> He's been waiting for forever<: :> But its ok he's a chess player they're patient<:"
 		}
 		if CurrentWork == "Drawing"
 		{
 			"\0%(typing):> Drawing more poses for Chesster<: :> I need to draw chess pieces moving on board<: :> Wish me luck<:"
+			"\0%(typing):> Drawing for Chesster<: :> Black and white<: :> And maybe red<: :> Unexpected third option<:"
 		}
 		if CurrentWork == "Writing"
 		{
 			"\0%(typing):> Doing some writing for Chesster<: :> Time to give this man crisis<: :> He gives me crisis sometimes so I think that's only fair<:"
+			"\0%(typing):> Doing dialogue for ChessterI have a couple of ideas<: :> Well, I HAD a couple of ideas<: :> Let's see if I still remember them<:"
 		}
 	}
 	if CurrentProject == "Fandom Ghost"
@@ -424,10 +428,12 @@ OnTalk.CurrentProject : nonoverlap_pool
 		if CurrentWork == "Drawing"
 		{
 			"\0%(typing):> Drawing stuff for Molnia<: :> I need a couple of new poses<: :> Hopefully I can just copy the wings and not redraw them again<:"
+			"\0%(typing):> Drawing stuff for my girl Molnia<: :> Still resisting the urge of starting on a new shell for her<:"
 		}
 		if CurrentWork == "Writing"
 		{
 			"\0%(typing):> Writing more things for Molnia<: :> I usually either write like twenty lines for her in half a hour<: :> Or one line in one sitting<: :> The duality of writing<:"
+			"\0%(typing):> Writing stuff for Molnia now<: :> I wrote some interesting theory posts about her today<: :> Gave me some stuff to think about<:"
 		}
 	}
 	if CurrentProject == "Jam Ghost"
@@ -435,14 +441,17 @@ OnTalk.CurrentProject : nonoverlap_pool
 		if CurrentWork == "Programming"
 		{
 			"\0%(typing):> Currently trying to fix Egg<: :> My code is so sloppy<: :> But I'll make it work<: :> Well, it's already working<: :> but I'll make it work BETTER<:"
+			"\0%(typing):> Coding Egg coding egg<: :> Codegging<: :> ...ok no that's a terrible word<:"
 		}
 		if CurrentWork == "Drawing"
 		{
 			"\0%(typing):> Drawing another shell for the Egg<: :> Another EGG SHELL<: :> ...I always make this joke I love this joke it's so dumb<:"
+			"\0%(typing):> Drawing for Egg<: :> Another egg<: :> Painting an egg<: :> Feels like Easter<:"
 		}
 		if CurrentWork == "Writing"
 		{
 			"\0%(typing):> Writing dialogue for the Egg<: :> It's harder than you might think<:"
+			"\0%(typing):> Writing things for the Egg<: :> it's pretty fun, even if it is just<: :> Egg<:"
 		}
 	}
 	if CurrentProject == "Big Fandom Ghost"
@@ -450,14 +459,19 @@ OnTalk.CurrentProject : nonoverlap_pool
 		if CurrentWork == "Programming"
 		{
 			"\0%(typing):> Currently working on Fae Friends Forever<: :> Trying to fix a bug in their progression<: :> just have to track down where it is lol<:"
+			"\0%(typing):> Implementing stuff for Fae Friends Forever<: :> New feature here I go<:"
 		}
 		if CurrentWork == "Drawing"
 		{
 			"\0%(typing):> Drawing the shell for Fae Friends Forever<: :> It's taking a while<: :> they need so many poses<: :> for 3 characters<: :> facing both left and right<:"
+			"\0%(typing):> Drawing things for Fae Friends Forever<: :> Today is Yoyo day<: :> She's smaller than the others so drawing her is faster anyway<:"
+			"\0%(typing):> Drawing stuff for Fae Friends Forever<: :> Gonna focus on Elliot<: :> More poses more poses<:"
+			"\0%(typing):> Drawing for Fae Friends Forever rn<: :> It's Diane's turn now<:"
 		}
 		if CurrentWork == "Writing"
 		{
-			"\0%(typing):> Writing dialogue for Fae Friends Forever<: :> It's pretty fun<: :> With 3 characters there's a lot of back and forth<: :> Makes it easier honestly<: :> you just say a thing and then the others carry it on for a while<:"
+			"\0%(typing):> Writing dialogue for Fae Friends Forever<: :> It's pretty fun<: :> With 3 characters there's a lot of back and forth<: :> Makes it easier honestly thank God<: :> you just say a thing and then the others carry it on for a while<:"
+			"\0%(typing):> Writing stuff for Fae Friends Forever<: :> Time to crack down on some dialogue so this ghost won't tale forever and actually gets made one day<: :> Hopefully<:"
 		}
 	}
 	if CurrentProject == "Mini Fandom Ghost"
@@ -465,14 +479,17 @@ OnTalk.CurrentProject : nonoverlap_pool
 		if CurrentWork == "Programming"
 		{
 			"\0%(typing):> I'm programming for Alastria right now<: :> It's really important that I balance this system just right<: :> and probably work out this bug that keeps haunting me lol<:"
+			"\0%(typing):> Programming for Alastria<: :> Crossing my fingers that it will work right away<:"
 		}
 		if CurrentWork == "Drawing"
 		{
 			"\0%(typing):> I'm working on the shell for Alastria<: :> it's pretty chill<: :> though I'm having some trouble getting the eyes to look right<:"
+			"\0%(typing):> Drawing more Alastria<: :> She's gotta look great<: :> She MUST<:"
 		}
 		if CurrentWork == "Writing"
 		{
 			"\0%(typing):> Dialogues dialogues dialogues<: :> Or the planning for dialogues, anyways<: :> I'm trying to script out how the story is going to go<:"
+			"\0%(typing):> Writing for Alastria now<: :> I was stuck for a while but finally got an idea<: :> Now write write write<:"
 		}
 	}
 	if CurrentProject == "Obscure Ghost"
@@ -480,29 +497,34 @@ OnTalk.CurrentProject : nonoverlap_pool
 		if CurrentWork == "Programming"
 		{
 			"\0%(typing):> Working on Super Snail, setting up some menus and stuff<: :> It's not glamorous work but it does need to be done<: :> but it should be a nice clean menu setup<: :> compared to some of my other projects lol<:"
+			"\0%(typing):> Programming all things Super Snail<: :> Not at a snail's pace :]<: :> not on a Super Snail's pace either tho :[<:"
 		}
 		if CurrentWork == "Drawing"
 		{
 			"\0%(typing):> Fussing with Super Snail's shell<: :> ghost shell not snail shell<: :> ok a bit of both since I'm touching up the snail shell part of this ghost shell<:"
+			"\0%(typing):> Drawing Super Snail<: :> I never expected to fuss about the way I draw snails<: :> but that's art for ya<: :> unpredictable<:"
 		}
 		if CurrentWork == "Writing"
 		{
 			"\0%(typing):> working on dialogue for Super Snail<: :> it's kinda sad ngl<: :> I mean that's the hope anyways<:"
+			"\0%(typing):> Writing some stuff for Super Snail<: :> if I feel like I make Molnia too happy<: :> With Super Snail it's the opposite<: :> poor snail<:"
 		}
 	}
 	if CurrentProject == "Object Ghost"
 	{
 		if CurrentWork == "Programming"
 		{
-			"\0%(typing):> Working on coding stuff for Printer right now<: :> I only have like 2 mechanics in this ghost so they really need to be solid<: ::> and<:: :> right now they're not lol<:"
+			"\0%(typing):> Working on coding stuff for Printer right now<: :> I only have like 2 mechanics in this ghost so they really need to be solid<: ::> and<:: :> right now they're not lol<: :> not helpful lol<:"
 		}
 		if CurrentWork == "Drawing"
 		{
 			"\0%(typing):> making more drawings for Printer<: :> can never have enough<: :> lots of printouts for lots of collecting and displaying<: :> it's kinda fun<: :> making new printouts is like its own little project<: :> so I feel like I've gotten a lot done after making them<:"
+			"\0%(typing):> Drawing things for Printer<: :> I feel like a printer myself with how much stuff I'm drawing for it<:"
 		}
 		if CurrentWork == "Writing"
 		{
 			"\0%(typing):> Printer dialogue<: :> I can basically just dump whatever's in my brain in here lol<: :> I do try to make it printer themed th<: :> like you know<: \i[6] :> BRRRRRRRR-SHK, BRRRRRRRRRR-SHK<: :> printer noises and all<:"
+			"\0%(typing):> Writing for Printer typing for Printer<: :> Time to think how long I want the BRRRRRRRRR's to be<:"
 		}
 	}
 	if CurrentProject == "Idle"
@@ -549,7 +571,7 @@ OnTalk.GhostIdeas : nonoverlap
 	"\0%(typing):> I came up with a random idea myself actually<: :> I was just daydreaming<: :> I don't want it tho, so<: :> If you want it you can have it<: :> The idea was a ghost of %(GhostIdeaGenerator)<:"
 	"\0%(typing):> Okay okay I have an idea<: :> I wanted to do it myself but I have too much on my plate so you can think on it<: :> Imagine, a ghost of %(GhostIdeaGenerator)<: :> Cool, right?<:"
 	--
-	backbuttons + "  \![*]\__q[OnTalk.GhostIdeas]Again\__q"
+	backbuttons + "  \![*]\__q[OnTalk.GhostIdeas]Another one\__q"
 }
 
 backbuttons
