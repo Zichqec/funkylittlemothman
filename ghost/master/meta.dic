@@ -33,7 +33,7 @@ OnNarCreated
 {
 	_nar = "\_a[OnNarLocation,""%(reference1)""]%(reference0)\_a" //Makes a clickable link that'll open the location of the file they just made
 	
-	"\0%(typing):> Grabbed a new %(_nar) for you<: :> You're welcome<:" //Maybe a bug with anchor color here but its late and i dont have time to check
+	"\0%(typing):> Grabbed a new %(_nar) for you<: :> You're welcome<:"
 }
 
 OnNarLocation
