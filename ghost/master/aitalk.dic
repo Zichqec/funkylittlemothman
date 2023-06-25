@@ -356,6 +356,7 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> alright, let's test and see<: :> oh<: :> it worked???????????????????<: \i[6] :> damn, can't believe it<:\e"
 		"\0%(typing):> ARGH I put a new bug in<: :> pain and suffering<: :> misery<: :> why<:\e"
 		"\0%(typing):> I want to make this menu smoother<: :> and fix this issue where it keeps flickering when you click stuff<: :> I think someone had a solution to that<: :> just gotta<: :> figure out how it works<:\e"
+		"\0%(typing):> so I have this problem<: :> I have two bugs I'm fighting<: :> every time I fix bug A<: :> I cause bug B again<: :> And then I fix bug B<: :> and bug A is back<: :> I'm going in circles<: :> aaaaaaaaaaaaaaaaaa<:\e"
 	}
 	
 	
@@ -380,6 +381,7 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> my room is too warm for this<:\e"
 		"\0%(typing):> cmon cmon don't freeze on me<: :> oh good ok it's back<:\e"
 		"\0%(typing):> ugh my internet is being a little slow<: :> annoying<: :> hope the screenshare looks ok still<: :> sorry if it gets fuzzy<:\e"
+		"\0%(typing)[[fidgets]]\e"
 	}
 	
 	if CurrentMood == "Long"
@@ -397,6 +399,11 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> I feel like I want to write an essay about ghost making<: :> I dunno I'm just having a good time today<: :> despite everything lol<:\e"
 		"\0%(typing):> rolling rolling rolling<: :> nothing can stop me today<:\e"
 		"\0%(typing)[[is unstoppable]]\e"
+		"\0%(typing)[[is on a roll]] \w8\w8 [[kinda wants rolls for dinner now lol]]\e"
+		"\0%(typing):> I have a long todo list today<: :> but<: :> I'm also checking lots of things off of it<: \i[6] :> feels really good<:\e"
+		"\0%(typing)[[hasn't stretched in a while]] [[should do better]] [[probably isn't going to, at least today]]\e"
+		"\0%(typing):> I need to sit up a little straighter<: :> back kinda hurts a little<:\e"
+		"\0%(typing):> I want to look something up on the wiki<: :> but I don't really want to wiki crawl for 3 hours<: :> and I know I will if I look at the wiki right now lol<: :> so<: :> I'll wait<:\e"
 	}
 	
 	if CurrentMood == "Random"
@@ -413,5 +420,10 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> I need to stop clenching my teeth<: :> I just get so focused on work sometimes<:\e"
 		"\0%(typing):> I keep fussing with this but I don't think it's really getting any better<: :> I suppose I should move on to the next thing<:\e"
 		"\0%(typing):> Just a little more of this I think<: :> Kinda want to switch to something else<: :> but idk maybe if I keep going I'll feel like going for longer<: :> We'll see<:\e"
+		"\0%(typing):> I think there's a fly in my room<: :> maybe if I ignore it it'll go away<:\e"
+		"\0%(typing)[[ignores the spider on his desk]]\e"
+		"\0%(typing):> I should clean my computer screen<: :> eh, later<:\e"
+		"\0%(typing):> I'm trying to work but I keep getting distracted daydreaming lol<: :> just gotta<: :> focus on work<: :> I want to make the ghost<: :> not just think about the ghost<:\e"
+		"\0%(typing)[[searches for more music to add to his playlist]] :> gotta find something to help me focus<:\e"
 	}
 }
