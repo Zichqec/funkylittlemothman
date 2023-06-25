@@ -9,7 +9,7 @@ OnInstallComplete
 	{
 		"\n\n\_q"
 		--
-		"\![*]\__q[OnInstallComplete.Action,call]Look at %(reference0)\__q  \![*]\__q[OnInstallComplete.Action,change]Check out %(reference0) now\__q\n\n"
+		"\![*]\__q[OnInstallComplete.Action,call]Open %(reference0)\__q  \![*]\__q[OnInstallComplete.Action,change]Say goodbye and open %(reference0)\__q\n\n"
 		--
 		"\![*]\q[Thanks,blank]"
 	}
@@ -87,7 +87,7 @@ OnUpdateFailure //If the update fails
 	{
 		_file = SPLITPATH(reference1)[2] + SPLITPATH(reference1)[3] //This gets the name and extension of the offending file
 		
-		"\0\s[0]The MD5 values don't match.\w8 Contact the ghost author and let them know that '%(_file)' is giving an MD5 error."
+		"\0%(typing):> Oof, MD5 error on %(_file)<: :> that sucks<: :> mood tho<:"
 	}
 	elseif reference0 == "artificial" //If the user cancels the update by double clicking the balloon
 	{
@@ -95,6 +95,6 @@ OnUpdateFailure //If the update fails
 	}
 	else //Any other errors
 	{
-		"\0\s[0]Error while updating:\w4 ""%(reference0)""."
+		"\0%(typing)]:> oof, got an error<: :> %(reference0)<:."
 	}
 }
