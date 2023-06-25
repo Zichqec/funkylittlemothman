@@ -374,6 +374,12 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Maybe today is a good research day<: :> you know<: :> watch some episodes<: :> make some notes<: :> mostly watch episodes<:\e"
 		"\0%(typing):> uuugggghhhh NOTHING wants to work today<: :> ugh ugh ugh<:\e"
 		"\0%(typing):> today isn't going very well tbh<:\e"
+		
+		"\0%(typing):> I'm kinda thinking about writing a guide one of these days<: :> not like<: :> a huge tutorial or anything<: :> but maybe some of the tricks I've picked up and the things I consider now<: :> so that other people don't repeat my early mistakes lol<:\e"
+		"\0%(typing):> I should make better thumbnails<: :> mine are pretty basic<: :> but idk<: :> thumbnails just need to be functional so like<: :> mine are fine<: :> just plain<:\e"
+		"\0%(typing):> my room is too warm for this<:\e"
+		"\0%(typing):> cmon cmon don't freeze on me<: :> oh good ok it's back<:\e"
+		"\0%(typing):> ugh my internet is being a little slow<: :> annoying<: :> hope the screenshare looks ok still<: :> sorry if it gets fuzzy<:\e"
 	}
 	
 	if CurrentMood == "Long"
