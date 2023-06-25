@@ -8,7 +8,7 @@ shiori,yaya.dll
 craftman,Venelona & Zichqec
 craftmanurl,https://github.com/Zichqec/funkylittlemothman
 
-sakura.name,
+sakura.name,@funkylittlemothman
 kero.name,Screenshare
 
 icon,icon.ico
