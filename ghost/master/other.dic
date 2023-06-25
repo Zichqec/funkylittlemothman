@@ -113,7 +113,10 @@ OnTranslate
 	
 	//_fontfix = " \_l[0,]"
 	//; _fontfix = ""
-	if SHIORI3FW.EventidOld != "OnSurfaceRestore"; _talk = REPLACE(_talk,"\0","\0%(_font)\_l[,] \_l[0,]",1)
+	
+	//SHIORI3FW.PushAdditionalReturn('ErrorLevel',"Warning","Warning")
+	//SHIORI3FW.PushAdditionalReturn('ErrorDescription',SHIORI3FW.EventidOld,"%(reference)") //I THINK I GOT IT THANK GOD
+	if !(SHIORI3FW.EventidOld == "OnSurfaceRestore" || "\![NO SPACE]" _in_ _talk); _talk = REPLACE(_talk,"\0","\0%(_font)\_l[,] \_l[0,]",1)
 	
 	TOSTR(_talk)
 }
@@ -200,6 +203,8 @@ OnSurfaceRestore : pool //I suppose I will have to build the kero surfaces into 
 {
 	SetSurfaceModeTime
 
+	"\![NO SPACE]"
+	--
 	if CurrentWork == "Programming"; programming
 	if CurrentWork == "Writing"; writing
 	if CurrentWork == "Drawing"; drawing
