@@ -25,14 +25,20 @@ OnTranslate
 	}
 	
 	_wait = "1.5"
+	
+	_typing = "\![set,balloonwait,%(_wait)]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]"
 
-	_talk = REPLACE(_talk,":> ","\![set,balloonwait,%(_wait)]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]%(_font)> ",1)
-	_talk = REPLACE(_talk,":> ","\![set,balloonwait,%(_wait)]\w8\w8\w8\n\n[half]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]\n\n[half]%(_font)> ")
+	//_talk = REPLACE(_talk,"::> ","%(_typing)%(_font)> ",1)
+	_talk = REPLACE(_talk,"::> ","\w4\n\n[half]%(_typing)\n\n[half]%(_font)> ")
+	_talk = REPLACE(_talk,"<::","\![set,balloonwait,1]\w4\![unlock,balloonrepaint]")
+
+	_talk = REPLACE(_talk,":> ","%(_typing)%(_font)> ",1)
+	_talk = REPLACE(_talk,":> ","\w8\w8\w8\n\n[half]%(_typing)\n\n[half]%(_font)> ")
 	_talk = REPLACE(_talk,"<:","\![set,balloonwait,1]\w8\w8\![unlock,balloonrepaint]")
 	
 	
 	
-	_talk = REPLACE(_talk,"[[","\![set,balloonwait,%(_wait)]\f[color,disable]\_q@funkylittlemothman is typing...\_q\f[color,default]\![lock,balloonrepaint]\c[char,32]%(_font)\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
+	_talk = REPLACE(_talk,"[[","%(_typing)%(_font)\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
 	_talk = REPLACE(_talk,"]]","\![set,balloonwait,1]\n\f[align,left]\n[-100]\w8\w8\w8\![unlock,balloonrepaint]")
 	
 	if SHIORI3FW.EventidOld == "OnAITalkNewEvent" || SHIORI3FW.EventidOld == "OnKeyPress" || SHIORI3FW.EventidOld == "OnSecondChange" || SHIORI3FW.EventidOld == "OnLastTalk" || SHIORI3FW.EventidOld == "OnFirstBoot2" || (reference1 == "" && reference2 == "")
@@ -41,7 +47,7 @@ OnTranslate
 		{
 			_talk = REPLACE(_talk,"\e\e","\_w[%((RAND(3) + 1) * 1000)]\![embed,OnSurfaceRestore]",1)
 		}
-		else;*/ _talk = REPLACE(_talk,"\e","\_w[%((RAND(3) + 1) * 1000)]\![embed,OnSurfaceRestore]",1)
+		else;*/ _talk = REPLACE(_talk,"\e","\_w[%((RAND(3) + 2) * 1000)]\![embed,OnSurfaceRestore]",1)
 
 		//_talk = REPLACE(_talk,origname,"\f[bold,1]\f[color,default.anchor]%(origname)\f[color,default]\f[bold,default]")
 	}
@@ -56,6 +62,30 @@ OnTranslate
 	_talk = REPLACE(_talk,"\0","\0%(_font)")
 	
 	TOSTR(_talk)
+}
+
+ChatlogFormatting
+{
+	_talk = _argv[0]
+	
+	_talk = REPLACE(_talk,"\f","||f")
+	_talk = REPLACE(_talk,"||f[height,","\f[height,")
+	_talk = REPLACE(_talk,"||f[name,","\f[name,")
+	_talk = SHIORI3FW.RemoveAllTags(_talk)
+	
+	_talk = REPLACE(_talk,"::> ","> ",1)
+	_talk = REPLACE(_talk,":> ","> ",1)
+	_talk = REPLACE(_talk,":> ","\n\n[half]> ")
+	_talk = REPLACE(_talk,"::> ","\n\n[half]> ")
+	_talk = REPLACE(_talk,"<:","")
+	_talk = REPLACE(_talk,"<::","")
+	
+	_talk = REPLACE(_talk,"[[","\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
+	_talk = REPLACE(_talk,"]]","\n\f[align,left]\n[-100]")
+	
+	_talk = REPLACE(_talk,"||f","\f")
+	
+	_talk
 }
 
 //This is just here so you can use anchors to link to websites if you want. You can link to websites with normal menu choice tags! If you do, a handy URL preview will show up in the balloon!

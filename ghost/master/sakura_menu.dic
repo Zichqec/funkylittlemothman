@@ -8,8 +8,8 @@ OnSakuraMenu : all
 {
 	"\0"
 	"\![set,autoscroll,disable]"
-	if !DefaultBalloon; "\b[2]"
-	else; "\b[6]"
+	if !DefaultBalloon; "\b[0]"
+	else; "\b[4]"
 	
 	//if SHIORI3FW.Eventid == "OnMouseDoubleClick"; SakuraMenuGreetings + "\n\n" //The check here is so they won't comment if you click the back button. Remove if you prefer
 	
@@ -25,7 +25,7 @@ OnSakuraMenu : all
 	
 	"\![*]\q[Nevermind,blank]"
 	
-	if SHIORI3FW.DebugMode; "\n\nProject: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nWork: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nMood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)\nSurface: %(SurfaceModeTime - GETSECCOUNT)"
+	if SHIORI3FW.DebugMode; "\n\nProject: %(CurrentProject) (%((ProjectModeTime - GETSECCOUNT) / 60) minutes remaining)\nWork: %(CurrentWork) (%((WorkModeTime - GETSECCOUNT) / 60) minutes remaining)\nMood: %(CurrentMood) (%((MoodModeTime - GETSECCOUNT) / 60) minutes remaining)\nSurface: %(SurfaceModeTime - GETSECCOUNT)\n# of dialogues: %(OUTPUTNUM('RandomTalk'))"
 }
 
 OnLastTalk : all
@@ -45,8 +45,8 @@ OnTalkMenu : all
 	"\C\![lock,balloonrepaint]\c\0\_q"
 	"\![set,autoscroll,disable]"
 	
-	if !DefaultBalloon; "\b[2]"
-	else; "\b[6]"
+	if !DefaultBalloon; "\b[0]"
+	else; "\b[4]"
 	
 	"\f[italic,1]Talk about...\f[italic,default]\n\n"
 	
@@ -63,15 +63,15 @@ OnTalkMenu : all
 OnTalk.Ghosts : nonoverlap_pool
 {
 	"\0%(typing):> My favourite part of working on a ghost<: :> Coding<: :> Because when I'm coding it usually means I'm already done with everything else lol<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
-	"\0%(typing):> dialogue<:"
+	"\0%(typing):> Ghosts are really cool<: :> They're like this niche medium for<: :> making whatever<: \i[6] :> Whatever your heart desires<: \s[1] :> It's a lot of fun<:"
+	"\0%(typing):> I've learned a lot about ghosts over the last couple years working on them<: :> There's a lot of history<: :> and SO MANY japanese ghosts<: :> I hope there are that many english ghosts one day<: :> Guess I better keep at it<:"
+	"\0%(typing):> Once you enter ghost hell you never leave<: \w8\w8\s[7]\w8\w8\w8\w8\s[1] :> that's a lie<: :> a lot of people have moved on to other things<: :> that's life I guess<: \w8\w8\w8 :> I'm here for life tho lol<:"
+	"\0%(typing):> Ghosts can be so many things<: :> I was just making desktop buds when I first started<: :> but like<: :> idk man Egg was fun to make<: \i[6] :> so like<: :> make what you wanna make and have fun with it<:"
+	"\0%(typing):> I wish I could get my other friends into ghosts<: :> they don't get the appeal tho<: :> I guess they're busy with other things lol<:"
+	"\0%(typing):> I didn't expect to spend so much time on them<: :> I just thought it would be a fun side project to do once<: :> but now<: :> they are my life<:"
+	"\0%(typing):> The more I work on them the more I learn<: :> the more I regret some of my past decisions lol<: :> but I'm getting a lot better at it<: :> And I'm learning how to program<: :> It's pretty neat<:"
+	"\0%(typing):> Writing is so important<: :> that was something I struggled with for a bit<: :> like<: :> what do you even make them say when they're just standing there<: \w8\w8 :> But I've been working on that a lot lately<: :> Especially since I released Egg<: :> And I'm getting more confident in coming up with interesting things to say<: :> If the angle you picked is difficult, you can just pick a new one, you know?<:"
+	"\0%(typing):> I'm glad I found them<: :> I mean sometimes it's frustrating<: :> When stuff's broken<: :> or people are complaining<: :> or not reading your instructions<: :> or making unreasonable feature requests<: :> But making stuff is fun<:"
 	--
 	backbuttons
 }
@@ -82,11 +82,10 @@ OnTalk.HisGhosts : all
 	{
 		ProjectsDiscussed[0] = 1
 		
-		"\0%(typing):> dialogue<:\x"
-		
+		"\0%(typing):> Sure, I can tell you about my ghosts<: :> I have a lot of them tho<: :> You'll have to tell me which one you want to hear about<: :> I have 3 released ghosts: Chesster, Molnia, and Egg<: :> And 4 other ghosts in the works too<: :> Fae Friends Forever, Alastria, Super Snail, and Printer<: :> So yeah, tell me which ones you want to know about<:\x"
 	}
 	
-	"\C\![lock,balloonrepaint]\c\0\_q"
+	"\C\![lock,balloonrepaint]\c\0\_q\f[anchorvisitedfontcolor,default.anchor]"
 	"\![set,autoscroll,disable]"
 	
 	if !DefaultBalloon; "\b[2]"
@@ -96,39 +95,39 @@ OnTalk.HisGhosts : all
 	
 	switch ProjectsDiscussed[1]
 	{
-		"\![*]\_a[OnTalkGhost.OC]OC ghost\_a\n"
-		"\_a[OnTalkGhost.OC.Initial]\![*]\_a\q[OC ghost,OnTalkGhost.OC]\n"
+		"\![*]\_a[OnTalkGhost.OC]Chesster\_a\n"
+		"\_a[OnTalkGhost.Initial,OC]\![*]\_a\__q[OnTalkGhost.OC]Chesster\__q\n"
 	}
 	switch ProjectsDiscussed[2]
 	{
-		"\![*]\_a[OnTalkGhost.Fandom]Fandom ghost\_a\n"
-		"\_a[OnTalkGhost.Fandom.Initial]\![*]\_a\q[Fandom ghost,OnTalkGhost.Fandom]\n"
+		"\![*]\_a[OnTalkGhost.Fandom]Molnia\_a\n"
+		"\_a[OnTalkGhost.Initial,Fandom]\![*]\_a\__q[OnTalkGhost.Fandom]Molnia\__q\n"
 	}
 	switch ProjectsDiscussed[3]
 	{
-		"\![*]\_a[OnTalkGhost.Jam]Jam ghost\_a\n"
-		"\_a[OnTalkGhost.Jam.Initial]\![*]\_a\q[Jam ghost,OnTalkGhost.Jam]\n"
+		"\![*]\_a[OnTalkGhost.Jam]Egg\_a\n"
+		"\_a[OnTalkGhost.Initial,Jam]\![*]\_a\__q[OnTalkGhost.Jam]Egg\__q\n"
 	}
 	"\n"
 	switch ProjectsDiscussed[4]
 	{
-		"\![*]\_a[OnTalkGhost.BigFandom]Big fandom ghost\_a\n"
-		"\_a[OnTalkGhost.BigFandom.Initial]\![*]\_a\q[Big fandom ghost,OnTalkGhost.BigFandom]\n"
+		"\![*]\_a[OnTalkGhost.BigFandom]Fae Friends Forever\_a\n"
+		"\_a[OnTalkGhost.Initial,BigFandom]\![*]\_a\__q[OnTalkGhost.BigFandom]Fae Friends Forever\__q\n"
 	}
 	switch ProjectsDiscussed[5]
 	{
-		"\![*]\_a[OnTalkGhost.MiniFandom]Mini fandom ghost\_a\n"
-		"\_a[OnTalkGhost.MiniFandom.Initial]\![*]\_a\q[Mini fandom ghost,OnTalkGhost.MiniFandom]\n"
+		"\![*]\_a[OnTalkGhost.MiniFandom]Alastria\_a\n"
+		"\_a[OnTalkGhost.Initial,MiniFandom]\![*]\_a\__q[OnTalkGhost.MiniFandom]Alastria\__q\n"
 	}
 	switch ProjectsDiscussed[6]
 	{
-		"\![*]\_a[OnTalkGhost.Obscure]Obscure ghost\_a\n"
-		"\_a[OnTalkGhost.Obscure.Initial]\![*]\_a\q[Obscure ghost,OnTalkGhost.Obscure]\n"
+		"\![*]\_a[OnTalkGhost.Obscure]Super Snail\_a\n"
+		"\_a[OnTalkGhost.Initial,Obscure]\![*]\_a\__q[OnTalkGhost.Obscure]Super Snail\__q\n"
 	}
 	switch ProjectsDiscussed[7]
 	{
-		"\![*]\_a[OnTalkGhost.Object]Object ghost\_a\n"
-		"\_a[OnTalkGhost.Object.Initial]\![*]\_a\q[Object ghost,OnTalkGhost.Object]\n"
+		"\![*]\_a[OnTalkGhost.Object]Printer\_a\n"
+		"\_a[OnTalkGhost.Initial,Object]\![*]\_a\__q[OnTalkGhost.Object]Printer\__q\n"
 	}
 
 	"\n"
@@ -136,15 +135,19 @@ OnTalk.HisGhosts : all
 	"\![unlock,balloonrepaint]"
 }
 
-OnTalkGhost.OC.Initial
+OnTalkGhost.Initial
 {
 	"\C\![lock,balloonrepaint]\c\0\b[2]\_q"
 	--
-	//duplicating these is bad but i don't want to have to make a whole setup to do this automatically right now
-	//maybe after jam or if i have extra time
-	"> This one is my first ghost\n\n[half]> I kinda just made him up as I went\n\n[half]> His name is Chesster\n\n[half]> And he plays chess\n\n[half]> And that's it \n\n[half]> Weeeeell he's packed with default template functions\n\n[half]> 'cuz I followed a tutorial and template while I was making him\n\n[half]> But overall he just sits there and thinks about chess moves\n\n[half]> And that's pretty much it"
+	_text = EVAL("OnTalkGhost.Initial.%(reference0)")
+	ChatlogFormatting(_text)
 	--
 	backbuttonsghost('nopause')
+}
+
+OnTalkGhost.Initial.OC
+{
+	"\0%(typing):> This one is my first ghost<: :> I kinda just made him up as I went<: :> His name is Chesster<: :> And he plays chess<: :> And that's it<: \w8\w8:> Weeeeell he's packed with default template functions<: :> 'cuz I followed a tutorial and template while I was making him<: :> But overall he just sits there and thinks about chess moves<: :> And that's pretty much it<:"
 	
 }
 
@@ -153,7 +156,7 @@ OnTalkGhost.OC : nonoverlap_pool
 	if !ProjectsDiscussed[1]
 	{
 		ProjectsDiscussed[1] = 1
-		"\0%(typing):> This one is my first ghost<: :> I kinda just made him up as I went<: :> His name is Chesster<: :> And he plays chess<: :> And that's it<: \w8\w8:> Weeeeell he's packed with default template functions<: :> 'cuz I followed a tutorial and template while I was making him<: :> But overall he just sits there and thinks about chess moves<: :> And that's pretty much it<:"
+		OnTalkGhost.Initial.OC
 	}
 	else
 	{
@@ -168,15 +171,9 @@ OnTalkGhost.OC : nonoverlap_pool
 	backbuttonsghost
 }
 
-OnTalkGhost.Fandom.Initial
+OnTalkGhost.Initial.Fandom
 {
-	"\C\![lock,balloonrepaint]\c\0\b[2]\_q"
-	--
-	//duplicating these is bad but i don't want to have to make a whole setup to do this automatically right now
-	//maybe after jam or if i have extra time
-	"> Oh oh oh %(username) that's my most popular ghost\n\n[half]> If you heard about me before that's probably why\n\n[half]> But yeah it's Molnia from the TV show 'Fairyland Forever'\n\n[half]> She's one of the fairies\n\n[half]> The cool one with lightning powers\n\n[half]> Fandom looooves her so when I posted this ghost it got popular faaast\n\n[half]> Still feels wild"
-	--
-	backbuttonsghost('nopause')
+	"\0%(typing)\i[6]:> Oh oh oh %(username) that's my most popular ghost<: :> If you heard about me before that's probably why<: :> But yeah it's Molnia from the TV show 'Fairyland Forever'<: :> She's one of the fairies<: :> The cool one with lightning powers<: :> Fandom looooves her so when I posted this ghost it got popular faaast<: :> Still feels wild<:"
 	
 }
 
@@ -185,7 +182,8 @@ OnTalkGhost.Fandom : nonoverlap_pool
 	if !ProjectsDiscussed[2]
 	{
 		ProjectsDiscussed[2] = 1
-		"\0%(typing)\i[6]:> Oh oh oh %(username) that's my most popular ghost<: :> If you heard about me before that's probably why<: :> But yeah it's Molnia from the TV show 'Fairyland Forever'<: :> She's one of the fairies<: :> The cool one with lightning powers<: :> Fandom looooves her so when I posted this ghost it got popular faaast<: :> Still feels wild<:"
+		OnTalkGhost.Initial.Fandom
+		
 	}
 	else
 	{
@@ -197,15 +195,9 @@ OnTalkGhost.Fandom : nonoverlap_pool
 	backbuttonsghost
 }
 
-OnTalkGhost.Jam.Initial
+OnTalkGhost.Initial.Jam
 {
-	"\C\![lock,balloonrepaint]\c\0\b[2]\_q"
-	--
-	//duplicating these is bad but i don't want to have to make a whole setup to do this automatically right now
-	//maybe after jam or if i have extra time
-	"> I participated in a Ghost Jam once\n\n[half]> Since it was my first one I decided to go small\n\n[half]> So it's just\n\n[half]> an egg\n\n[half]> You click it and it moves sometimes\n\n[half]> And if you click it a lot you discover\n\n[half]> THE SECRET INSIIIIDE\n\n[half]> What's the secret?\n\n[half]> \i[6]Click the egg like a thousand times to find out"
-	--
-	backbuttonsghost('nopause')
+	"\0%(typing):> I participated in a Ghost Jam once<: :> Since it was my first one I decided to go small<: :> So it's just<: :> an egg<: :> You click it and it moves sometimes<: :> And if you click it a lot you discover<: :> THE SECRET INSIIIIDE<: :> What's the secret?<: :> \i[6]Click the egg like a thousand times to find out<:"
 	
 }
 
@@ -214,7 +206,7 @@ OnTalkGhost.Jam : nonoverlap_pool
 	if !ProjectsDiscussed[3]
 	{
 		ProjectsDiscussed[3] = 1
-		"\0%(typing):> I participated in a Ghost Jam once<: :> Since it was my first one I decided to go small<: :> So it's just<: :> an egg<: :> You click it and it moves sometimes<: :> And if you click it a lot you discover<: :> THE SECRET INSIIIIDE<: :> What's the secret?<: :> \i[6]Click the egg like a thousand times to find out<:"
+		OnTalkGhost.Initial.Jam
 	}
 	else
 	{
@@ -226,15 +218,9 @@ OnTalkGhost.Jam : nonoverlap_pool
 	backbuttonsghost
 }
 
-OnTalkGhost.BigFandom.Initial
+OnTalkGhost.Initial.BigFandom
 {
-	"\C\![lock,balloonrepaint]\c\0\b[2]\_q"
-	--
-	//duplicating these is bad but i don't want to have to make a whole setup to do this automatically right now
-	//maybe after jam or if i have extra time
-	"> dialogue"
-	--
-	backbuttonsghost('nopause')
+	"\0%(typing):> I have this really ambitious idea for another ghost based on 'Fairyland Forever'<: :> It's gonna be<: :> B I G<: :> It's gonna have like 3 characters, a big progression with lots of stuff to discover<: :> And I really want the shell to be expressive<: :> but that means<: :> SO much drawing<: \w8\w8 :> if you don't hear back from me assume that working on this ghost killed me<: \w8\w8\w8 :> Anyways I'm really excited about it<: :> But it's really scary too<: :> If you're familiar with the show, I'm planning to include Diane, Elliot, and Yoyo<: :> So yeah<: \i[6] :> Fun<:"
 	
 }
 
@@ -243,26 +229,24 @@ OnTalkGhost.BigFandom : nonoverlap_pool
 	if !ProjectsDiscussed[4]
 	{
 		ProjectsDiscussed[4] = 1
-		"\0%(typing):> first dialogue<:"
-		
+		OnTalkGhost.Initial.BigFandom
 	}
 	else
 	{
-		"\0%(typing):> dialogue<:"
+		"\0%(typing):> The ghost is going to be kind of a rag-tag found family sort of thing<: :> I love those kinds of stories<: :> and I really wish these characters in the show got more attention<: :> One of them, Diane, knows Molnia<: :> But that means I probably have to figure out how to get two different ghosts to interact...<:"
+		"\0%(typing):> I'm going to have to write<: :> SO MUCH dialogue<: :> so much<: \w8\w8\s[6] :> It'll be pretty cool if I can pull it off tho<: \s[1]:> I guess I'll just have to keep chipping away at it<: :> But first I need to get the shell done...<: :> oh god it's so much to draw<:"
+		"\0%(typing):> Since there are 3 characters I want to make it so that they face each other when talking<: :> Since, you know, the user might rearrange the order they're standing in<: :> but it's going to be<: :> hell<: :> because that instantly doubles the amount of poses I need for them talking to each other<: :> Don't be like me, keep your projects a reasonable size<:"
+		"\0%(typing):> I'm not too worried about writing Diane, I feel like her dialogue will come to me easily<: :> but \f[italic,1]Elliot\f[italic,default]<: :> he's going to be hard to get right<: :> he's just so<: :> so<: :> \f[italic,1]intense\f[italic,default]<: :> He's easy to mess up and I want to do him justice<:"
+		"\0%(typing):> Yoyo is a really underrated character I think<: :> I see a lot of people complaining she's annoying, so I guess I need to be careful when writing her<: :> but the group wouldn't be the same without her, you know?<: :> She's important too<:"
+		"\0%(typing):> I know I'm setting my sights really high on this one<: :> I may never be able to complete it<: :> But I'm really excited about this idea<: :> If I keep working at it I have to get somewhere eventually right?<:"
 	}
 	--
 	backbuttonsghost
 }
 
-OnTalkGhost.MiniFandom.Initial
+OnTalkGhost.Initial.MiniFandom
 {
-	"\C\![lock,balloonrepaint]\c\0\b[2]\_q"
-	--
-	//duplicating these is bad but i don't want to have to make a whole setup to do this automatically right now
-	//maybe after jam or if i have extra time
-	"> dialogue"
-	--
-	backbuttonsghost('nopause')
+	"\0%(typing)\i[6]:> Ok ok ok I'm so excited about this one<: :> Like, it's just a little thing, right?<: :> A side project while I keep chipping away at the Big One<: :> It's also related to 'Fairyland Forever'<: :> But this time it's one little side character, Alastria, and it's gonna be a really different kind of story from the other ghosts I'm working on<: \s[1] :> It's inspired by some Japanese ghosts I was messing with<: :> I wanted to try writing the same style of story<: :> I think fans of my other ghosts are going to find it kind of weird<: :> But I hope the reaction is 'wow this is cool' and not 'wow this sucks'<: :> You know?<: :> It's kinda scary, because it really could go either way<:"
 	
 }
 
@@ -271,26 +255,25 @@ OnTalkGhost.MiniFandom : nonoverlap_pool
 	if !ProjectsDiscussed[5]
 	{
 		ProjectsDiscussed[5] = 1
-		"\0%(typing):> first dialogue<:"
+		OnTalkGhost.Initial.MiniFandom
 		
 	}
 	else
 	{
-		"\0%(typing):> dialogue<:"
+		"\0%(typing):> The shell for this ghost is going to be fairly small I hope<: :> I'm trying to keep the scope in general really small and focused<: :> It's so easy to want to make it bigger and bigger<: :> But I don't have time, I have too many other projects to work on<: :> I need to keep this one small and just make it good<: \w8\w8\w8\w8 :> I want to add a lot more tho<:"
+		"\0%(typing):> I still need to sit down and plot how her story progression is going to go exactly<: :> It's the kind of thing where I need a plan in place you know<: :> There are only a few branches, but it's really important they all work together<: :> One of these days I'll sit down and figure out the details<:"
+		"\0%(typing):> She's going to be in a different art style from the other ghosts I'm working on for 'Fairyland Forever'<: :> People might find that weird too<: :> idk<: :> but I don't want to always have to make them the same way you know<: :> So variety is good<:"
+		"\0%(typing):> This ghost isn't going to talk to any of the other 'Fairyland Forever' ghosts<: :> It's going to be all self contained<: :> Because<: :> It takes place at a different point in the timeline<: :> And in a specific place<: :> So it would be really difficult and weird to have them talk<:"
+		"\0%(typing):> Once I get my planning done and finish the shell I think the rest will go pretty fast<: :> There's a lot to write<: :> but like<: :> there's not anything else super complicated<:"
+		"\0%(typing):> The idea for this ghost came to me while I was trying to sleep one night<: :> I had been looking at some cool Japanese ghosts<: :> they're really hard to understand even through machine translation if you would believe it<: :> Anyways, I was wondering if I could make anything with that style of story<: :> And then it hit me all at once and I knew Alastria was the one<: \w8\w8\w8 :> I wrote down so many plans on my phone that night<: :> and then I couldn't sleep lol<:"
 	}
 	--
 	backbuttonsghost
 }
 
-OnTalkGhost.Obscure.Initial
+OnTalkGhost.Initial.Obscure
 {
-	"\C\![lock,balloonrepaint]\c\0\b[2]\_q"
-	--
-	//duplicating these is bad but i don't want to have to make a whole setup to do this automatically right now
-	//maybe after jam or if i have extra time
-	"> dialogue"
-	--
-	backbuttonsghost('nopause')
+	"\0%(typing):> If you haven't watched 'Starlight Sword Squad 3000'<: :> go. watch. it.<: :> please<: :> it's so underrated<: :> nobody ever knows what 3s3 is but it's really good<: :> The whole dynamic with Super Snail and Birdie Beauty is so complex<: :> I don't want to spoil it for you if you don't know<: :> But I'm making a ghost of Super Snail<: \w8\w8\w8 :> Even if nobody else knows who she is<: :> I'll know<: \i[6] :> And maybe other 3s3 fans will find it and join me in ghost hell<:"
 	
 }
 
@@ -299,26 +282,24 @@ OnTalkGhost.Obscure : nonoverlap_pool
 	if !ProjectsDiscussed[6]
 	{
 		ProjectsDiscussed[6] = 1
-		"\0%(typing):> first dialogue<:"
+		OnTalkGhost.Initial.Obscure
 		
 	}
 	else
 	{
-		"\0%(typing):> dialogue<:"
+		"\0%(typing):> BirdSnail shippers might get upset with me for this ghost<: :> But I have a lot of feelings about BirdSnail<: :> I guess I'll put some warnings so people know what angle I'm taking<: :> Snailkey fans probably aren't going to be happy with me either lol<:"
+		"\0%(typing):> It's really sad that the show only got a few seasons<: :> But hey<: :> Plenty of space for fans to make our own content right<: :> Like my ghost<: :> Maybe this ghost will get more people into the show<: \i[6] :> Then I would have more people to chat with about it<:"
+		"\0%(typing):> I've been debating if Meteor Monkey should make an appearance as a side character<: :> Not like, all the time, but it might be nice as an event now and then<: :> That's a lot of extra surfaces to draw tho...<: \w8\w8\w8\w8 :> Maybe in an update<:"
+		"\0%(typing):> This ghost is going to spoil the whole show<: :> So I guess I will put strong warnings on it<: \w8\w8 ::> go<:: ::> watch<:: ::> 3s3<::"
+		"\0%(typing):> 3s3 is my favorite<: :> And Super Snail is my favorite 3s3 character<: :> So I have to<: :> You know?<: :> Probably nobody will see it<: :> But that's ok<: :> I want her to exist on my computeor<: :> Would be nice if it got a few fans though lol<:"
 	}
 	--
 	backbuttonsghost
 }
 
-OnTalkGhost.Object.Initial
+OnTalkGhost.Initial.Object
 {
-	"\C\![lock,balloonrepaint]\c\0\b[2]\_q"
-	--
-	//duplicating these is bad but i don't want to have to make a whole setup to do this automatically right now
-	//maybe after jam or if i have extra time
-	"> dialogue"
-	--
-	backbuttonsghost('nopause')
+	"\0%(typing):> Ever since I made the Egg ghost I've become kind of obsessed with object ghosts<: :> like they don't seem like much at first right<: :> but actually it's really freeing<: :> because you get to ditch the standard format and make something silly<: :> A lot less drawing, too<: :> Anyways, so after Ghost Jam I decided I wanted to make another one<: :> This time it's gonna be a printer<: :> but the best bit is<: :> the printer always has some kind of printing trouble<: :> so you have to piece together what it's saying from bits and pieces<: :> rather than seeing the whole picture all at once<: :> I just think it will be fun<:"
 	
 }
 
@@ -327,12 +308,16 @@ OnTalkGhost.Object : nonoverlap_pool
 	if !ProjectsDiscussed[7]
 	{
 		ProjectsDiscussed[7] = 1
-		"\0%(typing):> first dialogue<:"
-		
+		OnTalkGhost.Initial.Object
 	}
 	else
 	{
-		"\0%(typing):> dialogue<:"
+		"\0%(typing):> What does a printer talk about?<: \i[6] :> Printer self-care, for starters<: :> Make sure you run your diagnostics<: :> Make sure to refill your ink regularly<: :> If you think your ink is getting low, cause a fuss until someone gets you more<: :> Don't settle for sub-par paper<: \s[1] :> That kind of stuff<:"
+		"\0%(typing):> I'm debating if I want to add beeping noises<: :> I guess if I do I will need a volume control<: :> Or a way to turn it off<: \w8\w8 :> Sounds get pretty annoying<:"
+		"\0%(typing):> I think I want to have extra characters that are sheets of paper<: :> And they have different images printed on them<: :> So you can collect and display them<: :> that is a lot of extra art tho...<:"
+		"\0%(typing):> I don't want to make this ghost too complicated<: :> just like<: :> 1 or 2 solid mechanics<: :> and then a lot of dialogue<:"
+		"\0%(typing):> I don't know how I'm going to sell people on this printer ghost<: :> Unless they're like<: :> Big printer fans lol<: :> I guess other fans of object ghosts will probably be the main audience<: :> we'll see<:"
+		"\0%(typing):> I think it would be \f[strike,1]annoying\f[strike,default] fun if the printer complains about being out of ink every hour or so<: \i[6] :> gotta make it realistic you know<: :> give people The Home Printer Experience(tm)<: :> that everyone is looking for<:"
 	}
 	--
 	backbuttonsghost
@@ -340,6 +325,111 @@ OnTalkGhost.Object : nonoverlap_pool
 
 OnTalk.CurrentProject : nonoverlap_pool
 {
+	if CurrentProject == "OC Ghost"
+	{
+		if CurrentWork == "Programming"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+		if CurrentWork == "Drawing"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+	}
+	if CurrentProject == "Fandom Ghost"
+	{
+		if CurrentWork == "Programming"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+		if CurrentWork == "Drawing"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+	}
+	if CurrentProject == "Jam Ghost"
+	{
+		if CurrentWork == "Programming"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+		if CurrentWork == "Drawing"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> dialogue<:"
+		}
+	}
+	if CurrentProject == "Big Fandom Ghost"
+	{
+		if CurrentWork == "Programming"
+		{
+			"\0%(typing):> Currently working on Fae Friends Forever<: :> Trying to fix a bug in their progression<: :> just have to track down where it is lol<:"
+		}
+		if CurrentWork == "Drawing"
+		{
+			"\0%(typing):> Drawing the shell for Fae Friends Forever<: :> It's taking a while<: :> they need so many poses<: :> for 3 characters<: :> facing both left and right<:"
+		}
+		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> Writing dialogue for Fae Friends Forever<: :> It's pretty fun<: :> With 3 characters there's a lot of back and forth<: :> Makes it easier honestly<:"
+		}
+	}
+	if CurrentProject == "Mini Fandom Ghost"
+	{
+		if CurrentWork == "Programming"
+		{
+			"\0%(typing):> I'm programming for Alastria right now<: :> It's really important that I balance this system just right<: :> and probably work out this bug that keeps haunting me lol<:"
+		}
+		if CurrentWork == "Drawing"
+		{
+			"\0%(typing):> I'm working on the shell for Alastria<: :> it's pretty chill<: :> though I'm having some trouble getting the eyes to look right<:"
+		}
+		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> Dialogues dialogues dialogues<: :> Or the planning for dialogues, anyways<: :> I'm trying to script out how the story is going to go<:"
+		}
+	}
+	if CurrentProject == "Obscure Ghost"
+	{
+		if CurrentWork == "Programming"
+		{
+			"\0%(typing):> Working on Super Snail, setting up some menus and stuff<: :> It's not glamorous work but it does need to be done<: :> but it should be a nice clean menu setup<: :> compared to some of my other projects lol<:"
+		}
+		if CurrentWork == "Drawing"
+		{
+			"\0%(typing):> Fussing with Super Snail's shell<: :> ghost shell not snail shell<: :> ok a bit of both since I'm touching up the snail shell part of this ghost shell<:"
+		}
+		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> working on dialogue for Super Snail<: :> it's kinda sad ngl<: :> I mean that's the hope anyways<:"
+		}
+	}
+	if CurrentProject == "Object Ghost"
+	{
+		if CurrentWork == "Programming"
+		{
+			"\0%(typing):> Working on coding stuff for Printer right now<: :> I only have like 2 mechanics in this ghost so they really need to be solid<: ::> and<:: :> right now they're not lol<:"
+		}
+		if CurrentWork == "Drawing"
+		{
+			"\0%(typing):> making more drawings for Printer<: :> can never have enough<: :> lots of printouts for lots of collecting and displaying<: :> it's kinda fun<: :> making new printouts is like its own little project<: :> so I feel like I've gotten a lot done after making them<:"
+		}
+		if CurrentWork == "Writing"
+		{
+			"\0%(typing):> Printer dialogue<: :> I can basically just dump whatever's in my brain in here lol<: :> I do try to make it printer themed th<: :> like you know<: \i[6] :> BRRRRRRRR-SHK, BRRRRRRRRRR-SHK<: :> printer noises and all<:"
+		}
+	}
 	"\0%(typing):> dialogue<:"
 	--
 	backbuttons
@@ -347,7 +437,16 @@ OnTalk.CurrentProject : nonoverlap_pool
 
 OnTalk.GhostTips : nonoverlap_pool
 {
-	"\0%(typing):> dialogue<:"
+	"\0%(typing):> Read a lot on Ukadoc<: :> It will save your life<: :> Sometimes I just go and browse there<: :> and I learn about lots of things that I didn't know were possible<: :> Seriously just scroll through the sakurascript tags sometime<: :> Did you know there's one for erasing charactesr out of the balloon?<: :> I've found some really surprising uses for that<:"
+	"\0%(typing):> Don't be afraid to reach out for help<: :> No point in just feeling lost and confused for hours and tiring yourself out<:"
+	"\0%(typing):> Play with stuff<: :> If you wanna know what something does<: :> Just start messing with it<: :> You can always undo your changes later<:"
+	"\0%(typing):> Listen to the error log<: :> It's there to help you<: :> sometimes I get mad at it lol<: :> but then a while later I find the error<: :> and then I feel kind of bad because it was just doing its job<: :> It's a lot easier to find errors if you stay calm and read very carefully<: :> learn from my mistakes<:"
+	"\0%(typing):> Your first ghost won't be perfect<: :> But that's ok<: :> Keep working at it and you'll get better<:"
+	"\0%(typing):> Have an end goal in mind<: :> If your plan is ""I'm gonna make a ghost of X"" then you might reach a point where you just don't know what to do or add<: :> So think about it before you start<: :> What do you \f[italic,1]want\f[italic,default] your ghost to do?<: :> What do you want the key focus to be?<: \w8\w8\w8\s[7]\w8\w8\w8\s[1] :> Make an object ghost first tbh<: :> Something simple and straightforward so you can learn the ropes<:"
+	"\0%(typing):> If you're not sure what features to have, or what poses to have, or what sorts of topics your ghost should talk about<: :> go study some other ghosts<: :> Look them over and write down a list of the things you like<: :> Taking a close look and getting that stuff down on paper can help a lot<:"
+	"\0%(typing):> Ghost making doesn't have to be a huge task<: :> There are ghost jams where ghosts get made in a week<: :> Sometimes people even submit ghosts within the first day<: :> It's pretty crazy<: :> I'm not that good yet lol<: :> I made Egg for a ghost jam but I took a week on it<: :> I learned a lot tho<: :> It's not a super flashy ghost but it only took 1 week to make<: :> and I was working alone lol<:"
+	"\0%(typing):> The best thing to do is just do it<: :> and if it all seems overwhelming<: :> remember that there are no required events in ghosts<: :> you can leave out anything that you don't want to deal with<: :> and that can make the work a lot more manageable and focused<:"
+	"\0%(typing):> Make a planning doc<: :> You don't need to get super detailed or anything<: :> just outline what you want<: :> and stick to it<: :> don't let your scope bloat so far that you don't complete your ghost<: :> put new ideas into a section for after-release updates or something<: :> make them goals that you have to complete the main ghost before you go after<: :> that helps me, anyways<:"
 	--
 	backbuttons
 }
@@ -366,7 +465,6 @@ backbuttonsghost
 	"\n\n\![quicksection,true]\![*]\q[Back,OnTalk.HisGhosts]  \![*]\q[Nevermind,blank]"
 }
 
-//ALL THE DIALOGUES ASSOCIATED WITH THIS ARE PLACEHOLDER
 OnEncourageMenu : all
 {
 	"\C\![lock,balloonrepaint]\c\0\_q"
@@ -387,21 +485,29 @@ OnEncourageWork
 {
 	if CurrentProject != "Idle"
 	{
-		"I'm already working, what more do you want?"
+		"\0%(typing):> I'm already working<: :> You can still see my screen right?<:\e"
+		"\0%(typing):> I am working<: :> I don't have enough hands to be doing more than this<: :> pls have mercy<:\e"
+		"\0%(typing):> I'm already on it<: :> You can watch if you want<: :> I'm screensharing, you know<:\e"
 	}
 	elseif CurrentMood == "Long"
 	{
 		SetProjectModeTime("no idle")
-		"I suppose I should get started"
+		"\0%(typing):> You're right you're right<: :> I need to just get to it<: :> Get in the zone<: :> Focus focus focus<:\e"
+		"\0%(typing):> Yes I know<: :> I was just taking a break for a bit<: :> But I need to really push today and get through some of this<:\e"
+		"\0%(typing):> Oh, yeah<: :> Got a bit distracted<: :> Back to it, then<:\e"
 	}
 	elseif CurrentMood == "Short"
 	{
-		"I'll get back to it in a bit"
+		"\0%(typing):> Eh, in a bit<:\e"
+		"\0%(typing):> I'll get there, just taking a break<:\e"
+		"\0%(typing):> I'll get back to it in a few minutes<:\e"
 	}
 	else //Random mood
 	{
-		"I'm on break, let me rest for a little."
-		"Sure\![raise,OnEncourageChangeProject,noidle]"
+		"\0%(typing):> Ehh<: :> I want a break for a bit longer<: :> Just a bit tired<: :> You know?<:\e"
+		"\0%(typing):> I will<: :> But I want to finish up something else first<: :> A few minutes away will let my brain reset too <: :> or something<:\e"
+		"\0%(typing):> Yeah, I guess you're right<: :> Let's see<: :> Can I remember where I left off lol<:\![raise,OnEncourageChangeProject,noidle]\e"
+		"\0%(typing):> I guess I do have a deadline to meet<: :> Alright, back at it, let's goooo<:\![raise,OnEncourageChangeProject,noidle]\e"
 	}
 }
 
@@ -409,17 +515,23 @@ OnEncourageBreak
 {
 	if CurrentMood == "Long"
 	{
-		"Not right now, I'm in the zone and I don't wanna lose it"
+		"\0%(typing):> I'll take a break in a bit<: :> I'm on a roll<: :> Don't want to lose momentum<:\e"
+		"\0%(typing):> Eh, later<: :> I'm in the zone<: :> Gotta make use of this focus while it's here<:\e"
+		"\0%(typing):> I'm making a lot of progress though<: :> I'll take a break once I finish this part<:\e"
 	}
 	elseif CurrentMood == "Short"
 	{
 		SetProjectModeTime("idle")
-		"Not a bad idea, I'm not getting much done anyways"
+		"\0%(typing):> Yeah, I'm not really getting much done anyways<: :> Better to rest my brain for a bit lol<:\e"
+		"\0%(typing)\i[6]:> Good idea<: :> Break time<: :> Break time forever<: \s[1] :> break time at least for a bit<:\e"
+		"\0%(typing):> I don't want to but I'm struggling to stay on task anyways<: :> So maybe a break is what I need<: :> Just so long as I don't take a break for the rest of the day<: \w8\w8\w8\w8\i[6] :> does sound kind of tempting tho<:\e"
 	}
 	else //Random mood
 	{
-		"Sure\![raise,OnEncourageChangeProject,idle]"
-		"Maybe in a bit"
+		"\0%(typing):> Eh, in a bit<: :> I'm almost done with this<:\e"
+		"\0%(typing):> I'll get there<: :> but I really want to get this finished first<: :> I've been trying for weeks and only just now started making real progress<: :> you know?<: :> so I don't want to risk losing my momentum here<:\e"
+		"\0%(typing):> Hmm yeah<: :> I want to get caught up on some stuff for a bit<: :> break time break time break time<:\![raise,OnEncourageChangeProject,idle]\e"
+		"\0%(typing):> Good idea<: :> Time to drink some water<: :> Get up and get a snack<: :> Stand and do some stretches<: :> Maybe even go for a walk<: \w8\w8\w8\w8\w8\w8 :> or at least think about doing those things<:\![raise,OnEncourageChangeProject,idle]\e"
 	}
 }
 

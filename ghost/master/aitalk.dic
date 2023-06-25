@@ -9,24 +9,7 @@ OnAiTalk
 	{
 		_lasttalk = ChainTalk
 	}
-	
-	_talk = _lasttalk
-	
-	_talk = REPLACE(_talk,"\f","||f")
-	_talk = REPLACE(_talk,"||f[height,","\f[height,")
-	_talk = REPLACE(_talk,"||f[name,","\f[name,")
-	_talk = SHIORI3FW.RemoveAllTags(_talk)
-	
-	_talk = REPLACE(_talk,":> ","> ",1)
-	_talk = REPLACE(_talk,":> ","\n\n[half]> ")
-	_talk = REPLACE(_talk,"<:","")
-	
-	_talk = REPLACE(_talk,"[[","\f[align,center]\f[bold,1]\f[color,default.anchor]@funkylittlemothman\f[color,default]\f[bold,default] ")
-	_talk = REPLACE(_talk,"]]","\n\f[align,left]\n[-100]")
-	
-	_talk = REPLACE(_talk,"||f","\f")
-	
-	LastTalk ,= _talk
+	LastTalk ,= ChatlogFormatting(_lasttalk)
 
 	if ARRAYSIZE(LastTalk) >= 50; LastTalk[0] = IARRAY
 	_lasttalk
@@ -54,7 +37,7 @@ RandomTalk : nonoverlap_pool
 		
 		"\0%(typing):> Piece of advice<: :> use new deifinition<: :> will save you a loooooooooooooooooooooot of trouble<:\e"
 		
-		"\0%(typing):> do i even bother updating<: :> whole three new lines<:\e"
+		"\0%(typing):> do i even bother updating<: :> three whole new lines<:\e"
 		
 		"\0%(typing):> Oh Chesster<: :> we're really in it now<:\e"
 	}
@@ -65,7 +48,7 @@ RandomTalk : nonoverlap_pool
 		
 		"\0%(typing):> %(username) can you help me fight my temptation<: :> of starting on a new shell<: :> please<:\e"
 		
-		"\0%(typing):> Why fairies have such complicated designs<: :> wings alone are a nightmare\w8\w8<: :> but also wings are pretty idk<:\e"
+		"\0%(typing):> Why do fairies have such complicated designs<: :> wings alone are a nightmare\w8\w8<: :> but also wings are pretty idk<:\e"
 		
 		"\0%(typing):> Alright<: :> Time to think like a teenage fairy<:\e"
 		
@@ -186,7 +169,7 @@ RandomTalk : nonoverlap_pool
 		
 		"\0%(typing):> Are you also working<: :> Or like me<: :> Thinking about working instead<:\e"
 		
-		"\0%(typing):> Maybe I should finally get to updating ghost wiki page...<:\e"
+		"\0%(typing):> Maybe I should finally get to updating that ghost wiki page...<:\e"
 		
 		"\0%(typing):> Okay.<: :> It's ghost time.<: :> After I decide.<: :> Which ghost.<:\e"
 		

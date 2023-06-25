@@ -57,7 +57,7 @@ SetProjectModeTime
 	
 	//↑ due to the above i will have to redo this later to account for other project types
 	if _argv[0] == "idle"; _newproject = "Idle"
-	elseif _argv[0] == "no idle"; _newproject = GhostProjects
+	elseif _argv[0] == "noidle"; _newproject = GhostProjects
 	
 	CurrentProject = _newproject
 	
