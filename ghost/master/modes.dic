@@ -113,9 +113,9 @@ OtherProjects : array
 //WE are gonna HAVE a ghost that CHANGES IDLES BETWEEN DIALOGUES
 SetSurfaceModeTime
 {
-	if CurrentMood == "Short"; SurfaceModeTime = (RAND(100) + 20 + 1) //20 seconds - 2 minutes
-	elseif CurrentMood == "Long"; SurfaceModeTime = (RAND(40) + 20 + 1) * 60 //20 minutes - 1 hour
-	else; SurfaceModeTime = (RAND(3580) + 20 + 1) //20 seconds - 1 hour
+	if CurrentMood == "Short"; SurfaceModeTime = (RAND(110) + 10 + 1) //10 seconds - 2 minutes
+	elseif CurrentMood == "Long"; SurfaceModeTime = (RAND(4) + 3 + 1) * 60 //3 minutes - 7 minutes
+	else; SurfaceModeTime = (RAND(410) + 20 + 1) //10 seconds - 7 minutes
 	
 	SurfaceModeTime += GETSECCOUNT
 }

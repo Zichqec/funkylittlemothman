@@ -110,7 +110,10 @@ OnTranslate
 		_talk = REPLACE(_talk,"\f[anchorvisitedfontcolor,default.anchor]","\f[anchorvisitedfontcolor,176,243,083]")
 	}
 	
-	_talk = REPLACE(_talk,"\0","\0%(_font)\_l[,] \_l[0,]",1)
+	
+	_fontfix = " \_l[0,]"
+	if SHIORI3FW.EventidOld == "OnSurfaceRestore"; _fontfix = ""
+	_talk = REPLACE(_talk,"\0","\0%(_font)\_l[,]%(_fontfix)",1)
 	
 	TOSTR(_talk)
 }
