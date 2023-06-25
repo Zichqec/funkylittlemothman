@@ -21,7 +21,7 @@ OnTranslate
 		_font += "\f[anchorpencolor,176,243,083]"
 	} 
 	
-	_wait = "1.5"
+	_wait = "1.25"
 	
 	_typing = ""
 	_typing += "\_l[0,]\![set,balloonwait,%(_wait)]"

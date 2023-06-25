@@ -83,7 +83,7 @@ OnTalk.HisGhosts : all
 	{
 		ProjectsDiscussed[0] = 1
 		
-		"\0%(typing):> Sure, I can tell you about my ghosts<: :> I have a lot of them tho<: :> You'll have to tell me which one you want to hear about<: :> I have 3 released ghosts: Chesster, Molnia, and Egg<: :> And 4 other ghosts in the works too<: :> Fae Friends Forever, Alastria, Super Snail, and Printer<: :> So yeah, tell me which ones you want to know about<:\x"
+		"\0%(typing):> Sure, I can tell you about my ghosts<: :> I have a lot of them tho<: :> You'll have to tell me which one you want to hear about<: :> I have 3 released ghosts: Chesster, Molnia, and Egg<: :> And 4 other ghosts in the works too<: :> Fae Friends Forever, Alastria, The Tragic Tale of Super Snail, and Printer<: :> So yeah, tell me which ones you want to know about<:\x"
 	}
 	
 	"\C\![lock,balloonrepaint]\c\0\_q\f[anchorvisitedfontcolor,default.anchor]"
@@ -122,8 +122,8 @@ OnTalk.HisGhosts : all
 	}
 	switch ProjectsDiscussed[6]
 	{
-		"\![*]\_a[OnTalkGhost.Obscure]Super Snail\_a\n"
-		"\_a[OnTalkGhost.Initial,Obscure]\![*]\_a\__q[OnTalkGhost.Obscure]Super Snail\__q\n"
+		"\![*]\_a[OnTalkGhost.Obscure]The Tragic Tale of Super Snail\_a\n"
+		"\_a[OnTalkGhost.Initial,Obscure]\![*]\_a\__q[OnTalkGhost.Obscure]The Tragic Tale of Super Snail\__q\n"
 	}
 	switch ProjectsDiscussed[7]
 	{
