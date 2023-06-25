@@ -111,9 +111,9 @@ OnTranslate
 	}
 	
 	
-	_fontfix = " \_l[0,]"
-	if SHIORI3FW.EventidOld == "OnSurfaceRestore"; _fontfix = ""
-	_talk = REPLACE(_talk,"\0","\0%(_font)\_l[,]%(_fontfix)",1)
+	//_fontfix = " \_l[0,]"
+	//; _fontfix = ""
+	if SHIORI3FW.EventidOld != "OnSurfaceRestore"; _talk = REPLACE(_talk,"\0","\0%(_font)\_l[,] \_l[0,]",1)
 	
 	TOSTR(_talk)
 }
