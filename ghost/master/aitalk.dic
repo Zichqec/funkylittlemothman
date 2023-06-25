@@ -232,6 +232,11 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> no thoughts<: :> head empty<: :> maybe some anime will help get inspiration flowing<:\e"
 		"\0%(typing):> this post made by the zoning out gang<:\e"
 		"\0%(typing):> too many thing to do<: :> maybe I'll roll a random number to pick which project to work on<: \w8\w8\w8\w8 :> innnnn a bit lol<:\e"
+		"\0%(typing):> I don't wanna<: :> I mean I do but I don't<: :> I do but my brain doesn't want to start<: :> tell me to start<:\e"
+		"\0%(typing)[[stares at the screen]]\e"
+		"\0%(typing)[[thinks about working on a ghost]] [[then proceeds to not do that]]\e"
+		"\0%(typing)[[is sleepy]]\e"
+		"\0%(typing)[[ponders going back to bed]]\e"
 	}
 	
 	
@@ -244,7 +249,7 @@ RandomTalk : nonoverlap_pool
 		
 		"\0%(typing):> Drawing is not my strong suit<: :> Maybe I should collab with somebody<: :> Idk<:\e"
 		
-		"\0%(typing):> Ey<: :> Do you know any good tutorial for drawing clothing folds<: :> I can't figure this out<:\e"
+		"\0%(typing):> Gotta find a good tutorial for drawing clothing folds<: :> I can't figure this out<:\e"
 		
 		"\0%(typing):> I really need to get to coloring<: :> Oooor<: :> Lining<: :> Or sketching<:\e"
 		
@@ -268,6 +273,11 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> Blinking animations<: :> it's always annoying to set them up<: :> but then the shell looks better with them<: :> so I always have to do them now<:\e"
 		"\0%(typing):> talk animations are hard<: :> that's all<:\e"
 		"\0%(typing):> Some days art just doesn't want to work<: :> everything just looks super wonky<: :> thankfully not today<: :> drawdrawdraw<:\e"
+		"\0%(typing):> I always feel like lineart will take so long<: :> but then I get started and it goes pretty quick<: :> so I worry for nothing lol<:\e"
+		"\0%(typing):> gotta decide on where I want the light to be<: :> sometimes I forget lol<:\e"
+		"\0%(typing):> probably should stretch my wrists<: :> I shouldn't grip my pen like it's trying to run away lol<:\e"
+		"\0%(typing):> can't get these lines how I want<: :> I think the shape is off anyways<: :> maybe I'll start over<:\e"
+		"\0%(typing):> damn<: :> drew on the wrong layer again<: :> rip<:\e"
 	}
 	
 	if CurrentWork == "Writing"
@@ -302,6 +312,11 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> thinking thinking<: :> if I smash some letters together maybe it will give me inspiration<: :> sdfkjsdfhsdfkjahad<: \w8\w8\w8\w8 :> nah not doing it for me<:\e"
 		"\0%(typing)[[is writing so much]] [[is gonna write all day]] \w8\w8\w8 [[might write all day]]\e"
 		"\0%(typing)[[is tap tap tapping away]] :> typing is fun<: :> smacksmacksmack the keys<: :> nice rhythm<: :> nice feel<: :> idk man that's just how I feel rn<:\e"
+		"\0%(typing):> Gonna fill a whole page with words<: :> hopefully<: :> I'm tryin<:\e"
+		"\0%(typing)[[fusses over wording]] :> It just doesn't flow right you know<: :> Maybe I'll comment this one and come back to it later<:\e"
+		"\0%(typing)[[tweaks punctuation]] :> gotta get it<: :> just right<: :> to have the right tone and rhythm<: :> and not be mega confusing lol<:\e"
+		"\0%(typing):> are people going to get mad at me for adding a semicolon here<: :> oh well lol<: :> ;;;;;;;;;<:\e"
+		"\0%(typing):> Right yeah I have some dialogues I wrote last night on my phone<: :> I should copy those into here and get them formatted lol<:\e"
 	}
 	
 	if CurrentWork == "Programming"
@@ -336,6 +351,11 @@ RandomTalk : nonoverlap_pool
 		"\0%(typing):> well I thought this was working but actually it's not<: :> I'm just gonna<: :> stare sadly at it and will it into working<:\e"
 		"\0%(typing):> but why isn't this working tho<: :> like<: :> it should<: :> but it's not<: :> where did I go wrong<:\e"
 		"\0%(typing):> I think code is magic<: :> I dunno I write some funky words and stuff happens on my computer<: :> like how wild is that<:\e"
+		"\0%(typing):> I'm having a bug where--<: :> wait<: :> scope issue<: :> again lol<:\e"
+		"\0%(typing):> oh no this is so messy<: :> what a nightmare<: :> oh well<:\e"
+		"\0%(typing):> alright, let's test and see<: :> oh<: :> it worked???????????????????<: \i[6] :> damn, can't believe it<:\e"
+		"\0%(typing):> ARGH I put a new bug in<: :> pain and suffering<: :> misery<: :> why<:\e"
+		"\0%(typing):> I want to make this menu smoother<: :> and fix this issue where it keeps flickering when you click stuff<: :> I think someone had a solution to that<: :> just gotta<: :> figure out how it works<:\e"
 	}
 	
 	
