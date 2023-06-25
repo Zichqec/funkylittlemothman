@@ -411,14 +411,14 @@ OnTalk.CurrentProject : nonoverlap_pool
 		}
 		if CurrentWork == "Writing"
 		{
-			"\0%(typing):> Doing some writing for Chesster<: :> Time to give this man crisis<: :> He gives me crisis sometimes so I think that's only fair<:"
+			"\0%(typing):> Doing some writing for Chesster<: :> Time to give this man a crisis<: :> He gives me a crisis sometimes so I think that's only fair<:"
 		}
 	}
 	if CurrentProject == "Fandom Ghost"
 	{
 		if CurrentWork == "Programming"
 		{
-			"\0%(typing):> Currently working on Molnia<: :> People pointed so many bugs<: :> Well, one bug but like ten people sent it to me<: :> Even after I posted that I'm working on it<: :> Well, I'm about to work on it rn<:"
+			"\0%(typing):> Currently working on Molnia<: :> People pointed out so many bugs<: :> Well, one bug but like ten people sent it to me<: :> Even after I posted that I'm working on it<: :> Well, I'm about to work on it rn<:"
 			"\0%(typing):> Currently working on Molnia<: :> I promised fans a new big update<: :> Gonna start chipping on it bit by bit<:"
 		}
 		if CurrentWork == "Drawing"
@@ -438,7 +438,7 @@ OnTalk.CurrentProject : nonoverlap_pool
 		}
 		if CurrentWork == "Drawing"
 		{
-			"\0%(typing):> Drawing another shell for the Egg<: :> Another EGG SHELL<: :> ...I always make this joke I love this joke it's so dumb<:"
+			"\0%(typing):> Drawing another shell for the Egg<: :> Another EGG SHELL<: :> ... I always make this joke I love this joke it's so dumb<:"
 		}
 		if CurrentWork == "Writing"
 		{

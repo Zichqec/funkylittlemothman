@@ -3,17 +3,19 @@
 GhostIdeaGenerator : nonoverlap
 {
 	"%(an(thing)) that %(feature), and %(and)"
+	"%(an(thing)) that %(feature), but %(but)"
 	"%(an(thing)) that %(feature)"
 	"%(an(thing)) that always %(always), and %(feature)"
-	"%(an(thing)) that %(feature), but never %(never)"
+	"%(an(thing)) that %(feature('but')), but it never %(never)"
 }
 
 thing{OnGhostGen.Thing}
-feature{"\![embed,OnGhostGen.Feature]"}
+feature{"\![embed,OnGhostGen.Feature,%(_argv[0])]"}
 and{"\![embed,OnGhostGen.And]"}
 object{"\![embed,OnGhostGen.Object]"}
 always{"\![embed,OnGhostGen.Always]"}
 never{"\![embed,OnGhostGen.Never]"}
+but{"\![embed,OnGhostGen.But]"}
 
 OnGhostGen.Thing : nonoverlap
 {
@@ -79,6 +81,61 @@ OnGhostGen.Thing : nonoverlap
 	"huge bug"
 	"nerd"
 	"pineapple"
+	"packet of salt"
+	"churro"
+	"dinosaur"
+	"hula hoop"
+	"bubble"
+	"pen"
+	"eraser"
+	"keyboard"
+	"construction worker"
+	"spy"
+	"gamer"
+	"programmer"
+	"artist"
+	"writer"
+	"cashier"
+	"disgruntled ATM machine"
+	"waitress"
+	"hummingbird"
+	"shark"
+	"whale"
+	"scarecrow with a variety of hats"
+	"vampire with oversized fangs"
+	"fence post"
+	"bucket of paint in a variety of colors"
+	"paintbrush with frayed bristles"
+	"smelly sponge"
+	"bottle of varnish"
+	"chef"
+	"fairy"
+	"warrior"
+	"adventurer"
+	"%(animal) slayer"
+	"%(animal) fanatic"
+	"cult leader"
+	"streamer"
+	"ancient deity"
+	"dictionary editor"
+	"checkbook"
+	"casette tape"
+	"living ball of fire"
+	"puddle of water"
+	"flower pot"
+	"broken feather"
+	"inkwell"
+	"frog"
+	"potholder"
+	"mysterious can full of something"
+	"skull"
+	"dude with a flamethrower"
+	"person with a cape"
+	"crumpled up shirt with stains and holes"
+	"sad looking bush"
+	"person with a clipboard but no pen"
+	"giant tree the size of a planet"
+	"tiny little skyscraper"
 }
 
 trash
@@ -98,11 +155,13 @@ trash
 
 OnGhostGen.Feature : nonoverlap
 {
+	_but = 0
+	if reference0 == "but"; _but = 1
 	"transforms into various other creatures"
 	"moves around the screen"
 	"tells the user a long and winding tale"
 	"is always angry at the user"
-	"has nothing but fakeout functions"
+	if !_but; "has nothing but fakeout functions"
 	"just says random stuff"
 	"lets the user collect various items"
 	"interacts with other ghosts"
@@ -123,7 +182,7 @@ OnGhostGen.Feature : nonoverlap
 	"wants to fight the user"
 	"thinks the user is super cool and the user has to convince it that they're not"
 	"is guarding the user"
-	"is long-time friends with the user but the user doesn't remember it"
+	"is long-time friends with the user although the user doesn't remember it"
 	"is an assassin sent to kill the user"
 	"was summoned to the mortal plane by the user"
 	"is meeting up with the user somewhere sketchy to exchange secret information"
@@ -132,9 +191,9 @@ OnGhostGen.Feature : nonoverlap
 	"is trying really hard to write music"
 	"appears in random places on the user's desktop"
 	"thinks the user is someone else and so the user gets swept up into a position as %(position)"
-	"cares deeply for the user but gets weaker every time they talk via their magical connection"
-	"wants to talk to the user but can never figure out what to say"
-	"makes meal plans but they make no sense"
+	if !_but; "cares deeply for the user but gets weaker every time they talk via their magical connection"
+	if !_but; "wants to talk to the user but can never figure out what to say"
+	if !_but; "makes meal plans but they make no sense"
 	"schedules random things for the user without asking"
 	"has something different to say for every day of the year"
 	"tries to clean the user's desktop"
@@ -161,10 +220,7 @@ OnGhostGen.And : nonoverlap
 {
 	"has horror elements"
 	"you have to unlock the features first"
-	"only when clicked"
 	"gets tired if it's open for too long"
-	"it's actually all a front"
-	"in a really unexpected way"
 	"it does literally nothing else"
 	"it's incredibly sad"
 	"has a mustache for some reason"
@@ -186,6 +242,9 @@ OnGhostGen.And : nonoverlap
 	"is annoying"
 	"gets in the way"
 	"obviously doesn't want to be there"
+	"wants to be %(position) %(oneday)"
+	"wants to get to know the user better %(oneday)"
+	"is hoping to get %(an(object)) %(oneday)"
 }
 
 oneday
@@ -212,6 +271,41 @@ OnGhostGen.Object : nonoverlap
 	"picture of %(an(magical)) %(animal)"
 	"broken coffee cup"
 	"%(magical) blanket"
+	"leek"
+	"juice box"
+	"wig"
+	"set of headphones"
+	"sketchbook that's already filled in"
+	"jar of hand cream"
+	"light switch cover"
+	"box of facial tissues"
+	"laptop"
+	"pencil case"
+	"new zipper pull"
+	"box of fuzz balls"
+	"pair of sunglasses"
+	"dresser with a drawer missing"
+	"handheld gaming console"
+	"hammer"
+	"screwdriver"
+	"bag of nails"
+	"lump or iron"
+	"necklace made out of coal"
+	"wall"
+	"lamp"
+	"pin"
+	"cardboard box"
+	"set of beads"
+	"bottle"
+	"set of fine china"
+	"dirty napkin"
+	"big banana"
+	"inconspicuous knife"
+	"dakimakura"
+	"long winding cable"
+	"very important spoon"
+	"iron with a steam feature"
+	"boring book"
 }
 
 OnGhostGen.Always : nonoverlap
@@ -221,8 +315,14 @@ OnGhostGen.Always : nonoverlap
 	"seems scared"
 	"whispers"
 	"seems a little lost"
-	"keeps its hands hidden"
-	"covers its face"
+	"keeps part of itself hidden from the user"
+	"covers its face (or approximation thereof)"
+	"wants more knowledge"
+	"is reading"
+	"is bored"
+	"seems tired"
+	"is fidgety"
+	"is forgetting something"
 }
 
 OnGhostGen.Never : nonoverlap
@@ -234,6 +334,29 @@ OnGhostGen.Never : nonoverlap
 	"pays attention"
 	"makes any sense"
 	"speaks in plain text"
+}
+
+OnGhostGen.But : nonoverlap
+{
+	"only when clicked"
+	"only when the user isn't looking"
+	"only if it's left open for more than an hour"
+	"only if the user knows the secret password"
+	"only if the user's name is longer than 20 letters"
+	"only if the user interacts with it every 5 minutes"
+	"only when it wants to"
+	"only on the top of the hour"
+	"only if the user asks nicely"
+	"only if the user bullies it"
+	"only when the user has completed a certain task for the day"
+	"only if it likes the user that day"
+	"only if it's in the mood"
+	"it turns out the user is the real ghost"
+	"the user isn't actually who they think they are"
+	"the user is something supernatural and they have to figure that out"
+	"only if the user solves the puzzles"
+	"it's actually all a front"
+	"in a really unexpected way"
 }
 
 magical
@@ -254,7 +377,6 @@ animal
 	"rat"
 	"worm"
 	"mushroom"
-	"poptart"
 	"kangaroo"
 	"rose"
 	"groundhog"
@@ -287,4 +409,7 @@ animal
 	"bee"
 	"buzzard"
 	"raccoon"
+	"monkey"
+	"turtle"
+	"tortoise"
 }
