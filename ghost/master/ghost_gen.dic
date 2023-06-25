@@ -76,6 +76,9 @@ OnGhostGen.Thing : nonoverlap
 	"rusty fork"
 	"coil of rope"
 	"old flip phone"
+	"huge bug"
+	"nerd"
+	"pineapple"
 }
 
 trash
@@ -144,7 +147,11 @@ position
 	"a bodyguard"
 	"a janitor"
 	"a CEO"
+	"a spy"
+	"an imposter"
+	"a very important dude"
 	"an assassin"
+	"a hot dog guy"
 	"the pilot of a space ship"
 	"caretaker of %(an(animal)) that is in poor health"
 	"a plant waterer"
