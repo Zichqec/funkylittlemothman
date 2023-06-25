@@ -126,7 +126,7 @@ ghosting : pool
 	if CurrentProject == "Fandom Ghost"; "\i[%(ANY(6,7,8,9))]"
 	elseif CurrentProject == "OC Ghost"; "\i[%(ANY(10,11,12,13,14,15,16))]"
 	elseif CurrentProject == "Jam Ghost"; "\i[%(ANY(17,18,19,20,21,22,23))]"
-	else; "\i[18]"
+	else; "\i[5]"
 	--
 	if _bloon == 21
 	{

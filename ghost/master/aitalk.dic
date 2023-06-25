@@ -11,7 +11,7 @@ OnAiTalk
 	}
 	LastTalk ,= ChatlogFormatting(_lasttalk)
 
-	if ARRAYSIZE(LastTalk) >= 50; LastTalk[0] = IARRAY
+	if ARRAYSIZE(LastTalk) >= 25; LastTalk[0] = IARRAY
 	_lasttalk
 }
 
@@ -150,11 +150,11 @@ RandomTalk : nonoverlap_pool
 	if CurrentProject == "Obscure Ghost"
 	{
 		"\0%(typing):> Super Snail Super Snail<: :> I need to do a super lot of work on you<:\e"
-		"\0%(typing):> Super Snail's kind of somber in thsi ghost<: :> But I dunno<: :> I think a more somber ghost is kind of interesting<:\e"
+		"\0%(typing):> Super Snail's kind of somber in this ghost<: :> But I dunno<: :> I think a more somber ghost is kind of interesting<:\e"
 		"\0%(typing):> I want the user to be able to befriend Super Snail<: :> and not like<: :> so that you can make her happy and bubbly again<: :> but it would be cool if your friendship helps her heal a little<: :> I'll have to think about it<:\e"
 		"\0%(typing):> Better not forget to add in those spoiler warnings<: :> Not that many people have seen the show<: :> But you know<:\e"
 		"\0%(typing):> Going to the wiki for information and finding it's run down<: :> it's really sad<: :> maybe I'll make some edits<: :> I do know a lot about this show<: ::> but<:: :> that means less time for ghost<:\e"
-		"\0%(typing)[[is sad about SuperBirdie still]] :> it's such a good plot point but man<: :> hurts<:\e"
+		"\0%(typing)[[is sad about BirdSnail still]] :> it's such a good plot point but man<: :> hurts<:\e"
 		"\0%(typing)[[is thinking about Super Snail]] \w8\w8\w8\w8 [[is also thinking about Birdie Beauty]] \w8\w8\w8\w8\w8\w8 [[is sad]]\e"
 		"\0%(typing):> Snails are fun to draw actually<: :> and write for<: :> Actually that goes for bugs in general tbh<:\e"
 		"\0%(typing):> I hope I get some people into the show with this ghost<: :> we'll see<:\e"
